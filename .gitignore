@@ -1,0 +1,32 @@
+# Audio files
+*.wav
+*.mp3
+*.aac
+*.flac
+*.ogg
+*.m4a
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.wmv
+*.flv
+*.m4v
+
+# Temporary directories
+*_temp/
+*temp/
+
+# Checkpoints and model files
+checkpoints/
+indextts/
+
+# Virtual environments
+venv*/
+.venv/
+
+# System files
+.DS_Store
