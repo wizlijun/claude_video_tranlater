@@ -399,7 +399,7 @@ for i, sub in enumerate(subs):
                 print(f'   IndexTTS重试第 {retry_count} 次...')
             
             # 生成IndexTTS命令
-            cmd = ['bash', '-c', f'cd /Users/bruce/git/index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice /Users/bruce/git/index-tts/$VOICE_FILE --output \"{audio_file}\" --device mps']
+            cmd = ['bash', '-c', f'cd /Users/bruce/git/claude_video_translater && MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice $VOICE_FILE --output \"{audio_file}\" --device mps']
             # Note: Using TTS_LANGUAGE={$TTS_LANGUAGE} for future language support
             result = subprocess.run(cmd, capture_output=True, text=True)
             

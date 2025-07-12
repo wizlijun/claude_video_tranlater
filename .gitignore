@@ -30,3 +30,4 @@ venv*/
 
 # System files
 .DS_Store
+.*
