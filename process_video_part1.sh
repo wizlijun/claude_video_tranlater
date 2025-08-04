@@ -201,7 +201,7 @@ if [ -n "$INPUT_SRT" ]; then
     SKIP_WHISPER=true
 elif [ "$FORCE" = true ]; then
     echo "🔄 强制模式：清理已有文件并重新处理所有步骤..."
-    rm -f "$EXTRACTED_AUDIO" "$ORIGINAL_SRT" "$OPTIMIZATION_FLAG"
+    rm -f "$EXTRACTED_AUDIO" "$ORIGINAL_SRT"
 else
     # 检查已有文件
     if [ -f "$EXTRACTED_AUDIO" ] && [ -s "$EXTRACTED_AUDIO" ]; then
@@ -227,7 +227,7 @@ if [ -n "$INPUT_SRT" ]; then
     echo "字幕来源: 用户提供的SRT文件 ($INPUT_SRT)"
 else
     echo "输入语言设置: $LANGUAGE"
-    echo "字幕分割: 使用whisper+整句分割优化"
+    echo "字幕提取: 使用get_srt_by_wisper.py优化处理"
 fi
 echo "输出语言设置: $OUTPUT_LANGUAGE"
 if [ "$HD_MODE" = true ]; then
@@ -272,580 +272,44 @@ else
     fi
 fi
 
-# 中文/日文/韩文优化的Whisper函数 - 直接生成SRT
-whisper_zh() {
-    local audio_file="$1"
-    local output_dir="$2"
-    local language="$3"
-    
-    echo "  使用优化的中文/日文/韩文Whisper配置（aggressive segmentation）..."
-    echo "  参数: --no_speech_threshold 0.3 --logprob_threshold -0.8 --compression_ratio_threshold 1.8"
-    echo "  直接生成SRT格式，跳过后续优化处理"
-    
-    if [ "$language" = "auto" ]; then
-        whisper "$audio_file" \
-            --model small \
-            --output_format srt \
-            --output_dir "$output_dir" \
-            --no_speech_threshold 0.3 \
-            --logprob_threshold -0.8 \
-            --compression_ratio_threshold 1.8 \
-            --temperature 0 \
-            --initial_prompt "Generate full sentence punctuation based on the language. 补全标点符号"
-    else
-        whisper "$audio_file" \
-            --model small \
-            --language "$language" \
-            --output_format srt \
-            --output_dir "$output_dir" \
-            --no_speech_threshold 0.3 \
-            --logprob_threshold -0.8 \
-            --compression_ratio_threshold 1.8 \
-            --temperature 0 \
-            --initial_prompt "Generate full sentence punctuation based on the language. 补全标点符号"
-    fi
-}
-
-# 临时文件定义 - 添加优化处理相关文件
-WORD_LEVEL_JSON="$TEMP_DIR/step2_word_level.json"
-OPTIMIZED_SRT="$TEMP_DIR/step2_optimized.srt"
-OPTIMIZATION_FLAG="$TEMP_DIR/.optimization_complete"
-
 # 步骤2: 音频识别为SRT字幕文件
 if [ "$SKIP_WHISPER" = true ]; then
     echo "步骤 2/2: ⏭️  跳过Whisper识别（使用已有文件: $ORIGINAL_SRT）"
 else
-    echo "步骤 2/2: 使用Whisper识别音频为SRT字幕（智能优化模式）..."
-
-    # 智能处理模式：先检测语言，然后选择处理方式
-    DETECTED_LANGUAGE=""
-    USED_ZH_CONFIG=false
+    echo "步骤 2/2: 使用get_srt_by_wisper.py进行字幕提取..."
     
+    # 构建get_srt_by_wisper.py的参数
+    if [ -f "$EXTRACTED_AUDIO" ] && [ -s "$EXTRACTED_AUDIO" ]; then
+        # 如果有提取的音频文件，直接使用音频文件
+        INPUT_FILE="$EXTRACTED_AUDIO"
+        echo "  使用提取的音频文件: $INPUT_FILE"
+    else
+        # 否则使用原视频文件
+        INPUT_FILE="$INPUT_VIDEO"
+        echo "  使用原视频文件: $INPUT_FILE"
+    fi
+    
+    # 调用get_srt_by_wisper.py
     if [ "$LANGUAGE" = "auto" ]; then
-        echo "  第一步：快速检测语言..."
-        # 使用快速转录前30秒来检测语言
-        DETECT_OUTPUT=$(whisper "$EXTRACTED_AUDIO" \
-            --model small \
-            --output_format txt \
-            --output_dir /tmp \
-            --clip_timestamps "0,30" \
-            --verbose False 2>&1 || true)
-        
-        # 从输出中提取检测到的语言（支持多种格式）
-        DETECTED_LANGUAGE_RAW=$(echo "$DETECT_OUTPUT" | grep -i "detected language" | sed -n 's/.*detected language[: ]*\([A-Za-z]*\).*/\1/ip' | head -1)
-        
-        # 如果第一种方法失败，尝试其他格式
-        if [ -z "$DETECTED_LANGUAGE_RAW" ]; then
-            DETECTED_LANGUAGE_RAW=$(echo "$DETECT_OUTPUT" | grep -i "language.*:" | sed -n 's/.*language[: ]*\([A-Za-z]*\).*/\1/ip' | head -1)
-        fi
-        
-        # 调试信息：显示检测输出的相关行（仅在检测失败时）
-        if [ -z "$DETECTED_LANGUAGE_RAW" ]; then
-            echo "  调试：语言检测输出："
-            echo "$DETECT_OUTPUT" | grep -i "language\|detected" | head -3
-        fi
-        
-        # 将语言名称映射为语言代码
-        case "$DETECTED_LANGUAGE_RAW" in
-            "Chinese"|"chinese")
-                DETECTED_LANGUAGE="zh"
-                ;;
-            "Japanese"|"japanese")
-                DETECTED_LANGUAGE="ja"
-                ;;
-            "Korean"|"korean")
-                DETECTED_LANGUAGE="ko"
-                ;;
-            "English"|"english")
-                DETECTED_LANGUAGE="en"
-                ;;
-            "Spanish"|"spanish")
-                DETECTED_LANGUAGE="es"
-                ;;
-            "French"|"french")
-                DETECTED_LANGUAGE="fr"
-                ;;
-            "German"|"german")
-                DETECTED_LANGUAGE="de"
-                ;;
-            "Russian"|"russian")
-                DETECTED_LANGUAGE="ru"
-                ;;
-            *)
-                # 如果是已经是代码格式或未知语言，直接使用
-                DETECTED_LANGUAGE="$DETECTED_LANGUAGE_RAW"
-                ;;
-        esac
-        
-        # 清理临时检测文件
-        rm -f /tmp/*.txt 2>/dev/null || true
-        
-        if [ -z "$DETECTED_LANGUAGE" ]; then
-            # 如果语言检测失败，使用标准配置
-            echo "  语言检测失败，使用标准whisper配置..."
-            whisper "$EXTRACTED_AUDIO" \
-                --model small \
-                --output_format json \
-                --output_dir "$TEMP_DIR" \
-                --word_timestamps True \
-                --temperature 0 \
-                --initial_prompt "Generate full sentence punctuation based on the language. 补全标点符号"
-        else
-            if [ "$DETECTED_LANGUAGE_RAW" != "$DETECTED_LANGUAGE" ]; then
-                echo "  检测到语言: $DETECTED_LANGUAGE_RAW -> $DETECTED_LANGUAGE"
-            else
-                echo "  检测到语言: $DETECTED_LANGUAGE"
-            fi
-            # 根据检测到的语言选择合适的配置
-            if [[ "$DETECTED_LANGUAGE" =~ ^(zh|ja|ko)$ ]]; then
-                echo "  检测到中文/日文/韩文，使用优化配置"
-                whisper_zh "$EXTRACTED_AUDIO" "$TEMP_DIR" "$DETECTED_LANGUAGE"
-                USED_ZH_CONFIG=true
-            else
-                echo "  使用标准Whisper配置"
-                whisper "$EXTRACTED_AUDIO" \
-                    --model small \
-                    --language "$DETECTED_LANGUAGE" \
-                    --output_format json \
-                    --output_dir "$TEMP_DIR" \
-                    --word_timestamps True \
-                    --temperature 0 \
-                    --initial_prompt "Generate full sentence punctuation based on the language. 补全标点符号"
-            fi
-        fi
+        python3 get_srt_by_wisper.py "$INPUT_FILE" -o "$ORIGINAL_SRT"
     else
-        echo "  指定语言: $LANGUAGE"
-        # 根据用户指定的语言选择合适的配置
-        if [[ "$LANGUAGE" =~ ^(zh|ja|ko)$ ]]; then
-            echo "  检测到中文/日文/韩文，使用优化配置"
-            whisper_zh "$EXTRACTED_AUDIO" "$TEMP_DIR" "$LANGUAGE"
-            USED_ZH_CONFIG=true
-        else
-            echo "  使用标准Whisper配置"
-            whisper "$EXTRACTED_AUDIO" \
-                --model small \
-                --language "$LANGUAGE" \
-                --output_format json \
-                --output_dir "$TEMP_DIR" \
-                --word_timestamps True \
-                --temperature 0 \
-                --initial_prompt "Generate full sentence punctuation based on the language. 补全标点符号"
-        fi
-    fi
-
-    # 处理不同的输出格式
-    if [ "$USED_ZH_CONFIG" = true ]; then
-        # 中文/日文/韩文已直接生成SRT，重命名为标准文件名
-        echo "  中文/日文/韩文已直接生成SRT，重命名为标准文件名..."
-        AUDIO_BASENAME=$(basename "$EXTRACTED_AUDIO" .wav)
-        WHISPER_SRT="$TEMP_DIR/${AUDIO_BASENAME}.srt"
-        if [ -f "$WHISPER_SRT" ]; then
-            mv "$WHISPER_SRT" "$ORIGINAL_SRT"
-        else
-            echo "错误：whisper_zh未生成SRT文件"
-            exit 1
-        fi
-    else
-        # 其他语言需要JSON处理
-        # 将whisper输出重命名为固定文件名
-        AUDIO_BASENAME=$(basename "$EXTRACTED_AUDIO" .wav)
-        TEMP_JSON="$TEMP_DIR/whisper_output.json"
-        mv "$TEMP_DIR/${AUDIO_BASENAME}.json" "$TEMP_JSON"
-
-        # 使用Python脚本进行整句级分割（基于词级时间戳）
-        echo "  进行整句级分割处理（基于词级精确时间戳）..."
-        python3 << EOF
-import re
-import json
-
-def format_srt_time(seconds):
-    """Convert seconds to SRT time format"""
-    hours = int(seconds // 3600)
-    minutes = int((seconds % 3600) // 60)
-    secs = int(seconds % 60)
-    ms = int((seconds % 1) * 1000)
-    return f"{hours:02d}:{minutes:02d}:{secs:02d},{ms:03d}"
-
-# Read JSON file with word-level timestamps
-with open('$TEMP_JSON', 'r') as f:
-    data = json.load(f)
-
-# Extract all words with timestamps
-all_words = []
-for segment in data['segments']:
-    if 'words' in segment:
-        for word_info in segment['words']:
-            all_words.append({
-                'word': word_info['word'].strip(),
-                'start': word_info['start'],
-                'end': word_info['end']
-            })
-
-# Combine all text and split into sentences
-full_text = ' '.join([word['word'] for word in all_words])
-print(f"Processing {len(all_words)} words...")
-
-# Split into sentences supporting both half-width (.!?) and full-width (。！？) punctuation
-sentences = re.split(r'([.!?。！？])', full_text)
-
-# Merge sentences with their punctuation
-merged_sentences = []
-i = 0
-while i < len(sentences):
-    sentence = sentences[i].strip()
-    if i + 1 < len(sentences) and sentences[i + 1] in '.!?。！？':
-        sentence += sentences[i + 1]
-        i += 2
-    else:
-        i += 1
-    if sentence:
-        merged_sentences.append(sentence.strip())
-
-print(f"Found {len(merged_sentences)} sentences")
-
-# Map each sentence to word-level timestamps
-sentence_segments = []
-word_index = 0
-
-for sentence_idx, sentence in enumerate(merged_sentences):
-    # Split sentence into words for matching (remove both half-width and full-width punctuation)
-    sentence_words = sentence.replace('.', '').replace('!', '').replace('?', '').replace('。', '').replace('！', '').replace('？', '').split()
-    
-    # Find corresponding words in the word list
-    sentence_start_time = None
-    sentence_end_time = None
-    matched_word_count = 0
-    
-    # Search for the sentence words in the word list
-    search_start = word_index
-    for i in range(search_start, len(all_words)):
-        word_text = all_words[i]['word'].replace('.', '').replace('!', '').replace('?', '').replace('。', '').replace('！', '').replace('？', '').replace(',', '').replace('，', '').strip()
-        
-        # Try to match with sentence words
-        if matched_word_count < len(sentence_words):
-            target_word = sentence_words[matched_word_count].replace(',', '').replace('，', '').strip()
-            
-            # Flexible matching (handle case and punctuation differences)
-            if word_text.lower() == target_word.lower():
-                if sentence_start_time is None:
-                    sentence_start_time = all_words[i]['start']
-                sentence_end_time = all_words[i]['end']
-                matched_word_count += 1
-                word_index = i + 1
-                
-                # If we've matched all words in this sentence, break
-                if matched_word_count >= len(sentence_words):
-                    break
-    
-    # Fallback: if we couldn't match words precisely, estimate timing
-    if sentence_start_time is None or sentence_end_time is None:
-        if sentence_idx == 0:
-            sentence_start_time = all_words[0]['start'] if all_words else 0
-        else:
-            sentence_start_time = sentence_segments[-1]['end'] if sentence_segments else 0
-        
-        # Estimate end time based on sentence length
-        if sentence_end_time is None:
-            avg_duration = 0.5  # average time per word
-            estimated_duration = len(sentence_words) * avg_duration
-            sentence_end_time = sentence_start_time + estimated_duration
-    
-    sentence_segments.append({
-        'start': sentence_start_time,
-        'end': sentence_end_time,
-        'text': sentence,
-        'matched_words': matched_word_count,
-        'total_words': len(sentence_words)
-    })
-    
-    print(f"Sentence {sentence_idx + 1}: '{sentence[:50]}...' -> {matched_word_count}/{len(sentence_words)} words matched")
-
-# Write new SRT file
-with open('$ORIGINAL_SRT', 'w') as f:
-    for i, segment in enumerate(sentence_segments, 1):
-        f.write(f"{i}\n")
-        f.write(f"{format_srt_time(segment['start'])} --> {format_srt_time(segment['end'])}\n")
-        f.write(f"{segment['text']}\n\n")
-
-print(f"Created word-timestamp-based SRT with {len(sentence_segments)} segments")
-print("Sample segments:")
-for i, seg in enumerate(sentence_segments[:3], 1):
-    print(f"{i}: [{format_srt_time(seg['start'])} --> {format_srt_time(seg['end'])}] {seg['text']}")
-
-# Statistics
-total_matched = sum(seg['matched_words'] for seg in sentence_segments)
-total_words = sum(seg['total_words'] for seg in sentence_segments)
-if total_words > 0:
-    print(f"Word matching accuracy: {total_matched}/{total_words} ({100*total_matched/total_words:.1f}%)")
-EOF
-
-        if [ ! -f "$ORIGINAL_SRT" ]; then
-            echo "错误：Whisper语音识别或整句分割失败。"
-            exit 1
-        fi
-        
-        # 清理临时JSON文件
-        rm -f "$TEMP_JSON"
+        python3 get_srt_by_wisper.py "$INPUT_FILE" -l "$LANGUAGE" -o "$ORIGINAL_SRT"
     fi
     
-    # 字幕后处理优化阶段
-    if [ -f "$OPTIMIZATION_FLAG" ] && [ "$FORCE" != true ]; then
-        echo "  ⏭️  跳过字幕优化（已完成，使用 -f 强制重新优化）"
-    else
-        echo "  🔧 开始字幕后处理优化..."
-    
-    # 步骤 2.1: 时间戳优化
-    echo "    - 优化时间戳（相邻字幕平滑处理）"
-    python3 << 'EOF'
-import re
-import os
-from datetime import timedelta
-
-def srt_time_to_seconds(srt_time):
-    """Convert SRT time format to seconds"""
-    time_parts = srt_time.replace(',', '.').split(':')
-    hours = int(time_parts[0])
-    minutes = int(time_parts[1])
-    seconds = float(time_parts[2])
-    return hours * 3600 + minutes * 60 + seconds
-
-def seconds_to_srt_time(seconds):
-    """Convert seconds to SRT time format"""
-    hours = int(seconds // 3600)
-    minutes = int((seconds % 3600) // 60)
-    secs = int(seconds % 60)
-    ms = int((seconds % 1) * 1000)
-    return f"{hours:02d}:{minutes:02d}:{secs:02d},{ms:03d}"
-
-def optimize_subtitle_timing(srt_file, threshold_ms=1000):
-    """优化字幕时间戳，处理相邻字幕间隔"""
-    with open(srt_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 解析SRT文件
-    blocks = re.split(r'\n\s*\n', content.strip())
-    segments = []
-    
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) >= 3:
-            index = lines[0]
-            time_line = lines[1]
-            text = '\n'.join(lines[2:])
-            
-            # 解析时间戳
-            match = re.match(r'(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})', time_line)
-            if match:
-                start_time = srt_time_to_seconds(match.group(1))
-                end_time = srt_time_to_seconds(match.group(2))
-                segments.append({
-                    'index': index,
-                    'start': start_time,
-                    'end': end_time,
-                    'text': text
-                })
-    
-    # 优化时间戳
-    threshold_sec = threshold_ms / 1000.0
-    for i in range(len(segments) - 1):
-        current = segments[i]
-        next_seg = segments[i + 1]
-        
-        # 计算时间间隔
-        time_gap = next_seg['start'] - current['end']
-        
-        # 如果间隔小于阈值，调整时间戳
-        if 0 < time_gap < threshold_sec:
-            mid_time = (current['end'] + next_seg['start']) / 2 + time_gap / 4
-            current['end'] = mid_time
-            next_seg['start'] = mid_time
-    
-    # 写回文件
-    with open(srt_file, 'w', encoding='utf-8') as f:
-        for seg in segments:
-            f.write(f"{seg['index']}\n")
-            f.write(f"{seconds_to_srt_time(seg['start'])} --> {seconds_to_srt_time(seg['end'])}\n")
-            f.write(f"{seg['text']}\n\n")
-
-# 执行时间戳优化
-optimize_subtitle_timing(os.environ['ORIGINAL_SRT'])
-print("✓ 时间戳优化完成")
-EOF
-    
-    # 步骤 2.2: 短句合并优化
-    echo "    - 合并短句和相邻片段"
-    python3 << 'EOF'
-import re
-import os
-
-def is_mainly_cjk(text):
-    """判断文本是否主要由中日韩文字组成"""
-    cjk_count = len(re.findall(r'[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]', text))
-    total_chars = len(re.sub(r'\s', '', text))
-    return cjk_count / total_chars > 0.5 if total_chars > 0 else False
-
-def count_words(text):
-    """统计字符/单词数"""
-    if is_mainly_cjk(text):
-        # 中日韩文字按字符计算
-        return len(re.sub(r'[\s\W]', '', text))
-    else:
-        # 其他语言按单词计算
-        return len(text.split())
-
-def merge_short_segments(srt_file):
-    """合并短句段落"""
-    with open(srt_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 解析SRT文件
-    blocks = re.split(r'\n\s*\n', content.strip())
-    segments = []
-    
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) >= 3:
-            index = int(lines[0])
-            time_line = lines[1]
-            text = '\n'.join(lines[2:]).strip()
-            
-            # 解析时间戳
-            match = re.match(r'(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})', time_line)
-            if match:
-                segments.append({
-                    'index': index,
-                    'time_line': time_line,
-                    'text': text,
-                    'start_str': match.group(1),
-                    'end_str': match.group(2)
-                })
-    
-    # 合并短句
-    merged_segments = []
-    i = 0
-    
-    while i < len(segments):
-        current = segments[i]
-        current_words = count_words(current['text'])
-        
-        # 检查是否需要与下一段合并
-        should_merge = False
-        if i < len(segments) - 1:
-            next_seg = segments[i + 1]
-            next_words = count_words(next_seg['text'])
-            total_words = current_words + next_words
-            
-            # 时间间隔检查（简化版）
-            current_end = current['end_str']
-            next_start = next_seg['start_str']
-            
-            # 合并条件：当前或下一句词数少于5，且总词数不超过限制
-            max_words = 25 if is_mainly_cjk(current['text']) else 18
-            if (current_words < 5 or next_words < 5) and total_words <= max_words:
-                should_merge = True
-        
-        if should_merge:
-            # 执行合并
-            merged_text = current['text']
-            if is_mainly_cjk(current['text']):
-                merged_text += next_seg['text']  # 中文直接连接
-            else:
-                merged_text += ' ' + next_seg['text']  # 英文加空格
-            
-            merged_segments.append({
-                'index': len(merged_segments) + 1,
-                'time_line': f"{current['start_str']} --> {next_seg['end_str']}",
-                'text': merged_text
-            })
-            i += 2  # 跳过下一个段落
-        else:
-            merged_segments.append({
-                'index': len(merged_segments) + 1,
-                'time_line': current['time_line'],
-                'text': current['text']
-            })
-            i += 1
-    
-    # 写回文件
-    with open(srt_file, 'w', encoding='utf-8') as f:
-        for seg in merged_segments:
-            f.write(f"{seg['index']}\n")
-            f.write(f"{seg['time_line']}\n")
-            f.write(f"{seg['text']}\n\n")
-    
-    print(f"✓ 短句合并完成，从 {len(segments)} 段合并为 {len(merged_segments)} 段")
-
-# 执行短句合并
-merge_short_segments(os.environ['ORIGINAL_SRT'])
-EOF
-    
-    # 步骤 2.3: 过滤噪音标记
-    echo "    - 过滤音乐和噪音标记"
-    python3 << 'EOF'
-import re
-import os
-
-def filter_noise_markers(srt_file):
-    """过滤音乐标记和噪音"""
-    with open(srt_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 解析SRT文件
-    blocks = re.split(r'\n\s*\n', content.strip())
-    filtered_segments = []
-    
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) >= 3:
-            index = lines[0]
-            time_line = lines[1]
-            text = '\n'.join(lines[2:]).strip()
-            
-            # 过滤条件：去除纯音乐标记
-            if not (text.startswith('【') or text.startswith('[') or 
-                   text.startswith('(') or text.startswith('（') or
-                   text.startswith('♪') or text.startswith('♫') or
-                   text.lower().startswith('[music]') or
-                   text.lower().startswith('[applause]')):
-                filtered_segments.append({
-                    'index': len(filtered_segments) + 1,
-                    'time_line': time_line,
-                    'text': text
-                })
-    
-    # 写回文件
-    with open(srt_file, 'w', encoding='utf-8') as f:
-        for seg in filtered_segments:
-            f.write(f"{seg['index']}\n")
-            f.write(f"{seg['time_line']}\n")
-            f.write(f"{seg['text']}\n\n")
-    
-    print(f"✓ 噪音过滤完成，保留 {len(filtered_segments)} 个有效段落")
-
-# 执行噪音过滤
-filter_noise_markers(os.environ['ORIGINAL_SRT'])
-EOF
-        
-        # 标记优化完成
-        touch "$OPTIMIZATION_FLAG"
-        echo "  ✓ 字幕后处理优化全部完成"
-    fi
-        
-        echo "✓ SRT字幕识别和优化完成: $ORIGINAL_SRT"
-        if [ "$USED_ZH_CONFIG" = true ]; then
-            echo "  ✓ 使用优化的中文/日文/韩文配置+智能后处理"
-        else
-            echo "  ✓ 使用whisper+智能后处理优化"
-        fi
-        echo "  ✓ 已应用时间戳平滑、短句合并、噪音过滤等优化"
-    fi
-    
-    # 通用的SRT文件检查
-    if [ ! -f "$ORIGINAL_SRT" ]; then
-        echo "错误：Whisper语音识别失败。"
+    if [ ! -f "$ORIGINAL_SRT" ] || [ ! -s "$ORIGINAL_SRT" ]; then
+        echo "错误：get_srt_by_wisper.py执行失败，未生成SRT文件。"
         exit 1
     fi
-
+    
+    echo "✓ SRT字幕识别完成: $ORIGINAL_SRT"
+    echo "  ✓ 使用get_srt_by_wisper.py的优化字幕提取和处理"
+fi
+    
+# 通用的SRT文件检查
+if [ ! -f "$ORIGINAL_SRT" ]; then
+    echo "错误：字幕生成失败。"
+    exit 1
+fi
 
 # 显示处理结果
 echo "=================================================="
@@ -867,11 +331,7 @@ if [ -f "$SEPARATE_AUDIO_FILE" ] && [ -s "$SEPARATE_AUDIO_FILE" ]; then
 else
     echo "1. ✓ 从视频提取音频"
 fi
-if [ "$USED_ZH_CONFIG" = true ]; then
-    echo "2. ✓ 使用优化的中文/日文/韩文Whisper配置+整句级分割SRT（词级时间戳）"
-else
-    echo "2. ✓ 使用Whisper识别为优化的整句级分割SRT（词级时间戳）"
-fi
+echo "2. ✓ 使用get_srt_by_wisper.py进行优化字幕提取和处理"
 echo ""
 echo "📝 下一步："
 echo "1. 翻译字幕: ./translate_by_claude.sh --olang $OUTPUT_LANGUAGE \"$INPUT_VIDEO\""
@@ -881,25 +341,9 @@ echo "   - 从 step3_translated.srt 生成 Markdown 文档"
 echo "3. 视频处理: ./process_video_part2.sh --olang $OUTPUT_LANGUAGE \"$INPUT_VIDEO\""
 echo "   - 使用 step3_translated.srt 生成带字幕的视频"
 echo ""
-echo "💡 提示和优化详情："
-if [ "$USED_ZH_CONFIG" = true ]; then
-    echo "  - 使用了针对中文/日文/韩文优化的aggressive segmentation配置"
-    echo "  - 字幕分割更适合亚洲语言的语音特点（词级时间戳）"
-else
-    echo "  - 字幕已使用whisper+整句分割进行优化（词级时间戳）"
-fi
-if [ "$USED_ZH_CONFIG" = false ]; then
-    echo "  - 每行字幕对应一个完整句子，时间戳基于实际词语音边界"
-    echo "  - 支持中文、日文等全角标点符号（。！？）的句子分割"
-fi
-echo "  - 自动语言检测：中文/日文/韩文使用优化配置"
-echo ""
-echo "🔧 智能后处理优化："
-echo "  - 时间戳平滑：优化相邻字幕间隔（阈值1秒）"
-echo "  - 短句合并：自动合并短句和相邻片段"
-echo "  - 多语言适配：中日韩25字符限制，英文18单词限制"
-echo "  - 噪音过滤：自动过滤音乐标记【】()（）♪♫等"
-echo "  - 语言检测：基于文本特征自动适配处理策略"
-echo ""
+echo "💡 提示："
+echo "  - 使用了get_srt_by_wisper.py的智能语言检测和优化配置"
+echo "  - 字幕已进行整句分割和时间戳优化处理"
+echo "  - 支持多语言自动检测和相应的优化策略"
 echo "  - 所有后续脚本都会使用 step3_translated.srt 文件"
-echo "=================================================="
+echo "================================================="=
