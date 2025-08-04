@@ -16,6 +16,9 @@
 *.flv
 *.m4v
 
+*.srt
+
+
 # Temporary directories
 *_temp/
 *temp/
