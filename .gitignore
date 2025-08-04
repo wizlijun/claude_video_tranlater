@@ -18,6 +18,7 @@
 
 *.srt
 
+.DS_Store
 
 # Temporary directories
 *_temp/
