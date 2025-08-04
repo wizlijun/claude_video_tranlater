@@ -278,16 +278,9 @@ if [ "$SKIP_WHISPER" = true ]; then
 else
     echo "步骤 2/2: 使用get_srt_by_wisper.py进行字幕提取..."
     
-    # 构建get_srt_by_wisper.py的参数
-    if [ -f "$EXTRACTED_AUDIO" ] && [ -s "$EXTRACTED_AUDIO" ]; then
-        # 如果有提取的音频文件，直接使用音频文件
-        INPUT_FILE="$EXTRACTED_AUDIO"
-        echo "  使用提取的音频文件: $INPUT_FILE"
-    else
-        # 否则使用原视频文件
-        INPUT_FILE="$INPUT_VIDEO"
-        echo "  使用原视频文件: $INPUT_FILE"
-    fi
+    # 直接使用原视频文件作为输入
+    INPUT_FILE="$INPUT_VIDEO"
+    echo "  使用原视频文件: $INPUT_FILE"
     
     # 调用get_srt_by_wisper.py
     if [ "$LANGUAGE" = "auto" ]; then
