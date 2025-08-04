@@ -1,0 +1,6084 @@
+1
+00:00:00,080 --> 00:00:06,960
+If you think we only think with our
+
+2
+00:00:02,080 --> 00:00:09,679
+brains, you tend to see AI as a
+
+3
+00:00:06,960 --> 00:00:14,320
+replacement of our thinking process. We
+
+4
+00:00:09,679 --> 00:00:17,199
+use AI to think for us instead.
+
+5
+00:00:14,320 --> 00:00:21,119
+And that's obviously a risk. And if you
+
+6
+00:00:17,199 --> 00:00:23,840
+think like that, you do that. You stop
+
+7
+00:00:21,119 --> 00:00:25,199
+thinking for yourself. You let AI do the
+
+8
+00:00:23,840 --> 00:00:27,039
+work.
+
+9
+00:00:25,199 --> 00:00:29,359
+Mind Hack is a podcast about the
+
+10
+00:00:27,039 --> 00:00:31,920
+psychology behind performance, behavior
+
+11
+00:00:29,359 --> 00:00:33,520
+change, and self-optimization.
+
+12
+00:00:31,920 --> 00:00:35,440
+Each episode explores how to think
+
+13
+00:00:33,520 --> 00:00:36,960
+clearly, work smarter, and live
+
+14
+00:00:35,440 --> 00:00:38,480
+intentionally through insightful
+
+15
+00:00:36,960 --> 00:00:40,879
+conversations with leading
+
+16
+00:00:38,480 --> 00:00:44,520
+entrepreneurs, scientists, and experts
+
+17
+00:00:40,879 --> 00:00:44,520
+in human behavior.
+
+18
+00:00:46,399 --> 00:00:50,719
+Hello and welcome to the Mind Hack
+
+19
+00:00:48,239 --> 00:00:52,879
+Podcast, the show where we explore the
+
+20
+00:00:50,719 --> 00:00:55,840
+science of peak performance, mindset,
+
+21
+00:00:52,879 --> 00:00:58,800
+and personal growth. I'm your host Cody
+
+22
+00:00:55,840 --> 00:01:01,120
+Mlan and today I'm joined by Dr. Sank
+
+23
+00:00:58,800 --> 00:01:03,680
+Arn, a distinguished social social
+
+24
+00:01:01,120 --> 00:01:06,240
+scientist, educator, and author of the
+
+25
+00:01:03,680 --> 00:01:08,880
+groundbreaking bestseller, How to Take
+
+26
+00:01:06,240 --> 00:01:10,960
+Smart Notes. His book, which introduced
+
+27
+00:01:08,880 --> 00:01:13,040
+the powerful Zettocast method of
+
+28
+00:01:10,960 --> 00:01:15,600
+personal knowledge management to over
+
+29
+00:01:13,040 --> 00:01:17,600
+100,000 readers worldwide, has
+
+30
+00:01:15,600 --> 00:01:19,920
+fundamentally challenged some of the
+
+31
+00:01:17,600 --> 00:01:23,439
+traditional views on how we learn,
+
+32
+00:01:19,920 --> 00:01:25,600
+think, and write. Dr. Rens argues that
+
+33
+00:01:23,439 --> 00:01:27,920
+writing is not just a way to document
+
+34
+00:01:25,600 --> 00:01:30,720
+our thoughts. It is the act of thinking
+
+35
+00:01:27,920 --> 00:01:33,520
+itself. A concept that has profoundly
+
+36
+00:01:30,720 --> 00:01:36,320
+reshaped my own approach to intellectual
+
+37
+00:01:33,520 --> 00:01:39,200
+work. In this conversation will
+
+38
+00:01:36,320 --> 00:01:41,840
+demystify the zetocasten approach often
+
+39
+00:01:39,200 --> 00:01:43,920
+described as building a second brain and
+
+40
+00:01:41,840 --> 00:01:45,439
+explore its practical power in
+
+41
+00:01:43,920 --> 00:01:47,360
+overcoming common intellectual
+
+42
+00:01:45,439 --> 00:01:49,280
+roadblocks like writer's block,
+
+43
+00:01:47,360 --> 00:01:52,159
+procrastination, and information
+
+44
+00:01:49,280 --> 00:01:54,320
+overload. We'll also discuss how Dr. RN
+
+45
+00:01:52,159 --> 00:01:56,560
+sees modern tools like Obsidian and
+
+46
+00:01:54,320 --> 00:01:58,799
+artificial intelligence fitting into the
+
+47
+00:01:56,560 --> 00:02:01,280
+future of effective note-taking and
+
+48
+00:01:58,799 --> 00:02:03,280
+learning. By the end of this episode,
+
+49
+00:02:01,280 --> 00:02:05,520
+you'll walk away with clear, actionable
+
+50
+00:02:03,280 --> 00:02:07,360
+insights and relatable strategies that
+
+51
+00:02:05,520 --> 00:02:08,879
+you can apply immediately, whether
+
+52
+00:02:07,360 --> 00:02:10,720
+you're looking to enhance academic
+
+53
+00:02:08,879 --> 00:02:13,440
+performance, streamline your research
+
+54
+00:02:10,720 --> 00:02:16,239
+process, or spark novel ideas for your
+
+55
+00:02:13,440 --> 00:02:18,720
+next major creative project. So, without
+
+56
+00:02:16,239 --> 00:02:19,200
+further ado, please welcome Dr. Shank
+
+57
+00:02:18,720 --> 00:02:20,640
+Ar.
+
+58
+00:02:19,200 --> 00:02:23,120
+>> Thank you, Cody, for having me.
+
+59
+00:02:20,640 --> 00:02:25,760
+>> Dr. Arves, welcome to the show. So, your
+
+60
+00:02:23,120 --> 00:02:28,400
+your book, How to Take Smart Notes, it's
+
+61
+00:02:25,760 --> 00:02:31,120
+resonated with so many people around the
+
+62
+00:02:28,400 --> 00:02:33,599
+world. You've sold over 100,000 copies.
+
+63
+00:02:31,120 --> 00:02:36,319
+You've translated into eight languages.
+
+64
+00:02:33,599 --> 00:02:40,000
+Did you ever expect your book on taking
+
+65
+00:02:36,319 --> 00:02:43,599
+notes would become so widespread?
+
+66
+00:02:40,000 --> 00:02:48,959
+>> Um, I had two thoughts. one is hopefully
+
+67
+00:02:43,599 --> 00:02:52,959
+I sell a few more than uh 10 copies and
+
+68
+00:02:48,959 --> 00:02:57,680
+I have I had mainly my own students in
+
+69
+00:02:52,959 --> 00:03:02,640
+mind because I couldn't find a really
+
+70
+00:02:57,680 --> 00:03:06,480
+helpful book on writing and notetaking
+
+71
+00:03:02,640 --> 00:03:11,760
+that mirrors the way I thought we
+
+72
+00:03:06,480 --> 00:03:14,720
+developed a thesis. So there was just
+
+73
+00:03:11,760 --> 00:03:17,200
+a need to write that because I didn't
+
+74
+00:03:14,720 --> 00:03:20,159
+feel comfortable with the ones that were
+
+75
+00:03:17,200 --> 00:03:24,400
+available. I did not expect at all that
+
+76
+00:03:20,159 --> 00:03:27,760
+it resonated so much with people outside
+
+77
+00:03:24,400 --> 00:03:33,040
+of academia. And
+
+78
+00:03:27,760 --> 00:03:37,040
+um I'm very pleased how people took
+
+79
+00:03:33,040 --> 00:03:41,360
+ideas and developed their own systems
+
+80
+00:03:37,040 --> 00:03:45,760
+around it. So I see it less as an
+
+81
+00:03:41,360 --> 00:03:50,720
+instruction and more as something that
+
+82
+00:03:45,760 --> 00:03:54,319
+sparked a discussion. I'm really glad um
+
+83
+00:03:50,720 --> 00:03:56,159
+happening. Yeah.
+
+84
+00:03:54,319 --> 00:03:57,920
+>> And so for those who haven't read your
+
+85
+00:03:56,159 --> 00:04:01,360
+book, can you give us kind of an
+
+86
+00:03:57,920 --> 00:04:03,519
+immediate idea about what it's about and
+
+87
+00:04:01,360 --> 00:04:06,000
+what kind of benefits that say new
+
+88
+00:04:03,519 --> 00:04:06,959
+adopters could expect to to learn from
+
+89
+00:04:06,000 --> 00:04:09,040
+your method?
+
+90
+00:04:06,959 --> 00:04:11,519
+>> Yeah, I mean there are multiple ways to
+
+91
+00:04:09,040 --> 00:04:17,759
+describe what the tetra cousin is all
+
+92
+00:04:11,519 --> 00:04:20,160
+about. Um, one way is it's um a system
+
+93
+00:04:17,759 --> 00:04:23,919
+to write
+
+94
+00:04:20,160 --> 00:04:28,320
+notes that connect in a way that you can
+
+95
+00:04:23,919 --> 00:04:31,680
+build something out of them and where
+
+96
+00:04:28,320 --> 00:04:34,720
+you have as you called it the second
+
+97
+00:04:31,680 --> 00:04:37,520
+brain or an external brain you're in a
+
+98
+00:04:34,720 --> 00:04:39,919
+dialogue with. Another way to describe
+
+99
+00:04:37,520 --> 00:04:44,880
+it and that's how I did it in the book
+
+100
+00:04:39,919 --> 00:04:50,000
+is um the author and social scientist
+
+101
+00:04:44,880 --> 00:04:54,479
+Nicholas Luman I studied the most um
+
+102
+00:04:50,000 --> 00:04:57,280
+he's a system theory thinker um he was
+
+103
+00:04:54,479 --> 00:05:01,520
+incredibly productive um writing almost
+
+104
+00:04:57,280 --> 00:05:03,280
+60 books and less than 30 years hundreds
+
+105
+00:05:01,520 --> 00:05:05,280
+of articles
+
+106
+00:05:03,280 --> 00:05:09,600
+and
+
+107
+00:05:05,280 --> 00:05:13,039
+um whenever he was was asked um how on
+
+108
+00:05:09,600 --> 00:05:15,600
+earth he was able to be that productive
+
+109
+00:05:13,039 --> 00:05:18,320
+um he referred to his subtle cousin. So
+
+110
+00:05:15,600 --> 00:05:21,199
+obviously uh as someone who struggled a
+
+111
+00:05:18,320 --> 00:05:25,520
+lot with writing I was intrigued uh what
+
+112
+00:05:21,199 --> 00:05:27,680
+this system is all about and there is a
+
+113
+00:05:25,520 --> 00:05:30,880
+research project still going on because
+
+114
+00:05:27,680 --> 00:05:35,600
+it's such a vast amount of notes that
+
+115
+00:05:30,880 --> 00:05:38,639
+needs to be digitalized and um
+
+116
+00:05:35,600 --> 00:05:40,880
+put online. Um
+
+117
+00:05:38,639 --> 00:05:44,160
+but there was very little available uh
+
+118
+00:05:40,880 --> 00:05:48,479
+at that time. Um but there are others
+
+119
+00:05:44,160 --> 00:05:52,000
+who work with similar methods and
+
+120
+00:05:48,479 --> 00:05:56,400
+so I tried to understand
+
+121
+00:05:52,000 --> 00:05:59,520
+um how that really worked in a practical
+
+122
+00:05:56,400 --> 00:06:03,680
+manner and
+
+123
+00:05:59,520 --> 00:06:05,360
+that was fascinating to me and um so I
+
+124
+00:06:03,680 --> 00:06:07,280
+wanted to write about that because there
+
+125
+00:06:05,360 --> 00:06:10,720
+wasn't anything available that really
+
+126
+00:06:07,280 --> 00:06:15,280
+described the method and because I at
+
+127
+00:06:10,720 --> 00:06:20,639
+the same time taught a lot about
+
+128
+00:06:15,280 --> 00:06:24,960
+um learning theories, I realized
+
+129
+00:06:20,639 --> 00:06:28,240
+how much the settle casten put modern
+
+130
+00:06:24,960 --> 00:06:33,520
+research into practice without lumen
+
+131
+00:06:28,240 --> 00:06:38,080
+probably being aware of that. Um but
+
+132
+00:06:33,520 --> 00:06:40,160
+and thirdly it resonates with um a new
+
+133
+00:06:38,080 --> 00:06:42,639
+line of research
+
+134
+00:06:40,160 --> 00:06:45,120
+that often
+
+135
+00:06:42,639 --> 00:06:48,000
+goes under the label of external
+
+136
+00:06:45,120 --> 00:06:51,759
+thinking. So the
+
+137
+00:06:48,000 --> 00:06:53,360
+realization how much of our environment
+
+138
+00:06:51,759 --> 00:06:57,840
+contributes
+
+139
+00:06:53,360 --> 00:06:59,919
+to our thinking processes and how much
+
+140
+00:06:57,840 --> 00:07:02,319
+we can do
+
+141
+00:06:59,919 --> 00:07:05,520
+to
+
+142
+00:07:02,319 --> 00:07:08,800
+improve our thinking by thinking a
+
+143
+00:07:05,520 --> 00:07:11,440
+little bit more systematically about how
+
+144
+00:07:08,800 --> 00:07:16,400
+we design our environment in which we
+
+145
+00:07:11,440 --> 00:07:21,199
+think. Um, so in a way it's all about
+
+146
+00:07:16,400 --> 00:07:23,360
+a thinking environment design. And
+
+147
+00:07:21,199 --> 00:07:25,440
+that might sound complicated, but in the
+
+148
+00:07:23,360 --> 00:07:30,160
+end it's just
+
+149
+00:07:25,440 --> 00:07:32,639
+writing on a daily or regular basis
+
+150
+00:07:30,160 --> 00:07:37,039
+small pieces
+
+151
+00:07:32,639 --> 00:07:42,240
+and add them to the existing
+
+152
+00:07:37,039 --> 00:07:45,599
+pool of ideas you have. So you extend
+
+153
+00:07:42,240 --> 00:07:48,800
+your thoughts instead of just collecting
+
+154
+00:07:45,599 --> 00:07:51,520
+them. And that
+
+155
+00:07:48,800 --> 00:07:55,599
+nudges you to
+
+156
+00:07:51,520 --> 00:07:57,919
+develop more complex thoughts because
+
+157
+00:07:55,599 --> 00:08:00,080
+having the thoughts externalized allows
+
+158
+00:07:57,919 --> 00:08:05,120
+you to build up complexity which is
+
+159
+00:08:00,080 --> 00:08:09,360
+impossible in our tiny brain. And it
+
+160
+00:08:05,120 --> 00:08:12,400
+also constantly confronts you with
+
+161
+00:08:09,360 --> 00:08:16,720
+things you have long forgotten.
+
+162
+00:08:12,400 --> 00:08:20,400
+And that is like a builtin
+
+163
+00:08:16,720 --> 00:08:23,120
+um critical element to your daily
+
+164
+00:08:20,400 --> 00:08:27,440
+writing. Um where you're being reminded
+
+165
+00:08:23,120 --> 00:08:30,240
+of things that might be um contradictory
+
+166
+00:08:27,440 --> 00:08:32,640
+to your great idea you had in the
+
+167
+00:08:30,240 --> 00:08:36,800
+morning. and instead of just putting it
+
+168
+00:08:32,640 --> 00:08:40,880
+out um you contrast that with something
+
+169
+00:08:36,800 --> 00:08:43,440
+you have already written down. And
+
+170
+00:08:40,880 --> 00:08:45,920
+these are the moments usually where
+
+171
+00:08:43,440 --> 00:08:47,920
+something interesting happens where you
+
+172
+00:08:45,920 --> 00:08:51,440
+have contradicting ideas and have to
+
+173
+00:08:47,920 --> 00:08:56,480
+figure out well um is one of them wrong
+
+174
+00:08:51,440 --> 00:08:59,920
+or can I um combine them in in a way.
+
+175
+00:08:56,480 --> 00:09:04,080
+Um, all these things only happen when
+
+176
+00:08:59,920 --> 00:09:05,839
+you have a system in place where you
+
+177
+00:09:04,080 --> 00:09:09,279
+have your thoughts in some way
+
+178
+00:09:05,839 --> 00:09:12,160
+externalized. And usually we do that
+
+179
+00:09:09,279 --> 00:09:15,920
+with books and articles all that is
+
+180
+00:09:12,160 --> 00:09:18,959
+external to our brain. But what we then
+
+181
+00:09:15,920 --> 00:09:21,839
+do we usually just do in our brain. So
+
+182
+00:09:18,959 --> 00:09:24,720
+it's like brain and the external
+
+183
+00:09:21,839 --> 00:09:27,440
+environment and that seat custom expands
+
+184
+00:09:24,720 --> 00:09:31,040
+the personal thinking space
+
+185
+00:09:27,440 --> 00:09:34,000
+to be able to think within that and I
+
+186
+00:09:31,040 --> 00:09:37,360
+think that's why Lumman was able to not
+
+187
+00:09:34,000 --> 00:09:41,120
+only be so proficient in his writing but
+
+188
+00:09:37,360 --> 00:09:45,600
+also be able to develop incredibly
+
+189
+00:09:41,120 --> 00:09:49,920
+complex thoughts and theories that are
+
+190
+00:09:45,600 --> 00:09:52,480
+highly consistent um within its itself
+
+191
+00:09:49,920 --> 00:09:54,320
+uh something that
+
+192
+00:09:52,480 --> 00:09:57,920
+that wouldn't be possible I think
+
+193
+00:09:54,320 --> 00:10:00,880
+without a system like that.
+
+194
+00:09:57,920 --> 00:10:02,399
+>> Right. So there's this other thing I'm
+
+195
+00:10:00,880 --> 00:10:05,680
+sure you're you're aware of called the
+
+196
+00:10:02,399 --> 00:10:07,360
+commonplace book. it's it's been famous
+
+197
+00:10:05,680 --> 00:10:09,360
+in history for for many writers,
+
+198
+00:10:07,360 --> 00:10:11,360
+Benjamin Franklin
+
+199
+00:10:09,360 --> 00:10:13,440
+included, is that they they created a
+
+200
+00:10:11,360 --> 00:10:16,399
+commonplace book where they would note
+
+201
+00:10:13,440 --> 00:10:18,160
+different references, quotes, ideas that
+
+202
+00:10:16,399 --> 00:10:20,399
+they would kind of keep with them for
+
+203
+00:10:18,160 --> 00:10:22,000
+the rest of their lives and that was
+
+204
+00:10:20,399 --> 00:10:24,000
+always an important part of their
+
+205
+00:10:22,000 --> 00:10:26,000
+writing process. Would you say that the
+
+206
+00:10:24,000 --> 00:10:28,399
+zodoccasted method is kind of like a
+
+207
+00:10:26,000 --> 00:10:30,399
+more complex version of that where
+
+208
+00:10:28,399 --> 00:10:32,320
+instead of just writing ideas, you're
+
+209
+00:10:30,399 --> 00:10:33,920
+also connecting
+
+210
+00:10:32,320 --> 00:10:35,920
+related thoughts?
+
+211
+00:10:33,920 --> 00:10:39,839
+>> I think it's
+
+212
+00:10:35,920 --> 00:10:43,920
+certainly um fits into the same category
+
+213
+00:10:39,839 --> 00:10:47,839
+of trying to use external means to
+
+214
+00:10:43,920 --> 00:10:50,320
+accompany you and um not just write
+
+215
+00:10:47,839 --> 00:10:52,640
+something down, put it out, and then go
+
+216
+00:10:50,320 --> 00:10:55,600
+back to the blank page.
+
+217
+00:10:52,640 --> 00:10:58,560
+But the settle cousin is certainly more
+
+218
+00:10:55,600 --> 00:11:04,560
+geared towards continuous development of
+
+219
+00:10:58,560 --> 00:11:06,640
+ideas and maybe less of a reminder um
+
+220
+00:11:04,560 --> 00:11:08,560
+and
+
+221
+00:11:06,640 --> 00:11:11,760
+um
+
+222
+00:11:08,560 --> 00:11:13,600
+I mean it's grounded in academia but
+
+223
+00:11:11,760 --> 00:11:19,680
+seeing how much it resonated outside of
+
+224
+00:11:13,600 --> 00:11:22,079
+academia I think it can be seen as um
+
+225
+00:11:19,680 --> 00:11:25,040
+maybe a little bit more sophisticated
+
+226
+00:11:22,079 --> 00:11:28,880
+version of the commonplace book. But you
+
+227
+00:11:25,040 --> 00:11:31,760
+tell me um you know better I think the
+
+228
+00:11:28,880 --> 00:11:34,560
+uh distinction between these two
+
+229
+00:11:31,760 --> 00:11:36,959
+systems.
+
+230
+00:11:34,560 --> 00:11:39,760
+No, I I would certainly say it's a more
+
+231
+00:11:36,959 --> 00:11:43,120
+nuanced complex version of a commonplace
+
+232
+00:11:39,760 --> 00:11:45,440
+book and yet it's also more difficult to
+
+233
+00:11:43,120 --> 00:11:47,760
+maintain and that's where certain
+
+234
+00:11:45,440 --> 00:11:50,240
+systems like Obsidian and other like
+
+235
+00:11:47,760 --> 00:11:52,560
+Rome have kind of come out in many of
+
+236
+00:11:50,240 --> 00:11:56,320
+the past few years to try to make it
+
+237
+00:11:52,560 --> 00:11:58,959
+easy to uh create these relationships
+
+238
+00:11:56,320 --> 00:12:01,120
+between different ideas. in doing so
+
+239
+00:11:58,959 --> 00:12:04,880
+kind of automatically but in the process
+
+240
+00:12:01,120 --> 00:12:06,880
+I think they also eliminate your own
+
+241
+00:12:04,880 --> 00:12:10,079
+intentional connection between these
+
+242
+00:12:06,880 --> 00:12:12,320
+ideas that perhaps is kind of removes
+
+243
+00:12:10,079 --> 00:12:14,320
+some of the critical thinking behind
+
+244
+00:12:12,320 --> 00:12:16,399
+making these connections yourselves uh
+
+245
+00:12:14,320 --> 00:12:18,240
+because I think there's this aspect of
+
+246
+00:12:16,399 --> 00:12:19,920
+what you argues you say in the book
+
+247
+00:12:18,240 --> 00:12:22,800
+writing is not just a record of thought
+
+248
+00:12:19,920 --> 00:12:25,279
+but the act of thinking itself and so
+
+249
+00:12:22,800 --> 00:12:29,279
+you argue that this method is a way for
+
+250
+00:12:25,279 --> 00:12:31,279
+you to to think about these things and
+
+251
+00:12:29,279 --> 00:12:32,560
+it's it's commonly notated that
+
+252
+00:12:31,279 --> 00:12:34,240
+obviously thinking about something
+
+253
+00:12:32,560 --> 00:12:36,880
+whether you're listening to an audio
+
+254
+00:12:34,240 --> 00:12:39,120
+book whether you're you're reading
+
+255
+00:12:36,880 --> 00:12:41,920
+something is that we we often don't
+
+256
+00:12:39,120 --> 00:12:43,760
+remember 95% of what we read in a book
+
+257
+00:12:41,920 --> 00:12:45,600
+but it's those moments when you come
+
+258
+00:12:43,760 --> 00:12:47,519
+across an idea you pause and you think
+
+259
+00:12:45,600 --> 00:12:49,279
+about that thought you think about it
+
+260
+00:12:47,519 --> 00:12:51,519
+from a different angle you think about
+
+261
+00:12:49,279 --> 00:12:53,680
+how does this apply to my life you you
+
+262
+00:12:51,519 --> 00:12:55,600
+expand on that idea those are the types
+
+263
+00:12:53,680 --> 00:12:57,440
+of things that we tend to remember and
+
+264
+00:12:55,600 --> 00:12:59,440
+so when you're taking that that kind
+
+265
+00:12:57,440 --> 00:13:00,560
+that instinctual part where you're
+
+266
+00:12:59,440 --> 00:13:02,000
+stopping and you're thinking about
+
+267
+00:13:00,560 --> 00:13:04,240
+something and you're adding it to a
+
+268
+00:13:02,000 --> 00:13:06,000
+system, then you can look at that and
+
+269
+00:13:04,240 --> 00:13:08,800
+expand on that further. And so I think
+
+270
+00:13:06,000 --> 00:13:12,560
+that certainly writing and note-taking
+
+271
+00:13:08,800 --> 00:13:15,360
+plays an active part of thinking. Um and
+
+272
+00:13:12,560 --> 00:13:18,560
+so I think everything has its place. Um
+
+273
+00:13:15,360 --> 00:13:20,079
+but um going off of going on a tangent,
+
+274
+00:13:18,560 --> 00:13:21,760
+uh do you have any additional thoughts
+
+275
+00:13:20,079 --> 00:13:25,760
+on top of that? Yeah, I think you strike
+
+276
+00:13:21,760 --> 00:13:30,160
+an important point and um let me comment
+
+277
+00:13:25,760 --> 00:13:34,320
+on the role of technology like obsidian
+
+278
+00:13:30,160 --> 00:13:38,639
+Rome research etc. Um I think there is
+
+279
+00:13:34,320 --> 00:13:43,839
+the risk that you do exactly what you
+
+280
+00:13:38,639 --> 00:13:48,079
+just said. Um automate the building of
+
+281
+00:13:43,839 --> 00:13:51,680
+connection and therefore just skip the
+
+282
+00:13:48,079 --> 00:13:54,240
+important step of thinking about what
+
+283
+00:13:51,680 --> 00:13:58,000
+connections make most sense
+
+284
+00:13:54,240 --> 00:14:01,839
+intellectually or by reasoning. But I
+
+285
+00:13:58,000 --> 00:14:04,240
+think this kind of technology doesn't
+
+286
+00:14:01,839 --> 00:14:07,760
+have to
+
+287
+00:14:04,240 --> 00:14:10,399
+um be used in that way. I think that
+
+288
+00:14:07,760 --> 00:14:12,720
+technology can
+
+289
+00:14:10,399 --> 00:14:16,720
+um complement
+
+290
+00:14:12,720 --> 00:14:19,839
+um our thinking very well if we are
+
+291
+00:14:16,720 --> 00:14:22,720
+aware of the risk you mentioned um that
+
+292
+00:14:19,839 --> 00:14:26,720
+we try to use it in a way that that it
+
+293
+00:14:22,720 --> 00:14:30,320
+skips the thinking part. I think when
+
+294
+00:14:26,720 --> 00:14:34,480
+you use Obsidian or Rome research or
+
+295
+00:14:30,320 --> 00:14:38,639
+lock and the other tools out there that
+
+296
+00:14:34,480 --> 00:14:40,800
+have the birectional linking feature,
+
+297
+00:14:38,639 --> 00:14:46,000
+um
+
+298
+00:14:40,800 --> 00:14:48,959
+you get quickly overwhelmed with links
+
+299
+00:14:46,000 --> 00:14:53,680
+when you automate that process or just
+
+300
+00:14:48,959 --> 00:14:56,480
+go by association like um oh this word
+
+301
+00:14:53,680 --> 00:15:00,079
+appears in these notes So I link them
+
+302
+00:14:56,480 --> 00:15:03,560
+all and I have uh beautiful graphs with
+
+303
+00:15:00,079 --> 00:15:03,560
+a lot of links
+
+304
+00:15:03,600 --> 00:15:11,279
+that can work as a warning signal. um
+
+305
+00:15:07,440 --> 00:15:14,320
+this overwhelming interconnectedness.
+
+306
+00:15:11,279 --> 00:15:17,279
+Um if you encounter that once, I think
+
+307
+00:15:14,320 --> 00:15:21,920
+you're thrown back to
+
+308
+00:15:17,279 --> 00:15:23,839
+uh the inside that any links should be
+
+309
+00:15:21,920 --> 00:15:25,440
+deliberate
+
+310
+00:15:23,839 --> 00:15:27,360
+and
+
+311
+00:15:25,440 --> 00:15:32,240
+ideally
+
+312
+00:15:27,360 --> 00:15:36,320
+commented on. Um so one of the main uh
+
+313
+00:15:32,240 --> 00:15:40,800
+points I keep stressing when I teach the
+
+314
+00:15:36,320 --> 00:15:46,480
+method is try to embed links to other
+
+315
+00:15:40,800 --> 00:15:50,240
+notes in full sentences. Try to explain
+
+316
+00:15:46,480 --> 00:15:52,320
+the relation between two notes in a way
+
+317
+00:15:50,240 --> 00:15:58,079
+that your future self can still
+
+318
+00:15:52,320 --> 00:16:02,240
+understand that. Um don't try to just um
+
+319
+00:15:58,079 --> 00:16:04,320
+have bullet points with um links.
+
+320
+00:16:02,240 --> 00:16:06,959
+They have their place as well, but the
+
+321
+00:16:04,320 --> 00:16:10,399
+main links should be explained to
+
+322
+00:16:06,959 --> 00:16:15,759
+yourself. And usually this is the moment
+
+323
+00:16:10,399 --> 00:16:18,720
+where you start thinking u because
+
+324
+00:16:15,759 --> 00:16:20,880
+intuitively often um the relation
+
+325
+00:16:18,720 --> 00:16:23,440
+between two pieces of information is
+
+326
+00:16:20,880 --> 00:16:26,720
+obvious. um you feel yeah of course this
+
+327
+00:16:23,440 --> 00:16:29,120
+belongs together but when you try to
+
+328
+00:16:26,720 --> 00:16:31,680
+make it explicit
+
+329
+00:16:29,120 --> 00:16:35,279
+you start to struggle and that is
+
+330
+00:16:31,680 --> 00:16:37,920
+usually the good kind of struggle. Um
+
+331
+00:16:35,279 --> 00:16:40,560
+first of all you might be right and then
+
+332
+00:16:37,920 --> 00:16:44,000
+it's good to be able to explain it
+
+333
+00:16:40,560 --> 00:16:46,720
+because in the end your knowledge isn't
+
+334
+00:16:44,000 --> 00:16:49,120
+much worth if you're not able to
+
+335
+00:16:46,720 --> 00:16:52,079
+communicate it. um if you can't tell
+
+336
+00:16:49,120 --> 00:16:53,839
+someone else how two things belong to
+
+337
+00:16:52,079 --> 00:16:58,800
+each other.
+
+338
+00:16:53,839 --> 00:17:01,600
+But most often you realize that
+
+339
+00:16:58,800 --> 00:17:03,360
+you haven't really thought through um
+
+340
+00:17:01,600 --> 00:17:05,679
+how two pieces of information belong
+
+341
+00:17:03,360 --> 00:17:10,160
+together and that you need more
+
+342
+00:17:05,679 --> 00:17:15,839
+information to make the connection um
+
+343
+00:17:10,160 --> 00:17:19,120
+plausible. So I think this linking which
+
+344
+00:17:15,839 --> 00:17:22,880
+can be done mostly automatic
+
+345
+00:17:19,120 --> 00:17:27,120
+uh if you do it manually where you feel
+
+346
+00:17:22,880 --> 00:17:29,919
+okay um it's interesting here
+
+347
+00:17:27,120 --> 00:17:33,520
+can zoom in
+
+348
+00:17:29,919 --> 00:17:35,760
+the most interesting parts of of what
+
+349
+00:17:33,520 --> 00:17:38,080
+you're doing. So I think the linking is
+
+350
+00:17:35,760 --> 00:17:42,320
+not a
+
+351
+00:17:38,080 --> 00:17:46,559
+support or help. I think it's often the
+
+352
+00:17:42,320 --> 00:17:50,000
+most important part of the whole process
+
+353
+00:17:46,559 --> 00:17:53,360
+and the most interesting
+
+354
+00:17:50,000 --> 00:17:56,240
+>> right and I I would in a easier way of
+
+355
+00:17:53,360 --> 00:18:00,000
+describing that I think if we look at
+
+356
+00:17:56,240 --> 00:18:02,480
+say if you are a surgeon and then
+
+357
+00:18:00,000 --> 00:18:05,919
+perhaps on the side you're you also like
+
+358
+00:18:02,480 --> 00:18:08,240
+to paint um or you you're in some other
+
+359
+00:18:05,919 --> 00:18:11,520
+completely unrelated field and it's
+
+360
+00:18:08,240 --> 00:18:14,080
+often the the people who end up in a
+
+361
+00:18:11,520 --> 00:18:17,440
+multitude of fields that have interests
+
+362
+00:18:14,080 --> 00:18:20,080
+and they're able to take those ideas and
+
+363
+00:18:17,440 --> 00:18:22,080
+overlap them with this other other
+
+364
+00:18:20,080 --> 00:18:24,400
+profession and that's often where we
+
+365
+00:18:22,080 --> 00:18:26,640
+have innovations and we have ideas that
+
+366
+00:18:24,400 --> 00:18:29,280
+kind of further society along because
+
+367
+00:18:26,640 --> 00:18:31,600
+you have overlapping uh knowledge in
+
+368
+00:18:29,280 --> 00:18:34,160
+different industries and so I think
+
+369
+00:18:31,600 --> 00:18:36,480
+these this idea of linking notes it's
+
+370
+00:18:34,160 --> 00:18:40,960
+kind of like a similar way of you're
+
+371
+00:18:36,480 --> 00:18:44,559
+you're creating this this this link
+
+372
+00:18:40,960 --> 00:18:47,120
+between notes and thoughts that perhaps
+
+373
+00:18:44,559 --> 00:18:49,840
+otherwise could be unrelated. It's
+
+374
+00:18:47,120 --> 00:18:53,280
+forcing yourself to think about a a
+
+375
+00:18:49,840 --> 00:18:55,280
+specific idea in a different way instead
+
+376
+00:18:53,280 --> 00:18:57,280
+of just looking at it in a in a linear
+
+377
+00:18:55,280 --> 00:18:58,559
+way, which is so often what we do,
+
+378
+00:18:57,280 --> 00:19:00,960
+especially when we're just creating
+
+379
+00:18:58,559 --> 00:19:02,240
+bullet points. when if if we have
+
+380
+00:19:00,960 --> 00:19:03,919
+highlights on a book, you know, we're
+
+381
+00:19:02,240 --> 00:19:05,600
+we're putting it into a specific
+
+382
+00:19:03,919 --> 00:19:07,600
+category and then we put, you know, if
+
+383
+00:19:05,600 --> 00:19:09,440
+it's a category on productivity, all all
+
+384
+00:19:07,600 --> 00:19:11,440
+of these notes might just just be in
+
+385
+00:19:09,440 --> 00:19:13,760
+this one one category, but there's
+
+386
+00:19:11,440 --> 00:19:16,160
+inevitably related I philosophical
+
+387
+00:19:13,760 --> 00:19:18,240
+ideas, industry ideas that you could
+
+388
+00:19:16,160 --> 00:19:20,400
+think about and that could be what
+
+389
+00:19:18,240 --> 00:19:23,280
+allows you to have kind of new creative
+
+390
+00:19:20,400 --> 00:19:25,360
+thinking and to write and and think from
+
+391
+00:19:23,280 --> 00:19:28,559
+a different perspective than most other
+
+392
+00:19:25,360 --> 00:19:30,320
+people would. Yeah, I think the art is
+
+393
+00:19:28,559 --> 00:19:33,840
+to
+
+394
+00:19:30,320 --> 00:19:35,919
+um find the right
+
+395
+00:19:33,840 --> 00:19:40,640
+level of abstraction.
+
+396
+00:19:35,919 --> 00:19:43,919
+Um on a two abstract um level everything
+
+397
+00:19:40,640 --> 00:19:48,080
+is related. And
+
+398
+00:19:43,919 --> 00:19:52,960
+if you try to find the
+
+399
+00:19:48,080 --> 00:19:55,120
+uh the abstraction level where two
+
+400
+00:19:52,960 --> 00:20:00,720
+uh until now unconnected pieces of
+
+401
+00:19:55,120 --> 00:20:05,120
+information can be put together. Um you
+
+402
+00:20:00,720 --> 00:20:06,559
+you create something new and
+
+403
+00:20:05,120 --> 00:20:09,440
+especially when you work
+
+404
+00:20:06,559 --> 00:20:12,720
+interdisciplinary and into very
+
+405
+00:20:09,440 --> 00:20:16,000
+different fields like medicine and art.
+
+406
+00:20:12,720 --> 00:20:20,640
+um you need to go to a more abstract
+
+407
+00:20:16,000 --> 00:20:23,919
+level but then also to respppecify
+
+408
+00:20:20,640 --> 00:20:27,600
+um from that level down to have a
+
+409
+00:20:23,919 --> 00:20:30,720
+concrete example or uh application of
+
+410
+00:20:27,600 --> 00:20:34,000
+that idea. I think that's where models
+
+411
+00:20:30,720 --> 00:20:37,360
+are extremely useful and have their
+
+412
+00:20:34,000 --> 00:20:40,400
+place because models are always
+
+413
+00:20:37,360 --> 00:20:42,880
+abstractions from reality but they
+
+414
+00:20:40,400 --> 00:20:45,200
+extremely useful uh because they are not
+
+415
+00:20:42,880 --> 00:20:48,559
+that abstract that you can't do anything
+
+416
+00:20:45,200 --> 00:20:52,480
+with them anymore. You can reapply them
+
+417
+00:20:48,559 --> 00:20:54,640
+on a more concrete level. Um,
+
+418
+00:20:52,480 --> 00:20:57,919
+yeah, sometimes people shy away a little
+
+419
+00:20:54,640 --> 00:20:59,919
+bit from too abstract ideas or abstract
+
+420
+00:20:57,919 --> 00:21:05,280
+ideas, but I think it's often
+
+421
+00:20:59,919 --> 00:21:08,640
+unavoidable to go that step to go back
+
+422
+00:21:05,280 --> 00:21:10,559
+um to a more concrete level in a
+
+423
+00:21:08,640 --> 00:21:13,840
+different field.
+
+424
+00:21:10,559 --> 00:21:17,240
+Um, yeah, that that's certainly what's
+
+425
+00:21:13,840 --> 00:21:17,240
+getting interesting.
+
+426
+00:21:17,280 --> 00:21:22,960
+>> Yeah. And and so you also say that notes
+
+427
+00:21:20,240 --> 00:21:25,440
+are only as valuable as the system that
+
+428
+00:21:22,960 --> 00:21:27,919
+they're embedded in. And so from a
+
+429
+00:21:25,440 --> 00:21:29,919
+perspective of of building a zetocasten
+
+430
+00:21:27,919 --> 00:21:34,480
+system, I know that we we touched on
+
+431
+00:21:29,919 --> 00:21:36,880
+Obsidian and Rome and u I believe uh
+
+432
+00:21:34,480 --> 00:21:38,559
+Lumen, you know, he he had these index
+
+433
+00:21:36,880 --> 00:21:40,799
+cards, right? And so he was able to
+
+434
+00:21:38,559 --> 00:21:43,360
+write over 60 books, uh hundreds of
+
+435
+00:21:40,799 --> 00:21:46,080
+articles, and he had like I think some
+
+436
+00:21:43,360 --> 00:21:48,159
+90,000 index cards. And there's a very
+
+437
+00:21:46,080 --> 00:21:49,919
+specific method of of putting like
+
+438
+00:21:48,159 --> 00:21:52,240
+notations in the upper right hand corner
+
+439
+00:21:49,919 --> 00:21:56,159
+to to link like specifically where this
+
+440
+00:21:52,240 --> 00:21:58,480
+should go. And a lot of that is a very
+
+441
+00:21:56,159 --> 00:22:00,320
+uh uh
+
+442
+00:21:58,480 --> 00:22:02,320
+process. It's very it's very resource
+
+443
+00:22:00,320 --> 00:22:04,880
+intensive right to create a system like
+
+444
+00:22:02,320 --> 00:22:08,000
+this. And I know say Ryan Holidayiday
+
+445
+00:22:04,880 --> 00:22:10,640
+very famous author and in stoicism realm
+
+446
+00:22:08,000 --> 00:22:13,200
+who was a protege of grav who wrote the
+
+447
+00:22:10,640 --> 00:22:15,360
+48 laws of power. He's mentioned his
+
+448
+00:22:13,200 --> 00:22:17,760
+system where he he will read a book. He
+
+449
+00:22:15,360 --> 00:22:19,039
+he manually highlights everything in the
+
+450
+00:22:17,760 --> 00:22:21,200
+book and then he goes back through the
+
+451
+00:22:19,039 --> 00:22:23,120
+book and he manually writes down every
+
+452
+00:22:21,200 --> 00:22:24,960
+single highlight and then he will go
+
+453
+00:22:23,120 --> 00:22:27,039
+through that and then process that
+
+454
+00:22:24,960 --> 00:22:29,039
+highlight. I think perhaps that's what
+
+455
+00:22:27,039 --> 00:22:31,760
+allows him to produce such extraordinary
+
+456
+00:22:29,039 --> 00:22:34,080
+work and to be such a deep thinker but
+
+457
+00:22:31,760 --> 00:22:35,520
+also that's it's very resource
+
+458
+00:22:34,080 --> 00:22:37,440
+intensive. You know, it's it's not
+
+459
+00:22:35,520 --> 00:22:39,760
+something that everybody has a lot of
+
+460
+00:22:37,440 --> 00:22:41,360
+time for. So perhaps that's where these
+
+461
+00:22:39,760 --> 00:22:43,440
+systems like Obsidian and Rome kind of
+
+462
+00:22:41,360 --> 00:22:46,720
+come into play where they make the
+
+463
+00:22:43,440 --> 00:22:49,760
+process of linking ideas easier even
+
+464
+00:22:46,720 --> 00:22:52,000
+though it's perhaps at the risk of
+
+465
+00:22:49,760 --> 00:22:53,919
+losing some of that internal creative
+
+466
+00:22:52,000 --> 00:22:57,760
+thinking around linking these ideas
+
+467
+00:22:53,919 --> 00:23:00,640
+yourself. Um which can itself spawn some
+
+468
+00:22:57,760 --> 00:23:03,200
+some new ideas instead of just letting a
+
+469
+00:23:00,640 --> 00:23:05,600
+system do it for you. Um so I guess the
+
+470
+00:23:03,200 --> 00:23:07,200
+question is kind of what is the what is
+
+471
+00:23:05,600 --> 00:23:09,120
+the middle ground? I suppose if you're
+
+472
+00:23:07,200 --> 00:23:11,200
+somebody like Ryan Holidayiday who you
+
+473
+00:23:09,120 --> 00:23:12,640
+know his your sole job as a writer then
+
+474
+00:23:11,200 --> 00:23:15,600
+perhaps you have the time and the
+
+475
+00:23:12,640 --> 00:23:17,200
+resources to be manually documenting
+
+476
+00:23:15,600 --> 00:23:20,080
+highlights to be thinking about them and
+
+477
+00:23:17,200 --> 00:23:22,400
+to maintain a very complex system. Um
+
+478
+00:23:20,080 --> 00:23:24,240
+I'm wondering where where do you see
+
+479
+00:23:22,400 --> 00:23:26,400
+your students in this regard? where you
+
+480
+00:23:24,240 --> 00:23:28,640
+see most people who perhaps they're
+
+481
+00:23:26,400 --> 00:23:30,400
+entrepreneurs, perhaps they're writers,
+
+482
+00:23:28,640 --> 00:23:33,440
+perhaps they're they're influencers or
+
+483
+00:23:30,400 --> 00:23:35,760
+or content creators and they they look
+
+484
+00:23:33,440 --> 00:23:37,840
+at something like this as being
+
+485
+00:23:35,760 --> 00:23:40,320
+beneficial to their content creation
+
+486
+00:23:37,840 --> 00:23:42,559
+process, but they don't have all this
+
+487
+00:23:40,320 --> 00:23:44,320
+time, you know, and don't want to ex
+
+488
+00:23:42,559 --> 00:23:46,080
+exude all of their mental energy and
+
+489
+00:23:44,320 --> 00:23:47,760
+trying to create these relationships
+
+490
+00:23:46,080 --> 00:23:49,840
+between these different ideas. So, kind
+
+491
+00:23:47,760 --> 00:23:53,280
+of what do you what do you say there and
+
+492
+00:23:49,840 --> 00:23:55,919
+what do you recommend? Um, I look at it
+
+493
+00:23:53,280 --> 00:23:58,640
+slightly differently. Um, I think you
+
+494
+00:23:55,919 --> 00:24:02,480
+can set up this system
+
+495
+00:23:58,640 --> 00:24:04,640
+on a weekend and get going. You you're
+
+496
+00:24:02,480 --> 00:24:08,000
+still learning along the way and you
+
+497
+00:24:04,640 --> 00:24:10,640
+have to adjust the system and in a way
+
+498
+00:24:08,000 --> 00:24:14,159
+it never finishes. So, I'm still
+
+499
+00:24:10,640 --> 00:24:17,200
+learning how to apply it and modify it
+
+500
+00:24:14,159 --> 00:24:21,200
+to my needs because my thinking develops
+
+501
+00:24:17,200 --> 00:24:23,840
+and the structure changes. So, uh, it
+
+502
+00:24:21,200 --> 00:24:28,080
+has an effect on the way I structure my
+
+503
+00:24:23,840 --> 00:24:29,840
+notes, but the basic setup that allows
+
+504
+00:24:28,080 --> 00:24:33,200
+you
+
+505
+00:24:29,840 --> 00:24:36,159
+whenever you have an idea to put them
+
+506
+00:24:33,200 --> 00:24:40,320
+into a designated space where you know
+
+507
+00:24:36,159 --> 00:24:43,840
+it's not lost, but can be
+
+508
+00:24:40,320 --> 00:24:48,240
+used to build something bigger.
+
+509
+00:24:43,840 --> 00:24:50,559
+that doesn't need more than a weekend or
+
+510
+00:24:48,240 --> 00:24:53,279
+an extended weekend.
+
+511
+00:24:50,559 --> 00:24:57,279
+The main difference you describe, I
+
+512
+00:24:53,279 --> 00:24:59,679
+think, uh, is in regard to what kind of
+
+513
+00:24:57,279 --> 00:25:02,159
+input you deal with. When Ryan
+
+514
+00:24:59,679 --> 00:25:06,400
+Holidayiday reads Zenica,
+
+515
+00:25:02,159 --> 00:25:11,919
+of course, he needs more time uh to go
+
+516
+00:25:06,400 --> 00:25:15,360
+through a book and ponder about
+
+517
+00:25:11,919 --> 00:25:18,360
+sentences within the context of the
+
+518
+00:25:15,360 --> 00:25:18,360
+text.
+
+519
+00:25:18,799 --> 00:25:24,080
+I like to say when you write a
+
+520
+00:25:21,039 --> 00:25:26,960
+literature note, so the note that gives
+
+521
+00:25:24,080 --> 00:25:28,640
+an account of the literature um you're
+
+522
+00:25:26,960 --> 00:25:31,360
+processing,
+
+523
+00:25:28,640 --> 00:25:34,000
+I'm often asked, well, what's
+
+524
+00:25:31,360 --> 00:25:36,000
+what's your regular time? Um am I taking
+
+525
+00:25:34,000 --> 00:25:38,960
+too long? Am I going too fast through
+
+526
+00:25:36,000 --> 00:25:40,799
+it? And the correct answer is of course,
+
+527
+00:25:38,960 --> 00:25:43,200
+well, it it depends on the kind of
+
+528
+00:25:40,799 --> 00:25:46,400
+literature you're working with. The
+
+529
+00:25:43,200 --> 00:25:49,440
+appropriate amount to spend on writing a
+
+530
+00:25:46,400 --> 00:25:52,320
+literature note is somewhere between a
+
+531
+00:25:49,440 --> 00:25:55,039
+second and a lifetime. I mean there are
+
+532
+00:25:52,320 --> 00:25:58,720
+people who who read the Bible for all
+
+533
+00:25:55,039 --> 00:26:02,799
+their year life and still find new
+
+534
+00:25:58,720 --> 00:26:06,559
+things. And I'm sure Ryan Holidayiday
+
+535
+00:26:02,799 --> 00:26:10,559
+um has read Zenica um more than once
+
+536
+00:26:06,559 --> 00:26:13,600
+because he finds new
+
+537
+00:26:10,559 --> 00:26:16,559
+um angles to it with a different life
+
+538
+00:26:13,600 --> 00:26:19,039
+experience. Um you often have these
+
+539
+00:26:16,559 --> 00:26:21,200
+encounters with ideas where you think,
+
+540
+00:26:19,039 --> 00:26:23,440
+"Yeah, yeah, okay, that's interesting."
+
+541
+00:26:21,200 --> 00:26:27,760
+And a few years later, you open the book
+
+542
+00:26:23,440 --> 00:26:31,039
+again and suddenly it hits you, oh, now
+
+543
+00:26:27,760 --> 00:26:34,720
+I understand. um
+
+544
+00:26:31,039 --> 00:26:38,960
+with my experience now I I see the depth
+
+545
+00:26:34,720 --> 00:26:43,520
+and the relevance of that or you read
+
+546
+00:26:38,960 --> 00:26:46,159
+something and you grasp the idea from
+
+547
+00:26:43,520 --> 00:26:48,720
+page one. It's actually already in the
+
+548
+00:26:46,159 --> 00:26:51,200
+title and the rest of the book is just a
+
+549
+00:26:48,720 --> 00:26:54,400
+variation on the same idea over and over
+
+550
+00:26:51,200 --> 00:26:57,520
+and over again. So you don't need to
+
+551
+00:26:54,400 --> 00:27:04,000
+read it twice. maybe just skim through
+
+552
+00:26:57,520 --> 00:27:06,799
+it all. Um so I think how much time you
+
+553
+00:27:04,000 --> 00:27:10,400
+have to spend on
+
+554
+00:27:06,799 --> 00:27:13,360
+um creating the system, developing it,
+
+555
+00:27:10,400 --> 00:27:15,440
+writing your notes, connecting them
+
+556
+00:27:13,360 --> 00:27:21,120
+really depends on what you're dealing
+
+557
+00:27:15,440 --> 00:27:24,320
+with. And there are some some books I
+
+558
+00:27:21,120 --> 00:27:27,279
+highlight a lot and go through twice
+
+559
+00:27:24,320 --> 00:27:31,919
+because I feel I can't give a proper
+
+560
+00:27:27,279 --> 00:27:34,159
+account on what's in there before I
+
+561
+00:27:31,919 --> 00:27:36,000
+haven't read the the whole bit because
+
+562
+00:27:34,159 --> 00:27:38,480
+some pieces of information only make
+
+563
+00:27:36,000 --> 00:27:40,480
+sense after you know what's in the last
+
+564
+00:27:38,480 --> 00:27:44,240
+chapter and then go back to the
+
+565
+00:27:40,480 --> 00:27:46,000
+beginning. And then there are articles
+
+566
+00:27:44,240 --> 00:27:47,520
+like I said where you have all the
+
+567
+00:27:46,000 --> 00:27:51,200
+information
+
+568
+00:27:47,520 --> 00:27:54,000
+already in the title.
+
+569
+00:27:51,200 --> 00:27:55,679
+>> So it's it's possible to spend as I I
+
+570
+00:27:54,000 --> 00:27:58,159
+love I love what you said, you know, a
+
+571
+00:27:55,679 --> 00:28:01,840
+second to a lifetime in terms of going
+
+572
+00:27:58,159 --> 00:28:04,960
+over a note and thinking about uh a
+
+573
+00:28:01,840 --> 00:28:08,159
+specific idea. And so now we've
+
+574
+00:28:04,960 --> 00:28:10,799
+mentioned a few times like Rome obsidian
+
+575
+00:28:08,159 --> 00:28:13,679
+and I believe you now teach a a course
+
+576
+00:28:10,799 --> 00:28:16,320
+on Obsidian, but before I ask you about
+
+577
+00:28:13,679 --> 00:28:19,120
+that, I'd love to ask you about kind of
+
+578
+00:28:16,320 --> 00:28:22,159
+the most common methods that perhaps
+
+579
+00:28:19,120 --> 00:28:23,760
+people of today can use uh or build a
+
+580
+00:28:22,159 --> 00:28:25,679
+system like this. I think we have
+
+581
+00:28:23,760 --> 00:28:28,399
+popular tools like like notion,
+
+582
+00:28:25,679 --> 00:28:31,200
+Evernotes, Google Docs. I'm wondering is
+
+583
+00:28:28,399 --> 00:28:32,880
+there uh so say besides Obsidian which I
+
+584
+00:28:31,200 --> 00:28:35,840
+suppose is probably looked at is like
+
+585
+00:28:32,880 --> 00:28:38,000
+the the one of the best versions of of
+
+586
+00:28:35,840 --> 00:28:41,279
+the built based specifically on the
+
+587
+00:28:38,000 --> 00:28:43,279
+Zillow caston system. Uh do you see the
+
+588
+00:28:41,279 --> 00:28:45,679
+possibility of using any of these other
+
+589
+00:28:43,279 --> 00:28:48,640
+tools like Evernote, uh notion, Google
+
+590
+00:28:45,679 --> 00:28:50,559
+Docs as being able to build such a
+
+591
+00:28:48,640 --> 00:28:53,440
+system within?
+
+592
+00:28:50,559 --> 00:28:57,120
+>> Well, some people use them and seem to
+
+593
+00:28:53,440 --> 00:29:01,200
+be happy with it. Um I can't imagine
+
+594
+00:28:57,120 --> 00:29:03,919
+myself uh working with
+
+595
+00:29:01,200 --> 00:29:06,640
+apps that are
+
+596
+00:29:03,919 --> 00:29:09,679
+not designed for interconnectedness but
+
+597
+00:29:06,640 --> 00:29:13,520
+where you have to
+
+598
+00:29:09,679 --> 00:29:16,640
+build your own little workarounds and um
+
+599
+00:29:13,520 --> 00:29:20,080
+in the end often they apply a similar
+
+600
+00:29:16,640 --> 00:29:22,000
+system like Luman did where you manually
+
+601
+00:29:20,080 --> 00:29:24,960
+um ID
+
+602
+00:29:22,000 --> 00:29:28,240
+um pieces of information and and link
+
+603
+00:29:24,960 --> 00:29:32,000
+them manually. I feel that distracts me
+
+604
+00:29:28,240 --> 00:29:35,760
+from uh the content. So I'm extremely
+
+605
+00:29:32,000 --> 00:29:41,279
+thankful for um the people who developed
+
+606
+00:29:35,760 --> 00:29:44,279
+Obidian and Rome research just to
+
+607
+00:29:41,279 --> 00:29:44,279
+um
+
+608
+00:29:44,399 --> 00:29:50,080
+push the development of these um note
+
+609
+00:29:47,200 --> 00:29:52,880
+takingaking apps into a new direction.
+
+610
+00:29:50,080 --> 00:30:00,480
+Um, and
+
+611
+00:29:52,880 --> 00:30:05,039
+I feel it um it's almost like you um you
+
+612
+00:30:00,480 --> 00:30:08,640
+take the um foot from the brake and um
+
+613
+00:30:05,039 --> 00:30:10,880
+it's so much smoother when you can link
+
+614
+00:30:08,640 --> 00:30:14,880
+and you have the back link and you don't
+
+615
+00:30:10,880 --> 00:30:16,320
+have to worry about iding and stuff like
+
+616
+00:30:14,880 --> 00:30:20,000
+that.
+
+617
+00:30:16,320 --> 00:30:23,120
+So I feel that there was a big shift um
+
+618
+00:30:20,000 --> 00:30:24,960
+from apps that were mainly designed for
+
+619
+00:30:23,120 --> 00:30:26,960
+collecting information, storing
+
+620
+00:30:24,960 --> 00:30:28,480
+information
+
+621
+00:30:26,960 --> 00:30:30,960
+um
+
+622
+00:30:28,480 --> 00:30:33,919
+folder based
+
+623
+00:30:30,960 --> 00:30:36,399
+um and
+
+624
+00:30:33,919 --> 00:30:39,840
+yeah you can you can certainly do
+
+625
+00:30:36,399 --> 00:30:43,080
+something with them but um
+
+626
+00:30:39,840 --> 00:30:43,080
+I feel
+
+627
+00:30:43,200 --> 00:30:48,480
+there was a breakthrough uh for in the
+
+628
+00:30:45,840 --> 00:30:51,360
+digital I always struggled um because
+
+629
+00:30:48,480 --> 00:30:54,640
+there are some elements of the analog
+
+630
+00:30:51,360 --> 00:30:57,200
+working with pen and paper I I like so
+
+631
+00:30:54,640 --> 00:30:59,840
+much um I still miss them when I work
+
+632
+00:30:57,200 --> 00:31:05,120
+digitally but now with this new
+
+633
+00:30:59,840 --> 00:31:06,640
+generation of apps I feel the advantages
+
+634
+00:31:05,120 --> 00:31:09,640
+um
+
+635
+00:31:06,640 --> 00:31:09,640
+are
+
+636
+00:31:10,640 --> 00:31:16,960
+are so obvious that um the disadvantages
+
+637
+00:31:14,799 --> 00:31:20,080
+of the digital
+
+638
+00:31:16,960 --> 00:31:24,880
+um slightly fade in the into the
+
+639
+00:31:20,080 --> 00:31:26,640
+background. Um you I still miss the
+
+640
+00:31:24,880 --> 00:31:30,080
+spatiality,
+
+641
+00:31:26,640 --> 00:31:32,720
+the haptics of it, the
+
+642
+00:31:30,080 --> 00:31:34,399
+the kind of writing that's really
+
+643
+00:31:32,720 --> 00:31:36,720
+undistracted.
+
+644
+00:31:34,399 --> 00:31:40,559
+Um
+
+645
+00:31:36,720 --> 00:31:43,840
+that you can still do that. Um but it's
+
+646
+00:31:40,559 --> 00:31:46,559
+but it's then outside of the system. Um,
+
+647
+00:31:43,840 --> 00:31:50,000
+yeah.
+
+648
+00:31:46,559 --> 00:31:52,640
+>> Right. And so, Obsidian seems like the
+
+649
+00:31:50,000 --> 00:31:54,880
+like the main feature. Uh, I'm wondering
+
+650
+00:31:52,640 --> 00:31:57,039
+if you can describe kind of your use
+
+651
+00:31:54,880 --> 00:32:00,240
+case or or some of the best cases you've
+
+652
+00:31:57,039 --> 00:32:04,240
+heard from other people in terms of how
+
+653
+00:32:00,240 --> 00:32:07,039
+Obsidian specifically uh is is uh one of
+
+654
+00:32:04,240 --> 00:32:09,039
+the best methods for for helping them to
+
+655
+00:32:07,039 --> 00:32:11,200
+link ideas. C. Can you kind of describe
+
+656
+00:32:09,039 --> 00:32:13,440
+like the the visual mapping feature and
+
+657
+00:32:11,200 --> 00:32:15,760
+kind of what you think really makes
+
+658
+00:32:13,440 --> 00:32:16,559
+Obsidian itself stand out for for the
+
+659
+00:32:15,760 --> 00:32:19,039
+Zettocast system?
+
+660
+00:32:16,559 --> 00:32:22,960
+>> The weird thing is I think the main
+
+661
+00:32:19,039 --> 00:32:26,320
+reason I like Obsidian is
+
+662
+00:32:22,960 --> 00:32:29,279
+really hard to describe. It's um it's
+
+663
+00:32:26,320 --> 00:32:33,039
+just the feeling of being immersed in
+
+664
+00:32:29,279 --> 00:32:36,159
+your thoughts with it. while I used
+
+665
+00:32:33,039 --> 00:32:41,039
+wrong research for a while and I liked
+
+666
+00:32:36,159 --> 00:32:46,080
+it, but I always felt like almost
+
+667
+00:32:41,039 --> 00:32:50,559
+um distant from it. It's almost like I'm
+
+668
+00:32:46,080 --> 00:32:55,600
+outside and looking at my notes
+
+669
+00:32:50,559 --> 00:33:00,960
+and have to apply a more
+
+670
+00:32:55,600 --> 00:33:04,799
+um prefrontal cortex like approach to it
+
+671
+00:33:00,960 --> 00:33:08,559
+all and obsidian
+
+672
+00:33:04,799 --> 00:33:11,919
+um more fades into the background as a
+
+673
+00:33:08,559 --> 00:33:15,519
+tool and I feel much more immersed in
+
+674
+00:33:11,919 --> 00:33:20,480
+thoughts. So my my theory is it's
+
+675
+00:33:15,519 --> 00:33:25,039
+because it allows you to use your screen
+
+676
+00:33:20,480 --> 00:33:29,840
+better by having multiple notes open by
+
+677
+00:33:25,039 --> 00:33:32,799
+stacking them by um going more quickly
+
+678
+00:33:29,840 --> 00:33:37,840
+through different notes
+
+679
+00:33:32,799 --> 00:33:39,840
+um and thereby having some kind of
+
+680
+00:33:37,840 --> 00:33:41,760
+orientation.
+
+681
+00:33:39,840 --> 00:33:45,840
+Um
+
+682
+00:33:41,760 --> 00:33:48,000
+and the way I teach the title of
+
+683
+00:33:45,840 --> 00:33:51,760
+customers obsidian
+
+684
+00:33:48,000 --> 00:33:56,559
+very much tries to
+
+685
+00:33:51,760 --> 00:33:59,279
+focus on building that kind of
+
+686
+00:33:56,559 --> 00:34:02,559
+experience of having an orientation
+
+687
+00:33:59,279 --> 00:34:05,360
+within your notes despite of the chances
+
+688
+00:34:02,559 --> 00:34:09,119
+to stumbling upon something.
+
+689
+00:34:05,360 --> 00:34:11,280
+um to get as close as possible to the
+
+690
+00:34:09,119 --> 00:34:13,440
+original set of customer experience with
+
+691
+00:34:11,280 --> 00:34:15,040
+pen and paper.
+
+692
+00:34:13,440 --> 00:34:18,639
+And
+
+693
+00:34:15,040 --> 00:34:20,639
+>> that needs some
+
+694
+00:34:18,639 --> 00:34:22,320
+structure
+
+695
+00:34:20,639 --> 00:34:26,800
+that
+
+696
+00:34:22,320 --> 00:34:32,960
+um took me a while to figure out. So
+
+697
+00:34:26,800 --> 00:34:37,520
+Obsidian is not a tool you can open and
+
+698
+00:34:32,960 --> 00:34:41,760
+just use. Its
+
+699
+00:34:37,520 --> 00:34:46,000
+main advantage is at the same time its
+
+700
+00:34:41,760 --> 00:34:48,639
+biggest risk. You can
+
+701
+00:34:46,000 --> 00:34:51,520
+do almost anything with it and you can
+
+702
+00:34:48,639 --> 00:34:54,720
+use it in all kinds of ways
+
+703
+00:34:51,520 --> 00:34:58,480
+and if you don't
+
+704
+00:34:54,720 --> 00:35:00,400
+have figured out a good structure um
+
+705
+00:34:58,480 --> 00:35:05,920
+you're lost.
+
+706
+00:35:00,400 --> 00:35:08,720
+And so what I try to um provide is the
+
+707
+00:35:05,920 --> 00:35:13,040
+experience-based structure that then
+
+708
+00:35:08,720 --> 00:35:16,160
+allows you to quickly u focus on your
+
+709
+00:35:13,040 --> 00:35:19,200
+thoughts instead of thinking too much
+
+710
+00:35:16,160 --> 00:35:22,320
+about how to set it up, how to structure
+
+711
+00:35:19,200 --> 00:35:24,640
+it. And
+
+712
+00:35:22,320 --> 00:35:26,320
+for some it goes a little bit against
+
+713
+00:35:24,640 --> 00:35:29,040
+the
+
+714
+00:35:26,320 --> 00:35:33,119
+bottom up approach of the set of custom
+
+715
+00:35:29,040 --> 00:35:36,720
+where you develop structure from uh from
+
+716
+00:35:33,119 --> 00:35:39,200
+the bottom up and you collect nodes see
+
+717
+00:35:36,720 --> 00:35:42,720
+how they fit together and then figure
+
+718
+00:35:39,200 --> 00:35:45,760
+out okay what's the structure here um
+
+719
+00:35:42,720 --> 00:35:48,320
+how do these things belong together
+
+720
+00:35:45,760 --> 00:35:51,520
+because you you already start with some
+
+721
+00:35:48,320 --> 00:35:53,920
+kind of hierarchy top down,
+
+722
+00:35:51,520 --> 00:35:56,079
+but it doesn't
+
+723
+00:35:53,920 --> 00:35:58,880
+um
+
+724
+00:35:56,079 --> 00:36:02,240
+hardwire anything into this system. You
+
+725
+00:35:58,880 --> 00:36:06,800
+can always change the structure
+
+726
+00:36:02,240 --> 00:36:09,119
+when your thinking changes because in a
+
+727
+00:36:06,800 --> 00:36:11,680
+way the way we think about things is the
+
+728
+00:36:09,119 --> 00:36:13,920
+way we structure things. So it it needs
+
+729
+00:36:11,680 --> 00:36:17,920
+to change something that couldn't be
+
+730
+00:36:13,920 --> 00:36:20,320
+done with a classical folder structure.
+
+731
+00:36:17,920 --> 00:36:24,880
+Um but I think it's justified because
+
+732
+00:36:20,320 --> 00:36:26,800
+when people start with
+
+733
+00:36:24,880 --> 00:36:29,520
+cast and obsidian
+
+734
+00:36:26,800 --> 00:36:31,520
+they don't start from scratch. Um you
+
+735
+00:36:29,520 --> 00:36:33,599
+don't have to pretend you know nothing.
+
+736
+00:36:31,520 --> 00:36:37,119
+You don't structure your thoughts. Um
+
+737
+00:36:33,599 --> 00:36:40,240
+you have to build it first. We always
+
+738
+00:36:37,119 --> 00:36:42,720
+already have an idea how we structure
+
+739
+00:36:40,240 --> 00:36:45,280
+things. Um we have different areas of
+
+740
+00:36:42,720 --> 00:36:46,880
+interest or different areas of
+
+741
+00:36:45,280 --> 00:36:50,320
+responsibility.
+
+742
+00:36:46,880 --> 00:36:53,119
+we um have different questions. So it
+
+743
+00:36:50,320 --> 00:36:57,040
+makes sense to start at the beginning to
+
+744
+00:36:53,119 --> 00:37:03,599
+make this structure explicit.
+
+745
+00:36:57,040 --> 00:37:09,599
+Uh use it as the scaffold you can then
+
+746
+00:37:03,599 --> 00:37:15,760
+add new ideas onto and change it when it
+
+747
+00:37:09,599 --> 00:37:19,359
+needs changing. Um and this structure
+
+748
+00:37:15,760 --> 00:37:22,160
+is something that
+
+749
+00:37:19,359 --> 00:37:27,520
+in my opinion
+
+750
+00:37:22,160 --> 00:37:30,960
+um is to some degree an alternative to
+
+751
+00:37:27,520 --> 00:37:32,880
+the haptic orientation you have with the
+
+752
+00:37:30,960 --> 00:37:35,680
+analog set.
+
+753
+00:37:32,880 --> 00:37:41,119
+So in the analog set you always knew
+
+754
+00:37:35,680 --> 00:37:45,200
+okay um my my notes on on writing and
+
+755
+00:37:41,119 --> 00:37:49,359
+thinking are somewhere on the left
+
+756
+00:37:45,200 --> 00:37:52,240
+bottom drawer and um I kind of know how
+
+757
+00:37:49,359 --> 00:37:56,400
+the notes feel because of
+
+758
+00:37:52,240 --> 00:37:59,520
+um used them so often or you know it was
+
+759
+00:37:56,400 --> 00:38:02,480
+a beloved burke you you kind of know
+
+760
+00:37:59,520 --> 00:38:06,400
+where the things are. um you don't have
+
+761
+00:38:02,480 --> 00:38:09,200
+that in the digital form but you have
+
+762
+00:38:06,400 --> 00:38:11,599
+other means of orientation
+
+763
+00:38:09,200 --> 00:38:14,560
+uh within obsidian.
+
+764
+00:38:11,599 --> 00:38:16,880
+Some of them are built in
+
+765
+00:38:14,560 --> 00:38:20,000
+but
+
+766
+00:38:16,880 --> 00:38:23,839
+most of them you need to create yourself
+
+767
+00:38:20,000 --> 00:38:27,520
+or use um a preconfigured
+
+768
+00:38:23,839 --> 00:38:30,720
+uh structure you can then tweak and
+
+769
+00:38:27,520 --> 00:38:33,760
+adjust to your own needs. Um I think
+
+770
+00:38:30,720 --> 00:38:38,160
+that's that's the challenge of these
+
+771
+00:38:33,760 --> 00:38:43,040
+ingenious uh apps that they are so open
+
+772
+00:38:38,160 --> 00:38:47,760
+uh that at the same time you need to
+
+773
+00:38:43,040 --> 00:38:49,040
+restrict uh the openness again with your
+
+774
+00:38:47,760 --> 00:38:52,240
+own
+
+775
+00:38:49,040 --> 00:38:54,800
+>> ideas. Yeah.
+
+776
+00:38:52,240 --> 00:38:57,599
+>> Yeah. I I think one way of looking at it
+
+777
+00:38:54,800 --> 00:39:00,079
+perhaps is that Obsidian itself provides
+
+778
+00:38:57,599 --> 00:39:02,000
+kind of the foundation but then you need
+
+779
+00:39:00,079 --> 00:39:03,440
+to be the architect and decide you know
+
+780
+00:39:02,000 --> 00:39:06,880
+how are you going to build on that
+
+781
+00:39:03,440 --> 00:39:08,880
+foundation and I know I I first time I
+
+782
+00:39:06,880 --> 00:39:11,680
+tried to use Obsidian I was completely
+
+783
+00:39:08,880 --> 00:39:13,839
+overwhelmed and I I was like this is way
+
+784
+00:39:11,680 --> 00:39:16,400
+too much for me because you have to
+
+785
+00:39:13,839 --> 00:39:18,560
+approach it um it's not it's not like a
+
+786
+00:39:16,400 --> 00:39:20,240
+tool like Evernote or Google Docs where
+
+787
+00:39:18,560 --> 00:39:21,920
+everything is kind of laid out and it's
+
+788
+00:39:20,240 --> 00:39:24,640
+like if you you you know that you're
+
+789
+00:39:21,920 --> 00:39:27,200
+going to put a note into a folder and or
+
+790
+00:39:24,640 --> 00:39:29,040
+a notebook and that's that's they they
+
+791
+00:39:27,200 --> 00:39:31,040
+provide the structure you know they are
+
+792
+00:39:29,040 --> 00:39:33,200
+the architects of that system and when
+
+793
+00:39:31,040 --> 00:39:35,520
+it comes to the is having a zilloccast
+
+794
+00:39:33,200 --> 00:39:37,520
+system whether you're using an analog or
+
+795
+00:39:35,520 --> 00:39:40,240
+a software version is that you are still
+
+796
+00:39:37,520 --> 00:39:42,400
+having to develop the structure of how
+
+797
+00:39:40,240 --> 00:39:44,400
+you are storing this information and now
+
+798
+00:39:42,400 --> 00:39:46,079
+I think Obsidian and Rome you know they
+
+799
+00:39:44,400 --> 00:39:47,920
+they try to take some of that out
+
+800
+00:39:46,079 --> 00:39:50,160
+because I think what allows them to be
+
+801
+00:39:47,920 --> 00:39:51,920
+so popular is their kind of intuitive
+
+802
+00:39:50,160 --> 00:39:54,400
+kind of visual linking it's like
+
+803
+00:39:51,920 --> 00:39:56,480
+birectional linking system where where
+
+804
+00:39:54,400 --> 00:39:58,800
+you can create these these links that go
+
+805
+00:39:56,480 --> 00:40:01,520
+between your notes back and forth. And I
+
+806
+00:39:58,800 --> 00:40:04,240
+love the the mind mapping functionality.
+
+807
+00:40:01,520 --> 00:40:06,160
+And I think a tool a tool like this is
+
+808
+00:40:04,240 --> 00:40:08,960
+probably the closest that we can get to
+
+809
+00:40:06,160 --> 00:40:11,040
+right now of having an interior view of
+
+810
+00:40:08,960 --> 00:40:13,520
+of your brain. And I think that that's
+
+811
+00:40:11,040 --> 00:40:16,000
+why it resonates so so much with so many
+
+812
+00:40:13,520 --> 00:40:18,960
+people because it's the the way that the
+
+813
+00:40:16,000 --> 00:40:21,760
+structure is oriented is closer to how
+
+814
+00:40:18,960 --> 00:40:24,000
+we think than I think any other other
+
+815
+00:40:21,760 --> 00:40:26,320
+method that has you know that we've
+
+816
+00:40:24,000 --> 00:40:28,880
+thought of up until now. And so that's
+
+817
+00:40:26,320 --> 00:40:31,440
+why I love when you say that Obsidian it
+
+818
+00:40:28,880 --> 00:40:33,599
+feels like you're you're viewing into
+
+819
+00:40:31,440 --> 00:40:35,839
+your brain in a way. Um, and that's
+
+820
+00:40:33,599 --> 00:40:38,720
+that's if you maintain it and if you're
+
+821
+00:40:35,839 --> 00:40:40,480
+not kind of uh taken a back and just
+
+822
+00:40:38,720 --> 00:40:42,400
+decide to to look elsewhere because you
+
+823
+00:40:40,480 --> 00:40:43,839
+just feel so overwhelmed. And I suppose
+
+824
+00:40:42,400 --> 00:40:45,760
+that's kind of what your course is
+
+825
+00:40:43,839 --> 00:40:47,440
+about, right? C, can you kind of explain
+
+826
+00:40:45,760 --> 00:40:49,520
+explain a little bit about your your
+
+827
+00:40:47,440 --> 00:40:52,160
+course uh what you teach and who you
+
+828
+00:40:49,520 --> 00:40:56,160
+think uh should consider uh signing up?
+
+829
+00:40:52,160 --> 00:40:59,359
+Yeah, I mean first of all the I I agree
+
+830
+00:40:56,160 --> 00:41:03,839
+that um
+
+831
+00:40:59,359 --> 00:41:07,280
+it it is the closest maybe to the way we
+
+832
+00:41:03,839 --> 00:41:10,240
+structure internally. So it is like a
+
+833
+00:41:07,280 --> 00:41:13,040
+second brain but I see it more as a
+
+834
+00:41:10,240 --> 00:41:15,599
+dialogue partner and that's how the
+
+835
+00:41:13,040 --> 00:41:19,839
+course is designed to
+
+836
+00:41:15,599 --> 00:41:23,520
+um build a dialogue partner along the
+
+837
+00:41:19,839 --> 00:41:26,880
+way. Um, and I I like the metaphor of
+
+838
+00:41:23,520 --> 00:41:29,760
+the dialogue partner better than the
+
+839
+00:41:26,880 --> 00:41:32,079
+second brain metaphor because the second
+
+840
+00:41:29,760 --> 00:41:34,160
+brain metaphor
+
+841
+00:41:32,079 --> 00:41:37,839
+um,
+
+842
+00:41:34,160 --> 00:41:41,200
+it insinuates you you look at yourself.
+
+843
+00:41:37,839 --> 00:41:43,119
+But when I interact with my subtle cast,
+
+844
+00:41:41,200 --> 00:41:45,760
+I don't feel like I'm interacting with
+
+845
+00:41:43,119 --> 00:41:50,560
+myself. like I feel like I'm interacting
+
+846
+00:41:45,760 --> 00:41:56,480
+with a different entity that challenges
+
+847
+00:41:50,560 --> 00:42:00,720
+me with information I I I don't remember
+
+848
+00:41:56,480 --> 00:42:04,240
+and or I remember in the moment um I'm
+
+849
+00:42:00,720 --> 00:42:06,800
+confronted with it. Uh but these moments
+
+850
+00:42:04,240 --> 00:42:09,520
+of oh um I think you forgot something
+
+851
+00:42:06,800 --> 00:42:11,680
+here or um you have written about that
+
+852
+00:42:09,520 --> 00:42:15,280
+before and in a slightly different way
+
+853
+00:42:11,680 --> 00:42:17,839
+or I'd take a literature note and um
+
+854
+00:42:15,280 --> 00:42:20,000
+look up a reference in a paper and say
+
+855
+00:42:17,839 --> 00:42:23,359
+well I don't understand it like that. So
+
+856
+00:42:20,000 --> 00:42:26,160
+the authors um I think they got it wrong
+
+857
+00:42:23,359 --> 00:42:27,760
+and so
+
+858
+00:42:26,160 --> 00:42:31,680
+yeah so it's more like a dialogue
+
+859
+00:42:27,760 --> 00:42:34,079
+partner and in the course um I provide
+
+860
+00:42:31,680 --> 00:42:37,440
+the structure
+
+861
+00:42:34,079 --> 00:42:40,720
+um so to not have this overwhelming
+
+862
+00:42:37,440 --> 00:42:44,880
+feeling of oh everything goes
+
+863
+00:42:40,720 --> 00:42:48,000
+um but okay um
+
+864
+00:42:44,880 --> 00:42:49,920
+here you have your daily note section
+
+865
+00:42:48,000 --> 00:42:51,839
+you can use that for fleeting notes.
+
+866
+00:42:49,920 --> 00:42:55,359
+When you have an idea that pops into
+
+867
+00:42:51,839 --> 00:42:58,079
+your hatch, just write it down. Um you
+
+868
+00:42:55,359 --> 00:43:01,280
+can connect it with projects or
+
+869
+00:42:58,079 --> 00:43:05,200
+questions you already tackling.
+
+870
+00:43:01,280 --> 00:43:09,280
+Um so it comes with uh the preconfigured
+
+871
+00:43:05,200 --> 00:43:12,319
+um vault with folders which are not
+
+872
+00:43:09,280 --> 00:43:16,960
+topic folders um but are functional
+
+873
+00:43:12,319 --> 00:43:19,920
+folders. Um it comes with a selection of
+
+874
+00:43:16,960 --> 00:43:24,400
+tags which are useful. It comes with a
+
+875
+00:43:19,920 --> 00:43:27,359
+selection of queries that allow you to
+
+876
+00:43:24,400 --> 00:43:29,040
+present yourself open loops, open
+
+877
+00:43:27,359 --> 00:43:31,520
+questions
+
+878
+00:43:29,040 --> 00:43:33,760
+in the morning when you open Obsidian
+
+879
+00:43:31,520 --> 00:43:37,680
+and you know, oh, I can continue working
+
+880
+00:43:33,760 --> 00:43:43,280
+there. Um, but I don't think that any of
+
+881
+00:43:37,680 --> 00:43:48,800
+that would be much of much use if you
+
+882
+00:43:43,280 --> 00:43:50,800
+don't get the explanation um why the
+
+883
+00:43:48,800 --> 00:43:53,280
+folders are there, why the tags are
+
+884
+00:43:50,800 --> 00:43:54,880
+there, what the function is, how it
+
+885
+00:43:53,280 --> 00:44:00,400
+interconnects.
+
+886
+00:43:54,880 --> 00:44:05,359
+So I hope with the course to explain um
+
+887
+00:44:00,400 --> 00:44:09,200
+how you can quickly build a habit a
+
+888
+00:44:05,359 --> 00:44:12,800
+routine of daily writing
+
+889
+00:44:09,200 --> 00:44:16,000
+into this structure and then adjust it
+
+890
+00:44:12,800 --> 00:44:18,640
+to your needs. Um, and it seems like
+
+891
+00:44:16,000 --> 00:44:23,760
+most people just go with the structure
+
+892
+00:44:18,640 --> 00:44:27,440
+as it is and are able to use it for
+
+893
+00:44:23,760 --> 00:44:29,520
+academic writing, but also for
+
+894
+00:44:27,440 --> 00:44:32,000
+um
+
+895
+00:44:29,520 --> 00:44:36,000
+more
+
+896
+00:44:32,000 --> 00:44:38,160
+looking things up, um, keeping track of
+
+897
+00:44:36,000 --> 00:44:41,920
+projects,
+
+898
+00:44:38,160 --> 00:44:44,800
+um, and having information readily
+
+899
+00:44:41,920 --> 00:44:49,359
+available. Um
+
+900
+00:44:44,800 --> 00:44:54,880
+yeah, so I think it's a lot about um
+
+901
+00:44:49,359 --> 00:44:59,599
+skipping this long process of
+
+902
+00:44:54,880 --> 00:45:03,359
+figuring stuff out um trying to
+
+903
+00:44:59,599 --> 00:45:07,040
+um conserve the advantages of the
+
+904
+00:45:03,359 --> 00:45:08,960
+original set casten in digital form
+
+905
+00:45:07,040 --> 00:45:11,200
+um
+
+906
+00:45:08,960 --> 00:45:14,160
+that
+
+907
+00:45:11,200 --> 00:45:17,200
+the students or users ers don't have to
+
+908
+00:45:14,160 --> 00:45:22,960
+go through this long iteration process
+
+909
+00:45:17,200 --> 00:45:25,359
+of um developing a structure that works
+
+910
+00:45:22,960 --> 00:45:29,359
+not just in the beginning but in the
+
+911
+00:45:25,359 --> 00:45:32,160
+long term. So I have thousand of notes.
+
+912
+00:45:29,359 --> 00:45:34,720
+It's pretty complex.
+
+913
+00:45:32,160 --> 00:45:40,400
+And
+
+914
+00:45:34,720 --> 00:45:43,359
+some some things I only realized
+
+915
+00:45:40,400 --> 00:45:47,280
+after I went through this threshold of
+
+916
+00:45:43,359 --> 00:45:50,000
+10 or 20,000 individual notes where you
+
+917
+00:45:47,280 --> 00:45:52,079
+realize, oh,
+
+918
+00:45:50,000 --> 00:45:57,200
+you you need to deal with this
+
+919
+00:45:52,079 --> 00:45:59,119
+complexity in a way. um that
+
+920
+00:45:57,200 --> 00:46:02,319
+would have been so much easier if I knew
+
+921
+00:45:59,119 --> 00:46:06,079
+that in the beginning. Um so I think
+
+922
+00:46:02,319 --> 00:46:12,359
+that's that's what I hope to achieve
+
+923
+00:46:06,079 --> 00:46:12,359
+with with this um with this course,
+
+924
+00:46:12,880 --> 00:46:17,920
+>> right? And I think you've said before
+
+925
+00:46:15,760 --> 00:46:20,960
+that the moment you stop treating notes
+
+926
+00:46:17,920 --> 00:46:23,680
+as just storage and start seeing them as
+
+927
+00:46:20,960 --> 00:46:25,359
+dialogue, your your thinking shifts. And
+
+928
+00:46:23,680 --> 00:46:27,680
+I think that's that's the powerful
+
+929
+00:46:25,359 --> 00:46:30,560
+component of uh having a system like
+
+930
+00:46:27,680 --> 00:46:32,720
+this. It's not necessarily something for
+
+931
+00:46:30,560 --> 00:46:36,079
+everybody. It's not necessarily
+
+932
+00:46:32,720 --> 00:46:38,240
+something that's easy to to set up um or
+
+933
+00:46:36,079 --> 00:46:40,720
+even maintain because it requires
+
+934
+00:46:38,240 --> 00:46:44,240
+constant effort. You have to have a
+
+935
+00:46:40,720 --> 00:46:47,280
+habit of regularly creating notes that
+
+936
+00:46:44,240 --> 00:46:50,079
+are not just notes in terms of quantity
+
+937
+00:46:47,280 --> 00:46:52,560
+but in in terms of quality and having
+
+938
+00:46:50,079 --> 00:46:55,119
+some kind of sufficient method or
+
+939
+00:46:52,560 --> 00:46:57,760
+routine where you are frequently using
+
+940
+00:46:55,119 --> 00:47:00,480
+this system and that's the only way that
+
+941
+00:46:57,760 --> 00:47:03,119
+your brain is going to trust this system
+
+942
+00:47:00,480 --> 00:47:06,240
+to maintain a certain set of outside
+
+943
+00:47:03,119 --> 00:47:08,160
+knowledge that you will be more likely
+
+944
+00:47:06,240 --> 00:47:10,720
+to reference. because I've made the
+
+945
+00:47:08,160 --> 00:47:12,560
+mistake of having say an Evernote system
+
+946
+00:47:10,720 --> 00:47:14,880
+that I tried to build on Thiago
+
+947
+00:47:12,560 --> 00:47:17,839
+Thiagoforte's par method. We have
+
+948
+00:47:14,880 --> 00:47:20,560
+projects, areas, resources, archives and
+
+949
+00:47:17,839 --> 00:47:23,200
+then I end up just forgetting that it's
+
+950
+00:47:20,560 --> 00:47:25,359
+there. And my first default if I need
+
+951
+00:47:23,200 --> 00:47:28,160
+information on a subject was to go to
+
+952
+00:47:25,359 --> 00:47:30,400
+Google or now it's just to go and create
+
+953
+00:47:28,160 --> 00:47:33,599
+like a a deep research query inside of
+
+954
+00:47:30,400 --> 00:47:36,160
+chat GPT and I I haven't necessarily
+
+955
+00:47:33,599 --> 00:47:38,640
+created a habit of let me look at my
+
+956
+00:47:36,160 --> 00:47:40,880
+notes first and see what I've read
+
+957
+00:47:38,640 --> 00:47:43,440
+previously, what thoughts I've created.
+
+958
+00:47:40,880 --> 00:47:46,160
+It's so easy to just kind of have your
+
+959
+00:47:43,440 --> 00:47:48,800
+thinking shift to extern externally
+
+960
+00:47:46,160 --> 00:47:50,640
+looking for it instead of intrinsically
+
+961
+00:47:48,800 --> 00:47:51,920
+seeing what you already have because
+
+962
+00:47:50,640 --> 00:47:53,359
+there's a good chance that you're going
+
+963
+00:47:51,920 --> 00:47:56,160
+to have some golden nuggets in there
+
+964
+00:47:53,359 --> 00:47:59,680
+that you haven't thought of before.
+
+965
+00:47:56,160 --> 00:48:05,200
+>> I totally agree. It's not for everyone.
+
+966
+00:47:59,680 --> 00:48:08,240
+Um, I think anyone who expect to be as
+
+967
+00:48:05,200 --> 00:48:11,599
+proficient as Lumen and suddenly start
+
+968
+00:48:08,240 --> 00:48:15,760
+uh creating an output of a few articles
+
+969
+00:48:11,599 --> 00:48:18,760
+a month um will be disappointed um
+
+970
+00:48:15,760 --> 00:48:18,760
+because
+
+971
+00:48:18,880 --> 00:48:25,839
+you still need to read,
+
+972
+00:48:22,800 --> 00:48:30,079
+think, write
+
+973
+00:48:25,839 --> 00:48:32,960
+and have the discipline to
+
+974
+00:48:30,079 --> 00:48:37,040
+um
+
+975
+00:48:32,960 --> 00:48:40,160
+have a routine of um practicing all
+
+976
+00:48:37,040 --> 00:48:44,079
+these things.
+
+977
+00:48:40,160 --> 00:48:48,960
+If you think and take thinking
+
+978
+00:48:44,079 --> 00:48:52,160
+seriously, if you read things not just
+
+979
+00:48:48,960 --> 00:48:54,720
+for the joy of reading but with the
+
+980
+00:48:52,160 --> 00:49:00,240
+intention of using the information and
+
+981
+00:48:54,720 --> 00:49:02,880
+using the ideas and challenges um a book
+
+982
+00:49:00,240 --> 00:49:05,200
+or article provides
+
+983
+00:49:02,880 --> 00:49:08,640
+to
+
+984
+00:49:05,200 --> 00:49:12,880
+challenge your own thinking, your way of
+
+985
+00:49:08,640 --> 00:49:17,280
+um looking at the world if if that is
+
+986
+00:49:12,880 --> 00:49:21,280
+your goal, regardless of the output
+
+987
+00:49:17,280 --> 00:49:23,839
+you're aiming for, I think
+
+988
+00:49:21,280 --> 00:49:26,400
+it's a method that can work for all
+
+989
+00:49:23,839 --> 00:49:28,000
+kinds of different people. Uh you don't
+
+990
+00:49:26,400 --> 00:49:32,480
+have to be an academic. You don't have
+
+991
+00:49:28,000 --> 00:49:34,480
+to um have the aim of writing. I think
+
+992
+00:49:32,480 --> 00:49:36,319
+the
+
+993
+00:49:34,480 --> 00:49:40,240
+common
+
+994
+00:49:36,319 --> 00:49:43,520
+advantage is that it allows you to
+
+995
+00:49:40,240 --> 00:49:46,720
+challenge your own thinking and it's so
+
+996
+00:49:43,520 --> 00:49:50,079
+much easier to change your thinking when
+
+997
+00:49:46,720 --> 00:49:53,280
+you have it externalized first. When you
+
+998
+00:49:50,079 --> 00:49:56,559
+look at your thoughts in writing, it's
+
+999
+00:49:53,280 --> 00:50:00,160
+so so much easier to detect the flaws in
+
+1000
+00:49:56,559 --> 00:50:03,040
+that or contradictions between two
+
+1001
+00:50:00,160 --> 00:50:05,760
+pieces of uh information you have
+
+1002
+00:50:03,040 --> 00:50:08,319
+written down. You you just detect that
+
+1003
+00:50:05,760 --> 00:50:10,079
+when you look at it. But it's if it's
+
+1004
+00:50:08,319 --> 00:50:12,559
+only in your brain, if you read
+
+1005
+00:50:10,079 --> 00:50:14,480
+something and you think, "Yeah, okay,
+
+1006
+00:50:12,559 --> 00:50:16,079
+that's that's interesting." And then you
+
+1007
+00:50:14,480 --> 00:50:18,400
+read the next bit and you think, "Yeah,
+
+1008
+00:50:16,079 --> 00:50:21,119
+okay, that convinced me as well." you
+
+1009
+00:50:18,400 --> 00:50:26,319
+don't even realize that these two things
+
+1010
+00:50:21,119 --> 00:50:29,200
+don't fit together. So that that is what
+
+1011
+00:50:26,319 --> 00:50:30,640
+it makes it interesting to me. I think
+
+1012
+00:50:29,200 --> 00:50:33,119
+that's what makes it relevant for
+
+1013
+00:50:30,640 --> 00:50:37,200
+writers because if you want to write
+
+1014
+00:50:33,119 --> 00:50:40,480
+something original, you need to
+
+1015
+00:50:37,200 --> 00:50:43,760
+come up with something new, interesting,
+
+1016
+00:50:40,480 --> 00:50:45,359
+a new angle. You need to
+
+1017
+00:50:43,760 --> 00:50:48,319
+um
+
+1018
+00:50:45,359 --> 00:50:50,640
+let ideas
+
+1019
+00:50:48,319 --> 00:50:54,240
+um
+
+1020
+00:50:50,640 --> 00:50:57,200
+be enriched through your own experience.
+
+1021
+00:50:54,240 --> 00:51:01,119
+Just taking something from CHP and
+
+1022
+00:50:57,200 --> 00:51:03,359
+putting it on paper. Um people will see
+
+1023
+00:51:01,119 --> 00:51:05,359
+that it is not enriched by your
+
+1024
+00:51:03,359 --> 00:51:08,400
+experience. There is a difference
+
+1025
+00:51:05,359 --> 00:51:13,440
+between here's a piece of information. I
+
+1026
+00:51:08,400 --> 00:51:16,319
+know this is true and that is true and
+
+1027
+00:51:13,440 --> 00:51:19,359
+being able to express the relevance of
+
+1028
+00:51:16,319 --> 00:51:22,319
+something and that needs a human
+
+1029
+00:51:19,359 --> 00:51:26,640
+intervention and the settle casten
+
+1030
+00:51:22,319 --> 00:51:29,599
+expands this personal space and uses the
+
+1031
+00:51:26,640 --> 00:51:31,520
+advantage of externalization
+
+1032
+00:51:29,599 --> 00:51:35,599
+to
+
+1033
+00:51:31,520 --> 00:51:38,400
+modify to develop and in in a way to
+
+1034
+00:51:35,599 --> 00:51:42,240
+mature your own thinking.
+
+1035
+00:51:38,400 --> 00:51:46,480
+Um, so I agree it's not for everyone,
+
+1036
+00:51:42,240 --> 00:51:48,319
+but I also think it's it doesn't need to
+
+1037
+00:51:46,480 --> 00:51:52,800
+be this
+
+1038
+00:51:48,319 --> 00:51:57,760
+academic tool that needs attention all
+
+1039
+00:51:52,800 --> 00:52:00,160
+the time. For me actually um that might
+
+1040
+00:51:57,760 --> 00:52:02,880
+surprise you. There are long streaks
+
+1041
+00:52:00,160 --> 00:52:06,800
+where I don't open my settle custom at
+
+1042
+00:52:02,880 --> 00:52:13,040
+all. Um because I'm in the middle of
+
+1043
+00:52:06,800 --> 00:52:15,119
+finishing the online course and have um
+
+1044
+00:52:13,040 --> 00:52:20,000
+organizational things to do. I need to
+
+1045
+00:52:15,119 --> 00:52:22,960
+call people. I I go on podcast. Um
+
+1046
+00:52:20,000 --> 00:52:25,359
+so it's on the back burner. I I'm I
+
+1047
+00:52:22,960 --> 00:52:27,040
+didn't start this day with opening my
+
+1048
+00:52:25,359 --> 00:52:29,520
+subtle custom. Now actually I did
+
+1049
+00:52:27,040 --> 00:52:33,680
+because I for preparation of the podcast
+
+1050
+00:52:29,520 --> 00:52:36,240
+I I I of course looked into it. Um but
+
+1051
+00:52:33,680 --> 00:52:39,839
+but there are long periods where I don't
+
+1052
+00:52:36,240 --> 00:52:42,640
+look at it and
+
+1053
+00:52:39,839 --> 00:52:47,760
+at the same time whenever I have a
+
+1054
+00:52:42,640 --> 00:52:50,480
+sudden idea and I think that's relevant.
+
+1055
+00:52:47,760 --> 00:52:54,960
+I I wouldn't know where to put it if not
+
+1056
+00:52:50,480 --> 00:52:57,599
+into my telecast. Um, if I just put it
+
+1057
+00:52:54,960 --> 00:53:01,680
+somewhere on paper, it it would be lost.
+
+1058
+00:52:57,599 --> 00:53:03,920
+Um, it can be an in between step, but I
+
+1059
+00:53:01,680 --> 00:53:06,800
+need to know it goes there, but because
+
+1060
+00:53:03,920 --> 00:53:10,000
+that's the only place where it can make
+
+1061
+00:53:06,800 --> 00:53:13,599
+an actual difference. Um, so it allows
+
+1062
+00:53:10,000 --> 00:53:19,319
+me to pick up um where I left it, even
+
+1063
+00:53:13,599 --> 00:53:19,319
+if I left it a couple of weeks ago. Um,
+
+1064
+00:53:19,599 --> 00:53:26,960
+I don't know if routine is overrated.
+
+1065
+00:53:22,720 --> 00:53:29,680
+Um, to me, having a daily routine is
+
+1066
+00:53:26,960 --> 00:53:32,960
+often something I
+
+1067
+00:53:29,680 --> 00:53:35,599
+I I really like the idea of, but in
+
+1068
+00:53:32,960 --> 00:53:38,640
+reality, it it it often doesn't work.
+
+1069
+00:53:35,599 --> 00:53:41,359
+I'm I'm I'm on the train and can't have
+
+1070
+00:53:38,640 --> 00:53:42,960
+only my morning routine at my desk.
+
+1071
+00:53:41,359 --> 00:53:45,599
+sometimes
+
+1072
+00:53:42,960 --> 00:53:51,520
+uh it's too noisy at home and I'm at the
+
+1073
+00:53:45,599 --> 00:53:55,440
+office. Um so in in reality
+
+1074
+00:53:51,520 --> 00:53:58,960
+in my life at least I I don't have such
+
+1075
+00:53:55,440 --> 00:54:03,440
+a daily routine uh even though it it
+
+1076
+00:53:58,960 --> 00:54:05,920
+always sounds great. Um but I'm glad I
+
+1077
+00:54:03,440 --> 00:54:08,319
+have a system which provides me with a
+
+1078
+00:54:05,920 --> 00:54:12,559
+kind of structure that allows me to pick
+
+1079
+00:54:08,319 --> 00:54:16,880
+up um where I left it. um continue to
+
+1080
+00:54:12,559 --> 00:54:20,079
+work with a project and sometimes leave
+
+1081
+00:54:16,880 --> 00:54:22,640
+a project for a while, develop another
+
+1082
+00:54:20,079 --> 00:54:26,800
+one further because
+
+1083
+00:54:22,640 --> 00:54:29,359
+I'm easily bored and um want to switch,
+
+1084
+00:54:26,800 --> 00:54:32,640
+which is maybe a reason a lot of people
+
+1085
+00:54:29,359 --> 00:54:35,440
+with ADHD um seem to like the system a
+
+1086
+00:54:32,640 --> 00:54:39,680
+lot. Um
+
+1087
+00:54:35,440 --> 00:54:41,520
+but yeah, that's um the long answer to
+
+1088
+00:54:39,680 --> 00:54:45,760
+um
+
+1089
+00:54:41,520 --> 00:54:49,480
+to to the problem of um who's it for and
+
+1090
+00:54:45,760 --> 00:54:49,480
+who's it not for.
+
+1091
+00:54:49,599 --> 00:54:54,480
+>> Yeah. And perhaps having a routine isn't
+
+1092
+00:54:51,680 --> 00:54:57,599
+necessary as long as you have the the
+
+1093
+00:54:54,480 --> 00:55:00,000
+instinct to open up the app and say add
+
+1094
+00:54:57,599 --> 00:55:02,240
+the relevant information whenever you
+
+1095
+00:55:00,000 --> 00:55:04,480
+come across the idea or the note or the
+
+1096
+00:55:02,240 --> 00:55:06,960
+highlight as quote and that you think is
+
+1097
+00:55:04,480 --> 00:55:09,200
+relevant to your system. So it's the act
+
+1098
+00:55:06,960 --> 00:55:11,520
+of maintaining the system and then
+
+1099
+00:55:09,200 --> 00:55:13,119
+utilizing it when you need to in
+
+1100
+00:55:11,520 --> 00:55:14,880
+relation to the work that you're trying
+
+1101
+00:55:13,119 --> 00:55:16,480
+to accomplish. And I think that's the
+
+1102
+00:55:14,880 --> 00:55:18,240
+only thing that matters as long as
+
+1103
+00:55:16,480 --> 00:55:19,520
+you're not just consistently adding
+
+1104
+00:55:18,240 --> 00:55:21,200
+information to it and then not
+
+1105
+00:55:19,520 --> 00:55:23,520
+referencing it or not using it because
+
+1106
+00:55:21,200 --> 00:55:25,119
+then you're just creating a a bloated
+
+1107
+00:55:23,520 --> 00:55:27,680
+system that you're unlikely to
+
+1108
+00:55:25,119 --> 00:55:30,559
+necessarily use. But but we've mentioned
+
+1109
+00:55:27,680 --> 00:55:32,559
+chat GPT now a few times and now it's
+
+1110
+00:55:30,559 --> 00:55:35,760
+become very widespread different forms
+
+1111
+00:55:32,559 --> 00:55:37,839
+of AI Gemini Claude and I'm wondering
+
+1112
+00:55:35,760 --> 00:55:40,000
+what your thoughts are on the matter in
+
+1113
+00:55:37,839 --> 00:55:41,599
+terms of do you think it could take over
+
+1114
+00:55:40,000 --> 00:55:43,599
+manual note-taking? Do you think that
+
+1115
+00:55:41,599 --> 00:55:46,720
+could become obsolete? Have you seen
+
+1116
+00:55:43,599 --> 00:55:49,280
+your students kind of using AI and do
+
+1117
+00:55:46,720 --> 00:55:51,839
+you think it's something that that could
+
+1118
+00:55:49,280 --> 00:55:53,520
+replace the Zeno castle system or do you
+
+1119
+00:55:51,839 --> 00:55:57,280
+think it might complement it?
+
+1120
+00:55:53,520 --> 00:56:00,960
+>> At the moment we treat chat chipity or
+
+1121
+00:55:57,280 --> 00:56:04,960
+uh AI um
+
+1122
+00:56:00,960 --> 00:56:09,680
+in a way that's too external
+
+1123
+00:56:04,960 --> 00:56:12,960
+and too internal at the same time. So I
+
+1124
+00:56:09,680 --> 00:56:15,040
+think our thinking is
+
+1125
+00:56:12,960 --> 00:56:18,880
+still
+
+1126
+00:56:15,040 --> 00:56:21,119
+very much tied to what philosophers call
+
+1127
+00:56:18,880 --> 00:56:25,920
+the representational
+
+1128
+00:56:21,119 --> 00:56:29,119
+area where we think of the brain um as
+
+1129
+00:56:25,920 --> 00:56:32,480
+an entity that is
+
+1130
+00:56:29,119 --> 00:56:35,200
+um separate from the world.
+
+1131
+00:56:32,480 --> 00:56:37,520
+It's like a processor that uh deals with
+
+1132
+00:56:35,200 --> 00:56:40,480
+the information coming in and then
+
+1133
+00:56:37,520 --> 00:56:46,680
+information goes out again. And only
+
+1134
+00:56:40,480 --> 00:56:46,680
+recently we start understanding the
+
+1135
+00:56:47,119 --> 00:56:53,839
+impact a different kind of thinking
+
+1136
+00:56:50,160 --> 00:56:57,760
+about thinking can have on practical
+
+1137
+00:56:53,839 --> 00:57:01,359
+matters. So if we think about thinking
+
+1138
+00:56:57,760 --> 00:57:05,359
+as something that happens externally as
+
+1139
+00:57:01,359 --> 00:57:10,400
+well as internally that we really think
+
+1140
+00:57:05,359 --> 00:57:13,400
+within our environment with our tools
+
+1141
+00:57:10,400 --> 00:57:13,400
+we
+
+1142
+00:57:13,920 --> 00:57:21,920
+I think shift the whole discussion. Um,
+
+1143
+00:57:19,920 --> 00:57:27,599
+if you think we only think with our
+
+1144
+00:57:21,920 --> 00:57:30,799
+brains, um, you tend to see AI as a
+
+1145
+00:57:27,599 --> 00:57:32,400
+replacement of our thinking process. We,
+
+1146
+00:57:30,799 --> 00:57:37,119
+um,
+
+1147
+00:57:32,400 --> 00:57:40,000
+use AI to think for us instead.
+
+1148
+00:57:37,119 --> 00:57:43,920
+And that's obviously a risk. And if you
+
+1149
+00:57:40,000 --> 00:57:46,640
+think like that, you do that. You stop
+
+1150
+00:57:43,920 --> 00:57:49,640
+thinking for yourself. you let AI do the
+
+1151
+00:57:46,640 --> 00:57:49,640
+work.
+
+1152
+00:57:50,000 --> 00:57:55,599
+But if you think
+
+1153
+00:57:52,319 --> 00:57:59,760
+that thinking happens in an external
+
+1154
+00:57:55,599 --> 00:58:03,400
+space and you want to
+
+1155
+00:57:59,760 --> 00:58:03,400
+keep the
+
+1156
+00:58:03,599 --> 00:58:08,160
+critical approach to the information
+
+1157
+00:58:05,440 --> 00:58:11,680
+you're dealing with, if you want to keep
+
+1158
+00:58:08,160 --> 00:58:14,400
+the experience enriched thinking that
+
+1159
+00:58:11,680 --> 00:58:19,200
+makes any output
+
+1160
+00:58:14,400 --> 00:58:23,040
+uh interesting for other humans, if you
+
+1161
+00:58:19,200 --> 00:58:27,920
+want to develop your own thinking
+
+1162
+00:58:23,040 --> 00:58:31,760
+skills, your own thinking abilities.
+
+1163
+00:58:27,920 --> 00:58:34,640
+Then it becomes all about
+
+1164
+00:58:31,760 --> 00:58:36,880
+the creation of an environment
+
+1165
+00:58:34,640 --> 00:58:40,640
+that is personal
+
+1166
+00:58:36,880 --> 00:58:43,200
+but also external because only in an
+
+1167
+00:58:40,640 --> 00:58:46,720
+external space you can build up
+
+1168
+00:58:43,200 --> 00:58:48,559
+complexity. You can combine more than a
+
+1169
+00:58:46,720 --> 00:58:54,720
+few things.
+
+1170
+00:58:48,559 --> 00:58:59,359
+Um, so AI makes it in my opinion obvious
+
+1171
+00:58:54,720 --> 00:59:02,000
+that we need to create external personal
+
+1172
+00:58:59,359 --> 00:59:05,680
+thinking spaces.
+
+1173
+00:59:02,000 --> 00:59:11,920
+Even more than that, I hope that we
+
+1174
+00:59:05,680 --> 00:59:17,680
+shift the discussion um more towards
+
+1175
+00:59:11,920 --> 00:59:22,799
+the the question of how can we curate
+
+1176
+00:59:17,680 --> 00:59:26,160
+common spaces to think together in like
+
+1177
+00:59:22,799 --> 00:59:31,280
+a third place between the big
+
+1178
+00:59:26,160 --> 00:59:35,520
+information out there that can be
+
+1179
+00:59:31,280 --> 00:59:40,240
+um quickly searched and
+
+1180
+00:59:35,520 --> 00:59:43,280
+presented by AI and our own little tiny
+
+1181
+00:59:40,240 --> 00:59:49,280
+minds uh that have to deal with that. I
+
+1182
+00:59:43,280 --> 00:59:52,319
+think these third spaces will be where
+
+1183
+00:59:49,280 --> 00:59:54,480
+we make the dis. How we curate them, how
+
+1184
+00:59:52,319 --> 01:00:00,079
+we build them, how we think about them
+
+1185
+00:59:54,480 --> 01:00:03,839
+will be the space will be the question
+
+1186
+01:00:00,079 --> 01:00:07,760
+on how we deal with AR like with every
+
+1187
+01:00:03,839 --> 01:00:11,359
+other kind of information overload um we
+
+1188
+01:00:07,760 --> 01:00:14,400
+face at the moment. And the question,
+
+1189
+01:00:11,359 --> 01:00:17,280
+well, will it replace our thinking or
+
+1190
+01:00:14,400 --> 01:00:21,280
+will it um
+
+1191
+01:00:17,280 --> 01:00:24,559
+um increase our ability?
+
+1192
+01:00:21,280 --> 01:00:27,599
+It really depends on how we build these
+
+1193
+01:00:24,559 --> 01:00:30,599
+third spaces. That that's my point of
+
+1194
+01:00:27,599 --> 01:00:30,599
+view.
+
+1195
+01:00:31,359 --> 01:00:38,160
+>> Perhaps a a a way of viewing it is that
+
+1196
+01:00:35,280 --> 01:00:40,000
+AI itself kind of streamlines research.
+
+1197
+01:00:38,160 --> 01:00:41,920
+you know, we can ask it any questions we
+
+1198
+01:00:40,000 --> 01:00:44,000
+want. Uh we can do a deep research
+
+1199
+01:00:41,920 --> 01:00:46,000
+inquiry and then have all of the the
+
+1200
+01:00:44,000 --> 01:00:48,640
+current information on a specific
+
+1201
+01:00:46,000 --> 01:00:52,480
+subject subject. Whether or not it's
+
+1202
+01:00:48,640 --> 01:00:54,720
+100% accurate, it kind of varies, but AI
+
+1203
+01:00:52,480 --> 01:00:56,880
+will never replace deep personal
+
+1204
+01:00:54,720 --> 01:00:59,440
+thought. Now, we can use it as an
+
+1205
+01:00:56,880 --> 01:01:02,240
+external reference to bounce our ideas
+
+1206
+01:00:59,440 --> 01:01:05,280
+off. But more often than not, the way
+
+1207
+01:01:02,240 --> 01:01:08,640
+that you phrase your question to an AI,
+
+1208
+01:01:05,280 --> 01:01:11,040
+it's going to intuitit your underlying
+
+1209
+01:01:08,640 --> 01:01:13,520
+thinking, your underlying reasoning, the
+
+1210
+01:01:11,040 --> 01:01:15,760
+underlying perspective of what you want.
+
+1211
+01:01:13,520 --> 01:01:18,480
+And that's now why we have situations
+
+1212
+01:01:15,760 --> 01:01:22,000
+where we have people who are going into
+
+1213
+01:01:18,480 --> 01:01:24,240
+delusional fantasies because their AI
+
+1214
+01:01:22,000 --> 01:01:27,359
+believes it's God and they are its
+
+1215
+01:01:24,240 --> 01:01:30,319
+worshipper. And open AI itself has had
+
+1216
+01:01:27,359 --> 01:01:33,440
+to employ now psychologists uh
+
+1217
+01:01:30,319 --> 01:01:35,839
+psychotherapists to try to understand
+
+1218
+01:01:33,440 --> 01:01:39,839
+why is this happening because it seems
+
+1219
+01:01:35,839 --> 01:01:43,359
+that if you have a certain level of of
+
+1220
+01:01:39,839 --> 01:01:46,559
+emotional or a kind of a disorder of
+
+1221
+01:01:43,359 --> 01:01:50,559
+sorts mental health issue that you could
+
+1222
+01:01:46,559 --> 01:01:54,160
+be subject to what AI uh the delusions
+
+1223
+01:01:50,559 --> 01:01:57,680
+that AI itself can go down and so if it
+
+1224
+01:01:54,160 --> 01:01:59,280
+can't place deep personal thought that
+
+1225
+01:01:57,680 --> 01:02:01,119
+is more or less kind of critical
+
+1226
+01:01:59,280 --> 01:02:03,520
+thinking skills. So, I think the next
+
+1227
+01:02:01,119 --> 01:02:05,760
+question to ask is, well, why are
+
+1228
+01:02:03,520 --> 01:02:08,640
+critical thinking skills important if
+
+1229
+01:02:05,760 --> 01:02:10,559
+we're in an era with AI that can just
+
+1230
+01:02:08,640 --> 01:02:13,040
+answer all of our questions and do all
+
+1231
+01:02:10,559 --> 01:02:16,160
+of our thinking? And I think my I would
+
+1232
+01:02:13,040 --> 01:02:18,319
+default to now this idea of of prompt
+
+1233
+01:02:16,160 --> 01:02:20,960
+engineering or it's more recently been
+
+1234
+01:02:18,319 --> 01:02:22,640
+referred to now as context engineering
+
+1235
+01:02:20,960 --> 01:02:24,880
+because there's a lot more than just
+
+1236
+01:02:22,640 --> 01:02:27,440
+trying to figure out how you create the
+
+1237
+01:02:24,880 --> 01:02:30,480
+best prompt because now we have AI
+
+1238
+01:02:27,440 --> 01:02:32,799
+agents that are doing complex workflows
+
+1239
+01:02:30,480 --> 01:02:35,280
+and you really have to be able to think
+
+1240
+01:02:32,799 --> 01:02:38,160
+about how is this workflow going to to
+
+1241
+01:02:35,280 --> 01:02:40,880
+work and if you're employed at a job and
+
+1242
+01:02:38,160 --> 01:02:42,720
+especially now millennials or Gen Z's
+
+1243
+01:02:40,880 --> 01:02:45,119
+especially the Gen Z generation are
+
+1244
+01:02:42,720 --> 01:02:47,680
+having a very tough time graduating from
+
+1245
+01:02:45,119 --> 01:02:50,400
+college and getting a job because all of
+
+1246
+01:02:47,680 --> 01:02:53,359
+the low-level jobs are now easily being
+
+1247
+01:02:50,400 --> 01:02:55,599
+able to being taken over by AI. But if
+
+1248
+01:02:53,359 --> 01:02:59,119
+you have the ability to do context
+
+1249
+01:02:55,599 --> 01:03:02,880
+engineering to think about why is how do
+
+1250
+01:02:59,119 --> 01:03:05,520
+I make AI work best in this use case or
+
+1251
+01:03:02,880 --> 01:03:06,960
+if you have uh trauma or mental health
+
+1252
+01:03:05,520 --> 01:03:09,920
+issues and you're wanting to use Chad
+
+1253
+01:03:06,960 --> 01:03:12,480
+GPT as a therapist, how do I best phrase
+
+1254
+01:03:09,920 --> 01:03:14,079
+my conversation in a way where it's not
+
+1255
+01:03:12,480 --> 01:03:16,799
+going to lead me down a delusional
+
+1256
+01:03:14,079 --> 01:03:19,280
+fantasy? Because it's how you talk to an
+
+1257
+01:03:16,799 --> 01:03:21,760
+AI. And I'm sure we've all used AI in a
+
+1258
+01:03:19,280 --> 01:03:24,799
+way where you ask it something and it
+
+1259
+01:03:21,760 --> 01:03:26,480
+gives you a response, but then you but
+
+1260
+01:03:24,799 --> 01:03:28,640
+then you realize, wait, it doesn't have
+
+1261
+01:03:26,480 --> 01:03:30,799
+this additional context. It's missing
+
+1262
+01:03:28,640 --> 01:03:32,480
+something or I don't feel like it's
+
+1263
+01:03:30,799 --> 01:03:34,559
+quite right. And then you respond to it
+
+1264
+01:03:32,480 --> 01:03:36,400
+and you say, oh, what about this? And
+
+1265
+01:03:34,559 --> 01:03:38,799
+then it's like, oh yes, sir, you are
+
+1266
+01:03:36,400 --> 01:03:41,680
+brilliant. This is and it completely
+
+1267
+01:03:38,799 --> 01:03:43,280
+changes its answer. And so I think all
+
+1268
+01:03:41,680 --> 01:03:46,960
+of this comes back down to what I'm
+
+1269
+01:03:43,280 --> 01:03:49,599
+saying is a encompass is that AI can
+
+1270
+01:03:46,960 --> 01:03:52,240
+help us in our our journey for
+
+1271
+01:03:49,599 --> 01:03:55,039
+accomplishing for building for for even
+
+1272
+01:03:52,240 --> 01:03:57,760
+thinking but I think it's a tool just
+
+1273
+01:03:55,039 --> 01:03:59,920
+like everything else and the moment you
+
+1274
+01:03:57,760 --> 01:04:03,200
+start to see AI as something that is
+
+1275
+01:03:59,920 --> 01:04:05,520
+going to replace your need for thinking
+
+1276
+01:04:03,200 --> 01:04:07,839
+for writing for creative thought then
+
+1277
+01:04:05,520 --> 01:04:09,599
+you're going down a dark path because
+
+1278
+01:04:07,839 --> 01:04:10,400
+that could just lead to a delusional
+
+1279
+01:04:09,599 --> 01:04:12,559
+fantasy.
+
+1280
+01:04:10,400 --> 01:04:14,960
+where you're just kind of not creating
+
+1281
+01:04:12,559 --> 01:04:17,359
+anything new and who knows where that
+
+1282
+01:04:14,960 --> 01:04:20,079
+might end up. So I think now more than
+
+1283
+01:04:17,359 --> 01:04:22,720
+ever we need to emphasize the importance
+
+1284
+01:04:20,079 --> 01:04:25,440
+of critical thinking because that is how
+
+1285
+01:04:22,720 --> 01:04:27,760
+you're going to leverage AI to allow you
+
+1286
+01:04:25,440 --> 01:04:30,400
+to get a job to allow you to get ahead
+
+1287
+01:04:27,760 --> 01:04:32,640
+of everybody else who is not able to
+
+1288
+01:04:30,400 --> 01:04:35,280
+leverage the ability to think properly
+
+1289
+01:04:32,640 --> 01:04:38,000
+and then apply that to AI.
+
+1290
+01:04:35,280 --> 01:04:43,039
+>> So that's that's my my two cents. Yeah,
+
+1291
+01:04:38,000 --> 01:04:46,359
+I I totally agree that the way we use it
+
+1292
+01:04:43,039 --> 01:04:46,359
+is is
+
+1293
+01:04:46,559 --> 01:04:53,119
+crucial and that
+
+1294
+01:04:49,760 --> 01:04:55,599
+there is a way to use it like a machine
+
+1295
+01:04:53,119 --> 01:04:58,000
+that replaces your thinking like like a
+
+1296
+01:04:55,599 --> 01:05:01,440
+bicycle you drive to work with instead
+
+1297
+01:04:58,000 --> 01:05:03,599
+of walking. So you can just roll and
+
+1298
+01:05:01,440 --> 01:05:06,799
+don't have to put any effort into it.
+
+1299
+01:05:03,599 --> 01:05:10,480
+But you can use the bicycle as well to
+
+1300
+01:05:06,799 --> 01:05:15,599
+increase your range to discover new
+
+1301
+01:05:10,480 --> 01:05:20,079
+places or to train your muscles and um
+
+1302
+01:05:15,599 --> 01:05:23,359
+to enhance what you have. Um so
+
+1303
+01:05:20,079 --> 01:05:26,079
+certainly it's about how to use it. Um
+
+1304
+01:05:23,359 --> 01:05:27,599
+so there will be certainly
+
+1305
+01:05:26,079 --> 01:05:31,839
+curated
+
+1306
+01:05:27,599 --> 01:05:34,240
+environments um as you describe them.
+
+1307
+01:05:31,839 --> 01:05:38,480
+Some that are
+
+1308
+01:05:34,240 --> 01:05:43,680
+fit for mental health counseling and
+
+1309
+01:05:38,480 --> 01:05:47,599
+some that are fit for um research and
+
+1310
+01:05:43,680 --> 01:05:49,839
+pushing research. You know that to
+
+1311
+01:05:47,599 --> 01:05:51,599
+change your way of thinking about the
+
+1312
+01:05:49,839 --> 01:05:53,440
+world requires more than one piece of
+
+1313
+01:05:51,599 --> 01:05:55,920
+information. But you need to take a lot
+
+1314
+01:05:53,440 --> 01:06:01,359
+of pieces of information into account.
+
+1315
+01:05:55,920 --> 01:06:03,119
+You need some kind of some form of
+
+1316
+01:06:01,359 --> 01:06:04,880
+complexity.
+
+1317
+01:06:03,119 --> 01:06:08,240
+Um
+
+1318
+01:06:04,880 --> 01:06:12,079
+it's not mind-blowing. It's not oh wow
+
+1319
+01:06:08,240 --> 01:06:13,920
+my worldview changed in an instant. It's
+
+1320
+01:06:12,079 --> 01:06:17,680
+more mundane.
+
+1321
+01:06:13,920 --> 01:06:20,319
+that probably that is the kind of buffer
+
+1322
+01:06:17,680 --> 01:06:25,280
+we need to
+
+1323
+01:06:20,319 --> 01:06:27,119
+um deal with the information coming in.
+
+1324
+01:06:25,280 --> 01:06:30,079
+>> When I say critical thinking, I suppose
+
+1325
+01:06:27,119 --> 01:06:31,920
+it's like uh the the ability to stop and
+
+1326
+01:06:30,079 --> 01:06:34,000
+pause and question
+
+1327
+01:06:31,920 --> 01:06:37,359
+>> a particular thought, right? Instead of
+
+1328
+01:06:34,000 --> 01:06:39,760
+just accepting what external information
+
+1329
+01:06:37,359 --> 01:06:43,039
+says or what somebody else or something
+
+1330
+01:06:39,760 --> 01:06:45,920
+says about that. And we we tend now to
+
+1331
+01:06:43,039 --> 01:06:47,680
+default to uh just asking AI for
+
+1332
+01:06:45,920 --> 01:06:50,400
+everything and then just accepting
+
+1333
+01:06:47,680 --> 01:06:52,079
+outright what it says without thinking
+
+1334
+01:06:50,400 --> 01:06:54,319
+about what it's actually saying, just
+
+1335
+01:06:52,079 --> 01:06:55,680
+accepting that information. And you
+
+1336
+01:06:54,319 --> 01:06:57,680
+know, if we're in a world we're just
+
+1337
+01:06:55,680 --> 01:06:59,119
+accepting information from an AI, it
+
+1338
+01:06:57,680 --> 01:07:00,720
+might not always be correct. And it's
+
+1339
+01:06:59,119 --> 01:07:03,119
+been shown it's definitely not always
+
+1340
+01:07:00,720 --> 01:07:06,160
+correct. Um and so that can lead us down
+
+1341
+01:07:03,119 --> 01:07:09,039
+like wrong paths. But I I suppose a a
+
+1342
+01:07:06,160 --> 01:07:12,079
+perspective of utilizing AI in relation
+
+1343
+01:07:09,039 --> 01:07:14,240
+to zetocasten is that perhaps it's it
+
+1344
+01:07:12,079 --> 01:07:16,720
+can be good for summarizing. I don't
+
+1345
+01:07:14,240 --> 01:07:19,359
+know. I I assume that Obsidian hasn't
+
+1346
+01:07:16,720 --> 01:07:21,520
+implemented any AI functionality, but I
+
+1347
+01:07:19,359 --> 01:07:23,839
+assume if they did, it would be helpful
+
+1348
+01:07:21,520 --> 01:07:25,920
+because it's like everything else where
+
+1349
+01:07:23,839 --> 01:07:28,799
+you can build out say like like the
+
+1350
+01:07:25,920 --> 01:07:30,240
+Google uh forgot the the Google podcast.
+
+1351
+01:07:28,799 --> 01:07:32,960
+I'm forgetting the the name of that
+
+1352
+01:07:30,240 --> 01:07:35,599
+where you can upload PDFs of information
+
+1353
+01:07:32,960 --> 01:07:38,480
+and then generate a podcast that will
+
+1354
+01:07:35,599 --> 01:07:41,440
+kind of summarize the information in of
+
+1355
+01:07:38,480 --> 01:07:42,960
+what you've up told it to to specify. So
+
+1356
+01:07:41,440 --> 01:07:46,000
+perhaps I think there could be a benefit
+
+1357
+01:07:42,960 --> 01:07:49,200
+in utilizing AI for that. But overall it
+
+1358
+01:07:46,000 --> 01:07:53,599
+still is that there's a risk of being
+
+1359
+01:07:49,200 --> 01:07:56,000
+overrelyant on AI as a means of of
+
+1360
+01:07:53,599 --> 01:07:58,880
+externalizing your thinking because we
+
+1361
+01:07:56,000 --> 01:08:02,319
+it's still today just as prevalent many
+
+1362
+01:07:58,880 --> 01:08:06,079
+years after it became popular that the
+
+1363
+01:08:02,319 --> 01:08:09,280
+ability to create a a good prompt is
+
+1364
+01:08:06,079 --> 01:08:11,920
+directly proportional to the quality of
+
+1365
+01:08:09,280 --> 01:08:14,319
+the response you're going to get. And if
+
+1366
+01:08:11,920 --> 01:08:17,679
+you have a zettocast and network or a
+
+1367
+01:08:14,319 --> 01:08:20,560
+system where you are able to see all of
+
+1368
+01:08:17,679 --> 01:08:23,120
+these ideas and thoughts and intercon
+
+1369
+01:08:20,560 --> 01:08:26,080
+the interconnectedness of them is going
+
+1370
+01:08:23,120 --> 01:08:28,799
+to give you a different perspective when
+
+1371
+01:08:26,080 --> 01:08:31,040
+you ask that question to AI that is
+
+1372
+01:08:28,799 --> 01:08:33,600
+going to generate a a proportionally
+
+1373
+01:08:31,040 --> 01:08:36,159
+much better response than if you had not
+
+1374
+01:08:33,600 --> 01:08:39,120
+had a system in which you were able to
+
+1375
+01:08:36,159 --> 01:08:41,600
+see all of the connectedness between
+
+1376
+01:08:39,120 --> 01:08:43,839
+various thoughts and ideas. the idea of
+
+1377
+01:08:41,600 --> 01:08:47,199
+critical thinking as stopping,
+
+1378
+01:08:43,839 --> 01:08:53,839
+reflecting, and taking the time to look
+
+1379
+01:08:47,199 --> 01:08:58,000
+at something. And it is connected to
+
+1380
+01:08:53,839 --> 01:09:00,319
+something that is often overlooked. Um,
+
+1381
+01:08:58,000 --> 01:09:03,120
+reflection is not just about judging
+
+1382
+01:09:00,319 --> 01:09:07,120
+information coming in. It's also about
+
+1383
+01:09:03,120 --> 01:09:11,759
+challenging the way we look at the world
+
+1384
+01:09:07,120 --> 01:09:14,159
+and to change and develop mature in our
+
+1385
+01:09:11,759 --> 01:09:19,199
+way of looking at the world and enrich
+
+1386
+01:09:14,159 --> 01:09:22,080
+it with experience. So being able to
+
+1387
+01:09:19,199 --> 01:09:25,600
+realize that the prompt you use is
+
+1388
+01:09:22,080 --> 01:09:29,199
+probably not the best one um but that
+
+1389
+01:09:25,600 --> 01:09:31,199
+you have to add context to it to get a
+
+1390
+01:09:29,199 --> 01:09:36,000
+better response.
+
+1391
+01:09:31,199 --> 01:09:39,120
+Um is only possible if
+
+1392
+01:09:36,000 --> 01:09:44,719
+something on your side on the personal
+
+1393
+01:09:39,120 --> 01:09:49,440
+side has developed over time. Um maybe
+
+1394
+01:09:44,719 --> 01:09:52,640
+we look too much at judging information
+
+1395
+01:09:49,440 --> 01:09:57,679
+coming in and too little about
+
+1396
+01:09:52,640 --> 01:09:59,199
+developing our ability to deal with the
+
+1397
+01:09:57,679 --> 01:10:04,239
+information.
+
+1398
+01:09:59,199 --> 01:10:07,120
+Um so not just about um
+
+1399
+01:10:04,239 --> 01:10:10,320
+not trusting what's coming in but also
+
+1400
+01:10:07,120 --> 01:10:13,280
+being worried that oneself needs um
+
+1401
+01:10:10,320 --> 01:10:17,520
+maybe a little bit more development to
+
+1402
+01:10:13,280 --> 01:10:20,400
+handle uh the information and
+
+1403
+01:10:17,520 --> 01:10:22,080
+being open to have your mind changed by
+
+1404
+01:10:20,400 --> 01:10:26,239
+it.
+
+1405
+01:10:22,080 --> 01:10:28,880
+>> Yeah. And in an area in in in which we
+
+1406
+01:10:26,239 --> 01:10:30,880
+in an area in which AI is a part of our
+
+1407
+01:10:28,880 --> 01:10:32,960
+daily lives, I think it's now important
+
+1408
+01:10:30,880 --> 01:10:34,719
+more important than ever to have a
+
+1409
+01:10:32,960 --> 01:10:37,360
+system where you're able to collect
+
+1410
+01:10:34,719 --> 01:10:40,560
+information because that will be useful
+
+1411
+01:10:37,360 --> 01:10:43,199
+in helping set you apart from everybody
+
+1412
+01:10:40,560 --> 01:10:45,520
+else who's able to use this tool but
+
+1413
+01:10:43,199 --> 01:10:47,520
+using it in a much more generic capacity
+
+1414
+01:10:45,520 --> 01:10:49,520
+without the level of insights that you
+
+1415
+01:10:47,520 --> 01:10:51,760
+might otherwise gain by being able to
+
+1416
+01:10:49,520 --> 01:10:53,760
+maintain your own personal note-taking
+
+1417
+01:10:51,760 --> 01:10:56,320
+system. I think we've seen people like
+
+1418
+01:10:53,760 --> 01:10:58,400
+like Ryan Holidayiday, David Pell,
+
+1419
+01:10:56,320 --> 01:11:00,480
+Thiago Forte, all very prominent figures
+
+1420
+01:10:58,400 --> 01:11:03,840
+in the self-help space who've either
+
+1421
+01:11:00,480 --> 01:11:06,800
+developed a variety of books or systems
+
+1422
+01:11:03,840 --> 01:11:09,199
+based on the Zenoccasten system. So, I
+
+1423
+01:11:06,800 --> 01:11:11,120
+think it it's something that it as
+
+1424
+01:11:09,199 --> 01:11:12,640
+people who have have used it, they
+
+1425
+01:11:11,120 --> 01:11:16,000
+they've cited, you know, it helps them
+
+1426
+01:11:12,640 --> 01:11:18,480
+to think more clearly. It helps with uh
+
+1427
+01:11:16,000 --> 01:11:20,480
+idea retention. uh and you're able to
+
+1428
+01:11:18,480 --> 01:11:23,760
+just get overall kind of more creative
+
+1429
+01:11:20,480 --> 01:11:26,239
+insights from uh areas of work in which
+
+1430
+01:11:23,760 --> 01:11:28,560
+you might not be able to to create or
+
+1431
+01:11:26,239 --> 01:11:30,800
+gain these insights if you had not had
+
+1432
+01:11:28,560 --> 01:11:33,120
+such a system. So I think it's something
+
+1433
+01:11:30,800 --> 01:11:36,239
+that everybody whether you're a business
+
+1434
+01:11:33,120 --> 01:11:38,719
+consultant or a writer or a student uh
+
+1435
+01:11:36,239 --> 01:11:40,880
+everybody should really consider having
+
+1436
+01:11:38,719 --> 01:11:43,040
+um to to some extent because that's
+
+1437
+01:11:40,880 --> 01:11:45,520
+going to be one of the small things that
+
+1438
+01:11:43,040 --> 01:11:47,920
+will help set you apart going into a
+
+1439
+01:11:45,520 --> 01:11:51,280
+world in which AI is just prevalent
+
+1440
+01:11:47,920 --> 01:11:53,920
+everywhere we go.
+
+1441
+01:11:51,280 --> 01:11:57,199
+>> Yeah. I think the question of how can
+
+1442
+01:11:53,920 --> 01:11:59,120
+you distinguish yourself if everyone can
+
+1443
+01:11:57,199 --> 01:12:01,520
+um access
+
+1444
+01:11:59,120 --> 01:12:04,080
+the the huge pool of information out
+
+1445
+01:12:01,520 --> 01:12:08,320
+there. Um
+
+1446
+01:12:04,080 --> 01:12:10,880
+certainly calls for a curated personal
+
+1447
+01:12:08,320 --> 01:12:13,440
+thinking space. Yeah, you're right
+
+1448
+01:12:10,880 --> 01:12:15,600
+there.
+
+1449
+01:12:13,440 --> 01:12:18,159
+>> And so I I I know that you're working on
+
+1450
+01:12:15,600 --> 01:12:19,679
+a new book and I think you started to
+
+1451
+01:12:18,159 --> 01:12:21,679
+scale back and kind of individual
+
+1452
+01:12:19,679 --> 01:12:24,000
+coaching. wondering if you can offer any
+
+1453
+01:12:21,679 --> 01:12:24,560
+kind of insight into your your next
+
+1454
+01:12:24,000 --> 01:12:27,920
+project.
+
+1455
+01:12:24,560 --> 01:12:31,280
+>> Um, it's still in in development. Uh, I
+
+1456
+01:12:27,920 --> 01:12:33,600
+kind of pick up on my academic work, um,
+
+1457
+01:12:31,280 --> 01:12:37,280
+which is a little bit more about
+
+1458
+01:12:33,600 --> 01:12:40,719
+epistemology, but I hope to make a
+
+1459
+01:12:37,280 --> 01:12:45,520
+contribution to what almost seems like
+
+1460
+01:12:40,719 --> 01:12:49,520
+an epistemic crisis at the moment. um
+
+1461
+01:12:45,520 --> 01:12:53,600
+dealing with um a lot of disinformation
+
+1462
+01:12:49,520 --> 01:12:56,560
+and how to be able to
+
+1463
+01:12:53,600 --> 01:13:02,159
+um
+
+1464
+01:12:56,560 --> 01:13:05,040
+deal with that or um set yourself up to
+
+1465
+01:13:02,159 --> 01:13:08,320
+problematic um
+
+1466
+01:13:05,040 --> 01:13:11,199
+uh information environment. And I think
+
+1467
+01:13:08,320 --> 01:13:16,000
+it will have a lot to do with curating
+
+1468
+01:13:11,199 --> 01:13:19,920
+these kinds of shared spaces and how to
+
+1469
+01:13:16,000 --> 01:13:21,520
+think about shared thinking spaces.
+
+1470
+01:13:19,920 --> 01:13:23,120
+Um
+
+1471
+01:13:21,520 --> 01:13:28,159
+yeah, I would like to make a
+
+1472
+01:13:23,120 --> 01:13:32,360
+contribution um to that solution. Um but
+
+1473
+01:13:28,159 --> 01:13:32,360
+it might take a little bit more time.
+
+1474
+01:13:32,480 --> 01:13:38,719
+And and I I can only hope that teaching
+
+1475
+01:13:35,679 --> 01:13:41,199
+kind of notetaking as like a score as a
+
+1476
+01:13:38,719 --> 01:13:44,159
+as a core skill alongside writing and
+
+1477
+01:13:41,199 --> 01:13:46,560
+math could hopefully become part of our
+
+1478
+01:13:44,159 --> 01:13:48,719
+future and education. I can we can only
+
+1479
+01:13:46,560 --> 01:13:51,760
+dream because I think that would help
+
+1480
+01:13:48,719 --> 01:13:54,800
+massively for our ability to to think to
+
+1481
+01:13:51,760 --> 01:13:57,040
+reflect to question um and especially in
+
+1482
+01:13:54,800 --> 01:14:02,400
+a world in which you know an answer is
+
+1483
+01:13:57,040 --> 01:14:04,159
+just a little chat conversation away um
+
+1484
+01:14:02,400 --> 01:14:06,560
+yeah
+
+1485
+01:14:04,159 --> 01:14:09,520
+so I think that's it's a good good spot
+
+1486
+01:14:06,560 --> 01:14:12,000
+to end. um wondering if you have any
+
+1487
+01:14:09,520 --> 01:14:14,400
+kind of practical advice for anybody
+
+1488
+01:14:12,000 --> 01:14:15,679
+listening that that perhaps this
+
+1489
+01:14:14,400 --> 01:14:17,760
+conversation has piqu their interest in
+
+1490
+01:14:15,679 --> 01:14:21,840
+the zero caston system where they might
+
+1491
+01:14:17,760 --> 01:14:24,080
+go uh to kind of learn more about this.
+
+1492
+01:14:21,840 --> 01:14:26,000
+>> Well, what I offer you can find on
+
+1493
+01:14:24,080 --> 01:14:28,560
+techsmartnotes.com.
+
+1494
+01:14:26,000 --> 01:14:32,239
+Um but there is a lot out there
+
+1495
+01:14:28,560 --> 01:14:35,199
+especially the Obsidian community is so
+
+1496
+01:14:32,239 --> 01:14:38,320
+lively and helpful and friendly and
+
+1497
+01:14:35,199 --> 01:14:43,360
+supportive. I think you'll find a lot of
+
+1498
+01:14:38,320 --> 01:14:47,120
+information and um support there. Um
+
+1499
+01:14:43,360 --> 01:14:52,320
+and I wouldn't underestimate
+
+1500
+01:14:47,120 --> 01:14:54,800
+the power of the metaphor of external
+
+1501
+01:14:52,320 --> 01:14:56,880
+thinking. Just thinking differently
+
+1502
+01:14:54,800 --> 01:15:00,320
+about thinking makes a huge difference
+
+1503
+01:14:56,880 --> 01:15:05,679
+in my opinion. um taking more seriously
+
+1504
+01:15:00,320 --> 01:15:11,280
+notetaking and what it can do to support
+
+1505
+01:15:05,679 --> 01:15:15,199
+your uh ideas and thought development
+
+1506
+01:15:11,280 --> 01:15:18,560
+and not just thinking about thinking as
+
+1507
+01:15:15,199 --> 01:15:21,840
+something that goes on in your brain
+
+1508
+01:15:18,560 --> 01:15:24,719
+just as a metaphor. I think it's it's
+
+1509
+01:15:21,840 --> 01:15:28,840
+can be extremely useful. That that
+
+1510
+01:15:24,719 --> 01:15:28,840
+that's my two cents.
+
+1511
+01:15:29,280 --> 01:15:34,480
+>> Well, uh thank you so much Dr. Sank Arns
+
+1512
+01:15:32,400 --> 01:15:37,520
+for joining us and sharing all of this
+
+1513
+01:15:34,480 --> 01:15:39,280
+this practical advice. Uh and if today's
+
+1514
+01:15:37,520 --> 01:15:41,120
+conversation sparked your interest,
+
+1515
+01:15:39,280 --> 01:15:43,520
+definitely check out his book How to
+
+1516
+01:15:41,120 --> 01:15:46,320
+Take Smart Notes or visit his website
+
+1517
+01:15:43,520 --> 01:15:48,400
+takesmartotes.com for more insights and
+
+1518
+01:15:46,320 --> 01:15:50,560
+resources. And of course, thank you for
+
+1519
+01:15:48,400 --> 01:15:52,719
+tuning in to the Mind Hack podcast. I'm
+
+1520
+01:15:50,560 --> 01:15:55,719
+Cody Mlan. I'll catch you in the next
+
+1521
+01:15:52,719 --> 01:15:55,719
+episode.
+

@@ -201,7 +201,7 @@ if [ -n "$INPUT_SRT" ]; then
     SKIP_WHISPER=true
 elif [ "$FORCE" = true ]; then
     echo "🔄 强制模式：清理已有文件并重新处理所有步骤..."
-    rm -f "$EXTRACTED_AUDIO" "$ORIGINAL_SRT" "$OPTIMIZATION_FLAG"
+    rm -f "$EXTRACTED_AUDIO" "$ORIGINAL_SRT"
 else
     # 检查已有文件
     if [ -f "$EXTRACTED_AUDIO" ] && [ -s "$EXTRACTED_AUDIO" ]; then
@@ -306,16 +306,11 @@ whisper_zh() {
     fi
 }
 
-# 临时文件定义 - 添加优化处理相关文件
-WORD_LEVEL_JSON="$TEMP_DIR/step2_word_level.json"
-OPTIMIZED_SRT="$TEMP_DIR/step2_optimized.srt"
-OPTIMIZATION_FLAG="$TEMP_DIR/.optimization_complete"
-
 # 步骤2: 音频识别为SRT字幕文件
 if [ "$SKIP_WHISPER" = true ]; then
     echo "步骤 2/2: ⏭️  跳过Whisper识别（使用已有文件: $ORIGINAL_SRT）"
 else
-    echo "步骤 2/2: 使用Whisper识别音频为SRT字幕（智能优化模式）..."
+    echo "步骤 2/2: 使用Whisper识别音频为SRT字幕（智能模式选择）..."
 
     # 智能处理模式：先检测语言，然后选择处理方式
     DETECTED_LANGUAGE=""
@@ -587,257 +582,13 @@ EOF
         # 清理临时JSON文件
         rm -f "$TEMP_JSON"
     fi
-    
-    # 字幕后处理优化阶段
-    if [ -f "$OPTIMIZATION_FLAG" ] && [ "$FORCE" != true ]; then
-        echo "  ⏭️  跳过字幕优化（已完成，使用 -f 强制重新优化）"
-    else
-        echo "  🔧 开始字幕后处理优化..."
-    
-    # 步骤 2.1: 时间戳优化
-    echo "    - 优化时间戳（相邻字幕平滑处理）"
-    python3 << 'EOF'
-import re
-import os
-from datetime import timedelta
-
-def srt_time_to_seconds(srt_time):
-    """Convert SRT time format to seconds"""
-    time_parts = srt_time.replace(',', '.').split(':')
-    hours = int(time_parts[0])
-    minutes = int(time_parts[1])
-    seconds = float(time_parts[2])
-    return hours * 3600 + minutes * 60 + seconds
-
-def seconds_to_srt_time(seconds):
-    """Convert seconds to SRT time format"""
-    hours = int(seconds // 3600)
-    minutes = int((seconds % 3600) // 60)
-    secs = int(seconds % 60)
-    ms = int((seconds % 1) * 1000)
-    return f"{hours:02d}:{minutes:02d}:{secs:02d},{ms:03d}"
-
-def optimize_subtitle_timing(srt_file, threshold_ms=1000):
-    """优化字幕时间戳，处理相邻字幕间隔"""
-    with open(srt_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 解析SRT文件
-    blocks = re.split(r'\n\s*\n', content.strip())
-    segments = []
-    
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) >= 3:
-            index = lines[0]
-            time_line = lines[1]
-            text = '\n'.join(lines[2:])
-            
-            # 解析时间戳
-            match = re.match(r'(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})', time_line)
-            if match:
-                start_time = srt_time_to_seconds(match.group(1))
-                end_time = srt_time_to_seconds(match.group(2))
-                segments.append({
-                    'index': index,
-                    'start': start_time,
-                    'end': end_time,
-                    'text': text
-                })
-    
-    # 优化时间戳
-    threshold_sec = threshold_ms / 1000.0
-    for i in range(len(segments) - 1):
-        current = segments[i]
-        next_seg = segments[i + 1]
         
-        # 计算时间间隔
-        time_gap = next_seg['start'] - current['end']
-        
-        # 如果间隔小于阈值，调整时间戳
-        if 0 < time_gap < threshold_sec:
-            mid_time = (current['end'] + next_seg['start']) / 2 + time_gap / 4
-            current['end'] = mid_time
-            next_seg['start'] = mid_time
-    
-    # 写回文件
-    with open(srt_file, 'w', encoding='utf-8') as f:
-        for seg in segments:
-            f.write(f"{seg['index']}\n")
-            f.write(f"{seconds_to_srt_time(seg['start'])} --> {seconds_to_srt_time(seg['end'])}\n")
-            f.write(f"{seg['text']}\n\n")
-
-# 执行时间戳优化
-optimize_subtitle_timing(os.environ['ORIGINAL_SRT'])
-print("✓ 时间戳优化完成")
-EOF
-    
-    # 步骤 2.2: 短句合并优化
-    echo "    - 合并短句和相邻片段"
-    python3 << 'EOF'
-import re
-import os
-
-def is_mainly_cjk(text):
-    """判断文本是否主要由中日韩文字组成"""
-    cjk_count = len(re.findall(r'[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]', text))
-    total_chars = len(re.sub(r'\s', '', text))
-    return cjk_count / total_chars > 0.5 if total_chars > 0 else False
-
-def count_words(text):
-    """统计字符/单词数"""
-    if is_mainly_cjk(text):
-        # 中日韩文字按字符计算
-        return len(re.sub(r'[\s\W]', '', text))
-    else:
-        # 其他语言按单词计算
-        return len(text.split())
-
-def merge_short_segments(srt_file):
-    """合并短句段落"""
-    with open(srt_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 解析SRT文件
-    blocks = re.split(r'\n\s*\n', content.strip())
-    segments = []
-    
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) >= 3:
-            index = int(lines[0])
-            time_line = lines[1]
-            text = '\n'.join(lines[2:]).strip()
-            
-            # 解析时间戳
-            match = re.match(r'(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})', time_line)
-            if match:
-                segments.append({
-                    'index': index,
-                    'time_line': time_line,
-                    'text': text,
-                    'start_str': match.group(1),
-                    'end_str': match.group(2)
-                })
-    
-    # 合并短句
-    merged_segments = []
-    i = 0
-    
-    while i < len(segments):
-        current = segments[i]
-        current_words = count_words(current['text'])
-        
-        # 检查是否需要与下一段合并
-        should_merge = False
-        if i < len(segments) - 1:
-            next_seg = segments[i + 1]
-            next_words = count_words(next_seg['text'])
-            total_words = current_words + next_words
-            
-            # 时间间隔检查（简化版）
-            current_end = current['end_str']
-            next_start = next_seg['start_str']
-            
-            # 合并条件：当前或下一句词数少于5，且总词数不超过限制
-            max_words = 25 if is_mainly_cjk(current['text']) else 18
-            if (current_words < 5 or next_words < 5) and total_words <= max_words:
-                should_merge = True
-        
-        if should_merge:
-            # 执行合并
-            merged_text = current['text']
-            if is_mainly_cjk(current['text']):
-                merged_text += next_seg['text']  # 中文直接连接
-            else:
-                merged_text += ' ' + next_seg['text']  # 英文加空格
-            
-            merged_segments.append({
-                'index': len(merged_segments) + 1,
-                'time_line': f"{current['start_str']} --> {next_seg['end_str']}",
-                'text': merged_text
-            })
-            i += 2  # 跳过下一个段落
-        else:
-            merged_segments.append({
-                'index': len(merged_segments) + 1,
-                'time_line': current['time_line'],
-                'text': current['text']
-            })
-            i += 1
-    
-    # 写回文件
-    with open(srt_file, 'w', encoding='utf-8') as f:
-        for seg in merged_segments:
-            f.write(f"{seg['index']}\n")
-            f.write(f"{seg['time_line']}\n")
-            f.write(f"{seg['text']}\n\n")
-    
-    print(f"✓ 短句合并完成，从 {len(segments)} 段合并为 {len(merged_segments)} 段")
-
-# 执行短句合并
-merge_short_segments(os.environ['ORIGINAL_SRT'])
-EOF
-    
-    # 步骤 2.3: 过滤噪音标记
-    echo "    - 过滤音乐和噪音标记"
-    python3 << 'EOF'
-import re
-import os
-
-def filter_noise_markers(srt_file):
-    """过滤音乐标记和噪音"""
-    with open(srt_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 解析SRT文件
-    blocks = re.split(r'\n\s*\n', content.strip())
-    filtered_segments = []
-    
-    for block in blocks:
-        lines = block.strip().split('\n')
-        if len(lines) >= 3:
-            index = lines[0]
-            time_line = lines[1]
-            text = '\n'.join(lines[2:]).strip()
-            
-            # 过滤条件：去除纯音乐标记
-            if not (text.startswith('【') or text.startswith('[') or 
-                   text.startswith('(') or text.startswith('（') or
-                   text.startswith('♪') or text.startswith('♫') or
-                   text.lower().startswith('[music]') or
-                   text.lower().startswith('[applause]')):
-                filtered_segments.append({
-                    'index': len(filtered_segments) + 1,
-                    'time_line': time_line,
-                    'text': text
-                })
-    
-    # 写回文件
-    with open(srt_file, 'w', encoding='utf-8') as f:
-        for seg in filtered_segments:
-            f.write(f"{seg['index']}\n")
-            f.write(f"{seg['time_line']}\n")
-            f.write(f"{seg['text']}\n\n")
-    
-    print(f"✓ 噪音过滤完成，保留 {len(filtered_segments)} 个有效段落")
-
-# 执行噪音过滤
-filter_noise_markers(os.environ['ORIGINAL_SRT'])
-EOF
-        
-        # 标记优化完成
-        touch "$OPTIMIZATION_FLAG"
-        echo "  ✓ 字幕后处理优化全部完成"
-    fi
-        
-        echo "✓ SRT字幕识别和优化完成: $ORIGINAL_SRT"
+        echo "✓ SRT字幕识别完成: $ORIGINAL_SRT"
         if [ "$USED_ZH_CONFIG" = true ]; then
-            echo "  ✓ 使用优化的中文/日文/韩文配置+智能后处理"
+            echo "  ✓ 使用优化的中文/日文/韩文配置+整句分割（aggressive segmentation + 词级时间戳）"
         else
-            echo "  ✓ 使用whisper+智能后处理优化"
+            echo "  ✓ 使用whisper+整句分割获得优化的sentence-based分割（词级时间戳）"
         fi
-        echo "  ✓ 已应用时间戳平滑、短句合并、噪音过滤等优化"
     fi
     
     # 通用的SRT文件检查
@@ -881,7 +632,7 @@ echo "   - 从 step3_translated.srt 生成 Markdown 文档"
 echo "3. 视频处理: ./process_video_part2.sh --olang $OUTPUT_LANGUAGE \"$INPUT_VIDEO\""
 echo "   - 使用 step3_translated.srt 生成带字幕的视频"
 echo ""
-echo "💡 提示和优化详情："
+echo "💡 提示："
 if [ "$USED_ZH_CONFIG" = true ]; then
     echo "  - 使用了针对中文/日文/韩文优化的aggressive segmentation配置"
     echo "  - 字幕分割更适合亚洲语言的语音特点（词级时间戳）"
@@ -893,13 +644,5 @@ if [ "$USED_ZH_CONFIG" = false ]; then
     echo "  - 支持中文、日文等全角标点符号（。！？）的句子分割"
 fi
 echo "  - 自动语言检测：中文/日文/韩文使用优化配置"
-echo ""
-echo "🔧 智能后处理优化："
-echo "  - 时间戳平滑：优化相邻字幕间隔（阈值1秒）"
-echo "  - 短句合并：自动合并短句和相邻片段"
-echo "  - 多语言适配：中日韩25字符限制，英文18单词限制"
-echo "  - 噪音过滤：自动过滤音乐标记【】()（）♪♫等"
-echo "  - 语言检测：基于文本特征自动适配处理策略"
-echo ""
 echo "  - 所有后续脚本都会使用 step3_translated.srt 文件"
 echo "=================================================="

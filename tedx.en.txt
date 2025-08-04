@@ -1,0 +1,1124 @@
+1
+00:00:00,000 --> 00:00:03,580
+[Music]
+
+2
+00:00:06,130 --> 00:00:09,280
+[Music]
+
+3
+00:00:07,680 --> 00:00:11,440
+At the turn of this century when I
+
+4
+00:00:09,280 --> 00:00:13,840
+started to learn software engineering my
+
+5
+00:00:11,440 --> 00:00:17,600
+one of my professors told us that in the
+
+6
+00:00:13,840 --> 00:00:19,760
+future every job is a programming job.
+
+7
+00:00:17,600 --> 00:00:22,480
+That's in 2001
+
+8
+00:00:19,760 --> 00:00:25,119
+and he said that we're holding a golden
+
+9
+00:00:22,480 --> 00:00:28,880
+ticket to job security.
+
+10
+00:00:25,119 --> 00:00:31,599
+Just last month, the CEO of GitHub said
+
+11
+00:00:28,880 --> 00:00:34,160
+that the future of programming is
+
+12
+00:00:31,599 --> 00:00:36,000
+natural language.
+
+13
+00:00:34,160 --> 00:00:38,079
+It looks like the prediction of my
+
+14
+00:00:36,000 --> 00:00:40,719
+professor at the turn of this century is
+
+15
+00:00:38,079 --> 00:00:43,360
+going to become true, but probably not
+
+16
+00:00:40,719 --> 00:00:45,840
+in the way that he had imagined.
+
+17
+00:00:43,360 --> 00:00:48,000
+Artificial intelligence is capable of
+
+18
+00:00:45,840 --> 00:00:51,520
+writing code for you through a natural
+
+19
+00:00:48,000 --> 00:00:54,079
+language prompt. GitHub C-Pilot can
+
+20
+00:00:51,520 --> 00:00:57,520
+complete code for you and fix bugs for
+
+21
+00:00:54,079 --> 00:01:00,399
+you. and chat GBT can create an entire
+
+22
+00:00:57,520 --> 00:01:03,760
+project for you within seconds and all
+
+23
+00:01:00,399 --> 00:01:06,720
+these tools available to anyone.
+
+24
+00:01:03,760 --> 00:01:09,680
+So I find myself wondering, have we lost
+
+25
+00:01:06,720 --> 00:01:13,439
+our golden tickets to job security?
+
+26
+00:01:09,680 --> 00:01:16,000
+And as a CST professor and a father to a
+
+27
+00:01:13,439 --> 00:01:18,720
+daughter who studies computer science,
+
+28
+00:01:16,000 --> 00:01:21,200
+there's a bigger question for me.
+
+29
+00:01:18,720 --> 00:01:23,600
+If AI is going to do programming, does
+
+30
+00:01:21,200 --> 00:01:26,880
+it still worth it for us to learn
+
+31
+00:01:23,600 --> 00:01:28,960
+software engineering anymore?
+
+32
+00:01:26,880 --> 00:01:31,119
+Today, I would like to explore this
+
+33
+00:01:28,960 --> 00:01:33,360
+question with all you guys. Let's talk
+
+34
+00:01:31,119 --> 00:01:36,479
+about what AI can do and more
+
+35
+00:01:33,360 --> 00:01:38,960
+importantly, how we can how our students
+
+36
+00:01:36,479 --> 00:01:41,360
+of software engineering uh prepare for
+
+37
+00:01:38,960 --> 00:01:44,479
+the future roles of a real software
+
+38
+00:01:41,360 --> 00:01:47,759
+engineer. So, let's dive in. First,
+
+39
+00:01:44,479 --> 00:01:50,720
+let's talk about what AI is good at in
+
+40
+00:01:47,759 --> 00:01:52,640
+when in terms of programming. AI is
+
+41
+00:01:50,720 --> 00:01:55,040
+really good at generating thousands of
+
+42
+00:01:52,640 --> 00:01:57,680
+lines of code. It translate between
+
+43
+00:01:55,040 --> 00:02:02,079
+programming languages. It can create
+
+44
+00:01:57,680 --> 00:02:05,600
+user uh interfaces and fix bugs for you
+
+45
+00:02:02,079 --> 00:02:08,000
+and it excels at repetitive tasks and
+
+46
+00:02:05,600 --> 00:02:10,560
+you know pattern recognition.
+
+47
+00:02:08,000 --> 00:02:13,360
+You know, once I asked ChatGBT to create
+
+48
+00:02:10,560 --> 00:02:16,959
+a project for me, uh, a dating app like
+
+49
+00:02:13,360 --> 00:02:18,879
+Tinder in Python, and within seconds, it
+
+50
+00:02:16,959 --> 00:02:21,360
+actually created a a complete
+
+51
+00:02:18,879 --> 00:02:23,599
+application with user profiles, the
+
+52
+00:02:21,360 --> 00:02:26,080
+swiping logic, and even a sample
+
+53
+00:02:23,599 --> 00:02:30,680
+database. The only thing didn't it
+
+54
+00:02:26,080 --> 00:02:30,680
+didn't do for me is find me a date.
+
+55
+00:02:30,720 --> 00:02:34,720
+But AI has a lot of limitations. We have
+
+56
+00:02:32,720 --> 00:02:36,480
+to accept that. you know, it still
+
+57
+00:02:34,720 --> 00:02:39,200
+doesn't understand the why behind all
+
+58
+00:02:36,480 --> 00:02:42,080
+the tasks we asked them to do. Um, it's
+
+59
+00:02:39,200 --> 00:02:45,280
+it's um it needs you human input for
+
+60
+00:02:42,080 --> 00:02:48,080
+real world context and scenarios. It may
+
+61
+00:02:45,280 --> 00:02:51,440
+not work well prioritizing long-term
+
+62
+00:02:48,080 --> 00:02:53,760
+business goals and assessing trade-offs.
+
+63
+00:02:51,440 --> 00:02:55,280
+And last but not least, it's not
+
+64
+00:02:53,760 --> 00:02:57,599
+reliable.
+
+65
+00:02:55,280 --> 00:03:00,560
+It hallucinates and sometimes give us
+
+66
+00:02:57,599 --> 00:03:04,239
+the wrong answer.
+
+67
+00:03:00,560 --> 00:03:06,239
+The statistics say that 55% of the
+
+68
+00:03:04,239 --> 00:03:09,920
+developers today are actually starting
+
+69
+00:03:06,239 --> 00:03:11,920
+to use co-pilot but only 30% of them are
+
+70
+00:03:09,920 --> 00:03:14,080
+accepting the outcome without any
+
+71
+00:03:11,920 --> 00:03:17,040
+changes. So if you are a developer and
+
+72
+00:03:14,080 --> 00:03:19,200
+you are not in the first 55%
+
+73
+00:03:17,040 --> 00:03:20,800
+that means you're not using AI you're in
+
+74
+00:03:19,200 --> 00:03:24,159
+trouble.
+
+75
+00:03:20,800 --> 00:03:26,400
+But if you are in the 30% that means you
+
+76
+00:03:24,159 --> 00:03:29,400
+trust AI too much. You may be in bigger
+
+77
+00:03:26,400 --> 00:03:29,400
+trouble.
+
+78
+00:03:29,599 --> 00:03:33,519
+All right. So, all the leading AIs today
+
+79
+00:03:31,920 --> 00:03:36,560
+are built on top of large language
+
+80
+00:03:33,519 --> 00:03:39,120
+models and it's trained on the text of
+
+81
+00:03:36,560 --> 00:03:41,840
+human knowledge. It's impressive. If you
+
+82
+00:03:39,120 --> 00:03:44,319
+give a clear prompt, it'll give you very
+
+83
+00:03:41,840 --> 00:03:46,879
+good results. But all the strategic
+
+84
+00:03:44,319 --> 00:03:50,080
+thinking are still us. It's the the
+
+85
+00:03:46,879 --> 00:03:52,959
+human. And you can think of AI as a
+
+86
+00:03:50,080 --> 00:03:55,280
+brilliant junior developer that you hire
+
+87
+00:03:52,959 --> 00:03:58,879
+to your team and they can do a lot of
+
+88
+00:03:55,280 --> 00:04:03,120
+jobs very quickly and efficiently. But
+
+89
+00:03:58,879 --> 00:04:06,000
+it's up to us human to define the vision
+
+90
+00:04:03,120 --> 00:04:09,840
+to validate the results and ensure what
+
+91
+00:04:06,000 --> 00:04:11,439
+we're building is good for the society.
+
+92
+00:04:09,840 --> 00:04:14,080
+So there's another thing that I want to
+
+93
+00:04:11,439 --> 00:04:17,040
+talk about that um AI is is struggling
+
+94
+00:04:14,080 --> 00:04:20,160
+on. It's struggling to communicate and
+
+95
+00:04:17,040 --> 00:04:22,000
+collaborate with human beings. Well,
+
+96
+00:04:20,160 --> 00:04:24,240
+maybe you will say this is more of a
+
+97
+00:04:22,000 --> 00:04:26,080
+human problem, right? We humans
+
+98
+00:04:24,240 --> 00:04:28,320
+sometimes deal with the same problem
+
+99
+00:04:26,080 --> 00:04:31,120
+too. But this is something, you know, we
+
+100
+00:04:28,320 --> 00:04:33,919
+will have to work out. Let AI do what AI
+
+101
+00:04:31,120 --> 00:04:36,720
+is good at and we humans can take care
+
+102
+00:04:33,919 --> 00:04:38,800
+of of the boring jobs such as handling
+
+103
+00:04:36,720 --> 00:04:40,800
+office politics.
+
+104
+00:04:38,800 --> 00:04:43,759
+All right. So, talked about the the
+
+105
+00:04:40,800 --> 00:04:45,440
+capabilities and limitations of AI. Now
+
+106
+00:04:43,759 --> 00:04:48,000
+we can take a look at the software
+
+107
+00:04:45,440 --> 00:04:50,639
+engineering roles.
+
+108
+00:04:48,000 --> 00:04:53,360
+So software engineering roles is not
+
+109
+00:04:50,639 --> 00:04:55,680
+just about writing code. It actually
+
+110
+00:04:53,360 --> 00:04:57,759
+talks about you know we need to
+
+111
+00:04:55,680 --> 00:05:01,600
+understand what the user needs. We need
+
+112
+00:04:57,759 --> 00:05:03,840
+to uh collaborate across roles and also
+
+113
+00:05:01,600 --> 00:05:06,400
+making tough decisions with empathy and
+
+114
+00:05:03,840 --> 00:05:08,240
+responsibility. This is what a soft
+
+115
+00:05:06,400 --> 00:05:11,360
+engineer should be doing, right? We're
+
+116
+00:05:08,240 --> 00:05:13,039
+not just tax executors. uh the the best
+
+117
+00:05:11,360 --> 00:05:15,280
+engineers are not the ones who code the
+
+118
+00:05:13,039 --> 00:05:17,360
+fastest but the ones who think the
+
+119
+00:05:15,280 --> 00:05:20,160
+deepest.
+
+120
+00:05:17,360 --> 00:05:22,320
+So a good engineer will take messy
+
+121
+00:05:20,160 --> 00:05:24,800
+problems, ambiguous problems and guide
+
+122
+00:05:22,320 --> 00:05:27,199
+machines towards a structured and
+
+123
+00:05:24,800 --> 00:05:30,160
+meaningful outcomes.
+
+124
+00:05:27,199 --> 00:05:33,120
+So there are system architects who
+
+125
+00:05:30,160 --> 00:05:35,919
+design the best solutions and they
+
+126
+00:05:33,120 --> 00:05:39,440
+should be the AI collaborators who use
+
+127
+00:05:35,919 --> 00:05:42,160
+AI to implement those solutions and then
+
+128
+00:05:39,440 --> 00:05:44,000
+they need to be ethical technologist to
+
+129
+00:05:42,160 --> 00:05:46,639
+make sure the solutions that we're
+
+130
+00:05:44,000 --> 00:05:50,240
+building are b truly benefiting human
+
+131
+00:05:46,639 --> 00:05:53,039
+being. So AI is actually democratizing a
+
+132
+00:05:50,240 --> 00:05:56,320
+lot of complicated technical pro tasks
+
+133
+00:05:53,039 --> 00:05:58,800
+like today a designer can mock up an
+
+134
+00:05:56,320 --> 00:06:01,520
+application and then you know it it's
+
+135
+00:05:58,800 --> 00:06:03,280
+just with a prompt and also marketers
+
+136
+00:06:01,520 --> 00:06:05,600
+they can they don't need data engineers
+
+137
+00:06:03,280 --> 00:06:08,560
+they can just run data analytics with
+
+138
+00:06:05,600 --> 00:06:10,720
+some you know without writing any code.
+
+139
+00:06:08,560 --> 00:06:13,759
+Does that mean soft engineers are losing
+
+140
+00:06:10,720 --> 00:06:17,039
+our advantages? The answer is no.
+
+141
+00:06:13,759 --> 00:06:19,919
+actually you know it it it still remains
+
+142
+00:06:17,039 --> 00:06:22,479
+essential for software engineers and the
+
+143
+00:06:19,919 --> 00:06:26,319
+reason is as follows.
+
+144
+00:06:22,479 --> 00:06:29,199
+First we understand AI better. We not
+
+145
+00:06:26,319 --> 00:06:31,759
+only know how to prompt and we also know
+
+146
+00:06:29,199 --> 00:06:34,240
+what's under the hood, the models, the
+
+147
+00:06:31,759 --> 00:06:37,520
+data pipelines, the limitations and
+
+148
+00:06:34,240 --> 00:06:40,160
+risks and the understanding of these are
+
+149
+00:06:37,520 --> 00:06:42,800
+very important because AI is integrated
+
+150
+00:06:40,160 --> 00:06:46,160
+into every product we're using and we're
+
+151
+00:06:42,800 --> 00:06:48,319
+building in the future. Second, we can
+
+152
+00:06:46,160 --> 00:06:51,280
+make better use of AI when building
+
+153
+00:06:48,319 --> 00:06:53,680
+software. So nowadays anybody can you
+
+154
+00:06:51,280 --> 00:06:56,720
+know prototype a demo or or create a
+
+155
+00:06:53,680 --> 00:06:59,919
+simple application of features but
+
+156
+00:06:56,720 --> 00:07:02,880
+softwares think of the bigger picture.
+
+157
+00:06:59,919 --> 00:07:05,199
+We are actually using AI to build a
+
+158
+00:07:02,880 --> 00:07:07,680
+production ready software that is
+
+159
+00:07:05,199 --> 00:07:10,000
+scalable reliable with long-term
+
+160
+00:07:07,680 --> 00:07:13,360
+maintainability.
+
+161
+00:07:10,000 --> 00:07:16,560
+Finally we are making AI better. We
+
+162
+00:07:13,360 --> 00:07:19,520
+fine-tune models. We optimize the
+
+163
+00:07:16,560 --> 00:07:22,160
+performance and improve usability. We
+
+164
+00:07:19,520 --> 00:07:24,639
+make AI available and useful for
+
+165
+00:07:22,160 --> 00:07:26,639
+everybody else. The next generation of
+
+166
+00:07:24,639 --> 00:07:29,120
+AI are still built by software
+
+167
+00:07:26,639 --> 00:07:32,639
+engineers. Do you guys remember this
+
+168
+00:07:29,120 --> 00:07:35,599
+quote from CEO of GitHub? This is not in
+
+169
+00:07:32,639 --> 00:07:38,800
+reality yet. It's still up to the
+
+170
+00:07:35,599 --> 00:07:41,759
+software engineers to improve AI and
+
+171
+00:07:38,800 --> 00:07:44,479
+make this happen.
+
+172
+00:07:41,759 --> 00:07:46,960
+So software engineers, we're not losing
+
+173
+00:07:44,479 --> 00:07:48,400
+the golden ticket to job security. As a
+
+174
+00:07:46,960 --> 00:07:50,319
+matter of fact, we're collecting even
+
+175
+00:07:48,400 --> 00:07:52,560
+more because we're no longer just
+
+176
+00:07:50,319 --> 00:07:57,280
+building software. We're actually
+
+177
+00:07:52,560 --> 00:08:00,879
+building the future intelligence itself.
+
+178
+00:07:57,280 --> 00:08:04,000
+And what we're how we train, direct, and
+
+179
+00:08:00,879 --> 00:08:07,199
+supervise AI today will define the kind
+
+180
+00:08:04,000 --> 00:08:10,319
+of systems, technology, and society that
+
+181
+00:08:07,199 --> 00:08:13,199
+we're building tomorrow.
+
+182
+00:08:10,319 --> 00:08:16,080
+AI is raising the floor, but software
+
+183
+00:08:13,199 --> 00:08:18,400
+engineers were raising the ceiling. And
+
+184
+00:08:16,080 --> 00:08:20,160
+I want to share this not just with you.
+
+185
+00:08:18,400 --> 00:08:22,000
+You can applaud. That's okay. I want to
+
+186
+00:08:20,160 --> 00:08:23,919
+share this with not just system
+
+187
+00:08:22,000 --> 00:08:26,080
+engineers. This is for everyone. All
+
+188
+00:08:23,919 --> 00:08:28,319
+right? We have AI that's rooting us up
+
+189
+00:08:26,080 --> 00:08:30,960
+from the floor, but it's human that we
+
+190
+00:08:28,319 --> 00:08:33,200
+have to reach to the ceiling and raise
+
+191
+00:08:30,960 --> 00:08:35,519
+up the ceiling.
+
+192
+00:08:33,200 --> 00:08:36,719
+All right? So after all these now we can
+
+193
+00:08:35,519 --> 00:08:38,719
+talk about software engineering
+
+194
+00:08:36,719 --> 00:08:41,120
+education, right? So you know in the
+
+195
+00:08:38,719 --> 00:08:43,680
+past coding is very important piece of
+
+196
+00:08:41,120 --> 00:08:45,200
+uh software engineering education but
+
+197
+00:08:43,680 --> 00:08:47,519
+software engineering education is not
+
+198
+00:08:45,200 --> 00:08:49,519
+just about writing code. It's also about
+
+199
+00:08:47,519 --> 00:08:52,000
+you know teaching you how to break
+
+200
+00:08:49,519 --> 00:08:54,959
+complex problems into steps think
+
+201
+00:08:52,000 --> 00:08:57,440
+logically and critically and harness the
+
+202
+00:08:54,959 --> 00:08:59,519
+digital tools to build solutions that
+
+203
+00:08:57,440 --> 00:09:02,959
+really matters.
+
+204
+00:08:59,519 --> 00:09:05,600
+So in the time when everybody AI is
+
+205
+00:09:02,959 --> 00:09:08,640
+everybody's assistant engineers becomes
+
+206
+00:09:05,600 --> 00:09:11,760
+the orchestrators we remove remove
+
+207
+00:09:08,640 --> 00:09:14,240
+barriers and open doors
+
+208
+00:09:11,760 --> 00:09:15,839
+and in order for us to uh be a
+
+209
+00:09:14,240 --> 00:09:17,920
+successful software engineer the
+
+210
+00:09:15,839 --> 00:09:20,800
+students should go beyond learning code
+
+211
+00:09:17,920 --> 00:09:23,920
+as quickly as possible and get into the
+
+212
+00:09:20,800 --> 00:09:25,680
+following things
+
+213
+00:09:23,920 --> 00:09:27,440
+you know so in order to become a
+
+214
+00:09:25,680 --> 00:09:29,360
+successful engineer in the future we
+
+215
+00:09:27,440 --> 00:09:31,839
+should focus on master to the
+
+216
+00:09:29,360 --> 00:09:33,760
+foundations, the data structure, the
+
+217
+00:09:31,839 --> 00:09:35,279
+algorithm, the programming concepts,
+
+218
+00:09:33,760 --> 00:09:37,760
+they're still very important. Spend
+
+219
+00:09:35,279 --> 00:09:40,000
+enough time to learn on these and make
+
+220
+00:09:37,760 --> 00:09:42,959
+make become an expert on those because
+
+221
+00:09:40,000 --> 00:09:47,519
+they're the very important basics.
+
+222
+00:09:42,959 --> 00:09:50,560
+Next, think about system like architect
+
+223
+00:09:47,519 --> 00:09:52,800
+because you know uh aim higher, meet the
+
+224
+00:09:50,560 --> 00:09:55,040
+expectation of a senior engineer as soon
+
+225
+00:09:52,800 --> 00:09:57,600
+as possible and think about designing
+
+226
+00:09:55,040 --> 00:10:00,000
+systems that can that is reliable and
+
+227
+00:09:57,600 --> 00:10:02,800
+scalable.
+
+228
+00:10:00,000 --> 00:10:05,760
+go beyond u go full stack across
+
+229
+00:10:02,800 --> 00:10:08,720
+disciplines. The days when a soft
+
+230
+00:10:05,760 --> 00:10:10,399
+engineer can uh can focus on either the
+
+231
+00:10:08,720 --> 00:10:12,800
+front end or the back end or the
+
+232
+00:10:10,399 --> 00:10:15,519
+database is gone. The future software
+
+233
+00:10:12,800 --> 00:10:17,600
+engineers all full stack engineers and
+
+234
+00:10:15,519 --> 00:10:19,440
+there's more. You need to also get into
+
+235
+00:10:17,600 --> 00:10:22,160
+the other disciplines like design,
+
+236
+00:10:19,440 --> 00:10:25,519
+product, data, project management and be
+
+237
+00:10:22,160 --> 00:10:27,519
+prepared to wear multiple hats.
+
+238
+00:10:25,519 --> 00:10:30,079
+practice communication and
+
+239
+00:10:27,519 --> 00:10:33,600
+collaborations. Learn to work with
+
+240
+00:10:30,079 --> 00:10:35,680
+people um you know through team projects
+
+241
+00:10:33,600 --> 00:10:39,440
+because you know in the future the way
+
+242
+00:10:35,680 --> 00:10:41,519
+you if you can explain and connect it it
+
+243
+00:10:39,440 --> 00:10:44,720
+it'll become increasingly important and
+
+244
+00:10:41,519 --> 00:10:47,839
+it will set you apart.
+
+245
+00:10:44,720 --> 00:10:51,600
+Use AI as a creative partner. Embrace
+
+246
+00:10:47,839 --> 00:10:53,600
+UI, don't hate it, and learn LLM,
+
+247
+00:10:51,600 --> 00:10:57,279
+generative AI, you know, model
+
+248
+00:10:53,600 --> 00:10:59,600
+fine-tuning and uh rack, etc. You
+
+249
+00:10:57,279 --> 00:11:01,760
+discuss your project with AI and
+
+250
+00:10:59,600 --> 00:11:03,920
+delegate your work to AI as if it's one
+
+251
+00:11:01,760 --> 00:11:07,120
+of your teammates.
+
+252
+00:11:03,920 --> 00:11:10,959
+Last but not least, stay adaptable.
+
+253
+00:11:07,120 --> 00:11:13,519
+Tools change, principles last. So, you
+
+254
+00:11:10,959 --> 00:11:15,360
+should always focus on learning how to
+
+255
+00:11:13,519 --> 00:11:18,560
+learn.
+
+256
+00:11:15,360 --> 00:11:20,800
+So in the future when everyone uh can
+
+257
+00:11:18,560 --> 00:11:23,279
+code a little the ones who can master
+
+258
+00:11:20,800 --> 00:11:26,399
+the craft will build the path for
+
+259
+00:11:23,279 --> 00:11:29,440
+everyone and becomes the leader. So in
+
+260
+00:11:26,399 --> 00:11:34,440
+the era of AI software engineering is
+
+261
+00:11:29,440 --> 00:11:34,440
+becoming the foundation of leadership.
+
+262
+00:11:34,640 --> 00:11:38,640
+I've talked a lot about programming but
+
+263
+00:11:36,720 --> 00:11:40,399
+perhaps programmer is no longer the
+
+264
+00:11:38,640 --> 00:11:42,959
+right term we should be using to refer
+
+265
+00:11:40,399 --> 00:11:45,120
+to software engineers. The software
+
+266
+00:11:42,959 --> 00:11:48,079
+engineers of the AI era should be
+
+267
+00:11:45,120 --> 00:11:51,120
+visionaries who can define meaningful
+
+268
+00:11:48,079 --> 00:11:55,200
+result uh meaningful problems. A
+
+269
+00:11:51,120 --> 00:11:58,640
+bridgeuer who can connect tools, teams
+
+270
+00:11:55,200 --> 00:12:02,240
+and disciplines and leaders who not only
+
+271
+00:11:58,640 --> 00:12:04,000
+lead human beings but also lead AI. So
+
+272
+00:12:02,240 --> 00:12:06,880
+the future doesn't belong to those who
+
+273
+00:12:04,000 --> 00:12:08,560
+code the fast fastest but it also it
+
+274
+00:12:06,880 --> 00:12:12,079
+should belong to the one who think
+
+275
+00:12:08,560 --> 00:12:14,959
+deeply adapt quickly and collaborate
+
+276
+00:12:12,079 --> 00:12:17,519
+efficiently. They are the ones who don't
+
+277
+00:12:14,959 --> 00:12:19,360
+just predict the future we build the
+
+278
+00:12:17,519 --> 00:12:21,080
+future.
+
+279
+00:12:19,360 --> 00:12:21,640
+Thank you.
+
+280
+00:12:21,080 --> 00:12:28,200
+[Applause]
+
+281
+00:12:21,640 --> 00:12:28,200
+[Music]
+

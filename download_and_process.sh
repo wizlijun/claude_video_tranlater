@@ -16,6 +16,7 @@ show_help() {
     echo "  --fsize SIZE          设置字幕字体大小 (默认: 15)"
     echo "  -o, --output NAME     指定输出文件名前缀（不含扩展名）"
     echo "  -p, --prompt TEXT     添加自定义prompt到翻译指令末尾"
+    echo "  --proxy               使用代理下载（http://127.0.0.1:1087）"
     echo "  -h, --help            显示帮助信息"
     echo ""
     echo "语言代码:"
@@ -48,6 +49,7 @@ show_help() {
     echo "  $0 -v female.wav -s 2.0 --fsize 18 https://youtu.be/VIDEO_ID"
     echo "  $0 -o custom_name https://youtu.be/VIDEO_ID"
     echo "  $0 -p \"这是一个技术教程视频\" https://youtu.be/VIDEO_ID"
+    echo "  $0 --proxy https://youtu.be/VIDEO_ID"
     echo ""
     echo "  # 本地视频文件处理"
     echo "  $0 knife.mp4"
@@ -73,6 +75,7 @@ SPEECH_RATE=""
 SUBTITLE_SIZE=""
 OUTPUT_NAME=""
 CUSTOM_PROMPT=""
+USE_PROXY=false
 VIDEO_URL=""
 
 # 解析参数
@@ -109,6 +112,10 @@ while [[ $# -gt 0 ]]; do
         -p|--prompt)
             CUSTOM_PROMPT="$2"
             shift 2
+            ;;
+        --proxy)
+            USE_PROXY=true
+            shift
             ;;
         -h|--help)
             show_help
@@ -222,12 +229,19 @@ fi
 if [ -n "$CUSTOM_PROMPT" ]; then
     echo "自定义Prompt: $CUSTOM_PROMPT"
 fi
+if [ "$USE_PROXY" = true ]; then
+    echo "代理模式: 启用 (http://127.0.0.1:1087)"
+else
+    echo "代理模式: 禁用"
+fi
 echo ""
 echo "📋 处理步骤:"
 if [ "$IS_LOCAL_FILE" = true ]; then
     echo "  1. 跳过视频下载（使用本地文件）"
+    echo "  1.5. 跳过字幕下载（本地文件）"
 else
     echo "  1. 下载视频"
+    echo "  1.5. 尝试下载视频字幕"
 fi
 echo "  2. 音频提取和语音识别"
 echo "  3. AI翻译字幕到${OUTPUT_LANGUAGE}"
@@ -249,14 +263,13 @@ else
     if [ -n "$OUTPUT_NAME" ]; then
         GETVIDEO_ARGS+=("-o" "$OUTPUT_NAME")
     fi
+    if [ "$USE_PROXY" = true ]; then
+        GETVIDEO_ARGS+=("--proxy")
+    fi
     GETVIDEO_ARGS+=("$VIDEO_URL")
 
     # 显示执行命令
-    if [ -n "$OUTPUT_NAME" ]; then
-        echo "执行命令: $GETVIDEO_SCRIPT -o \"$OUTPUT_NAME\" \"$VIDEO_URL\""
-    else
-        echo "执行命令: $GETVIDEO_SCRIPT \"$VIDEO_URL\""
-    fi
+    echo "执行命令: $GETVIDEO_SCRIPT ${GETVIDEO_ARGS[*]}"
     echo ""
 
     # 实时显示下载进度，同时捕获输出用于提取文件名
@@ -324,6 +337,76 @@ else
     echo "✅ 视频下载成功: $DOWNLOADED_FILE"
 fi
 
+# 获取生成的文件信息（提前计算用于字幕下载）
+BASENAME=$(basename "${DOWNLOADED_FILE%.*}")
+TEMP_DIR="$(pwd)/${BASENAME}_temp"
+
+# 步骤1.5: 尝试下载字幕
+echo ""
+if [ "$IS_LOCAL_FILE" = true ]; then
+    echo "📄 步骤 1.5/5: 跳过字幕下载（本地文件）..."
+    WHISPER_SRT=""
+else
+    echo "📄 步骤 1.5/5: 尝试下载视频字幕..."
+    
+    # 构建getvideo.sh字幕下载的参数
+    GETVIDEO_SRT_ARGS=("-srt")
+    if [ -n "$OUTPUT_NAME" ]; then
+        GETVIDEO_SRT_ARGS+=("-o" "$OUTPUT_NAME")
+    fi
+    if [ "$USE_PROXY" = true ]; then
+        GETVIDEO_SRT_ARGS+=("--proxy")
+    fi
+    GETVIDEO_SRT_ARGS+=("$VIDEO_URL")
+    
+    # 显示执行命令
+    echo "执行命令: $GETVIDEO_SCRIPT ${GETVIDEO_SRT_ARGS[*]}"
+    echo ""
+    
+    # 创建临时文件保存字幕下载输出
+    SUBTITLE_LOG=$(mktemp)
+    
+    # 临时禁用严格模式以捕获字幕下载脚本的退出码
+    set +e
+    
+    # 使用 tee 同时显示进度和保存输出
+    "$GETVIDEO_SCRIPT" "${GETVIDEO_SRT_ARGS[@]}" 2>&1 | tee "$SUBTITLE_LOG"
+    SUBTITLE_EXIT_CODE=$?
+    
+    set -e
+    
+    echo ""
+    echo "=================================================="
+    
+    if [ $SUBTITLE_EXIT_CODE -eq 0 ]; then
+        # 从保存的输出中提取字幕文件名
+        WHISPER_SRT=$(grep "^DOWNLOADED_FILE:" "$SUBTITLE_LOG" | tail -n 1 | sed 's/^DOWNLOADED_FILE://')
+        
+        # 如果没有找到标记的文件名，尝试查找.srt文件
+        if [ -z "$WHISPER_SRT" ]; then
+            WHISPER_SRT=$(find . -maxdepth 1 -name "*.srt" -type f -newerct '5 seconds ago' | head -1)
+        fi
+        
+        # 验证字幕文件是否存在且不为空
+        if [ -f "$WHISPER_SRT" ] && [ -s "$WHISPER_SRT" ]; then
+            echo "✅ 字幕下载成功: $WHISPER_SRT"
+        else
+            echo "⚠️  字幕下载完成但未找到有效字幕文件"
+            WHISPER_SRT=""
+        fi
+    elif [ $SUBTITLE_EXIT_CODE -eq 2 ]; then
+        echo "ℹ️  该视频没有可用的字幕文件"
+        WHISPER_SRT=""
+    else
+        echo "⚠️  字幕下载失败（退出码: $SUBTITLE_EXIT_CODE）"
+        WHISPER_SRT=""
+    fi
+    
+    # 清理临时文件
+    rm -f "$SUBTITLE_LOG"
+fi
+
+
 # 步骤2: 处理视频（第一阶段）
 echo ""
 echo "🎬 步骤 2/5: 执行视频预处理..."
@@ -339,6 +422,28 @@ fi
 if [ "$NO_MERGE" = true ]; then
     PART1_ARGS+=("-nm")
 fi
+
+# 检查是否存在字幕文件
+VIDEO_BASENAME=$(basename "${DOWNLOADED_FILE%.*}")
+STANDARD_SRT_FILE="${VIDEO_BASENAME}.srt"
+DOWNLOADED_SUBTITLE_FILE=""
+
+# 检查是否有下载成功的字幕文件
+if [ -f "$WHISPER_SRT" ] && [ -s "$WHISPER_SRT" ]; then
+    echo "✅ 检测到下载的字幕文件: $WHISPER_SRT"
+    echo "🔄 将使用下载的字幕文件跳过语音识别..."
+    DOWNLOADED_SUBTITLE_FILE="$WHISPER_SRT"
+elif [ -f "$STANDARD_SRT_FILE" ] && [ -s "$STANDARD_SRT_FILE" ]; then
+    echo "✅ 检测到已有SRT字幕文件: $STANDARD_SRT_FILE"
+    echo "🔄 将使用现有SRT字幕文件跳过语音识别..."
+    DOWNLOADED_SUBTITLE_FILE="$STANDARD_SRT_FILE"
+fi
+
+# 如果有字幕文件，添加到参数中
+if [ -n "$DOWNLOADED_SUBTITLE_FILE" ]; then
+    PART1_ARGS+=("-srt" "$DOWNLOADED_SUBTITLE_FILE")
+fi
+
 PART1_ARGS+=("$DOWNLOADED_FILE")
 
 # 显示将要执行的命令
@@ -353,9 +458,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 获取生成的文件信息
-BASENAME=$(basename "${DOWNLOADED_FILE%.*}")
-TEMP_DIR="$(pwd)/${BASENAME}_temp"
+# 获取生成的文件信息（已在字幕下载阶段定义）
 OPTIMIZED_SRT="$TEMP_DIR/step3_optimized.srt"
 TRANSLATED_SRT="$TEMP_DIR/step3.5_translated.srt"
 XIAOHONGSHU_MD="$TEMP_DIR/xiaohongshu.md"
@@ -444,16 +547,22 @@ if [[ ! "$DOWNLOADED_FILE" =~ _hd\..*$ ]]; then
         # 临时禁用严格模式以捕获下载脚本的退出码
         set +e
         
-        # 下载高清视频
+        # 构建高清下载参数
+        HD_GETVIDEO_ARGS=("-hd")
         if [ -n "$OUTPUT_NAME" ]; then
-            echo "执行命令: $GETVIDEO_SCRIPT -hd -o \"$OUTPUT_NAME\" \"$VIDEO_URL\""
-            echo ""
-            "$GETVIDEO_SCRIPT" -hd -o "$OUTPUT_NAME" "$VIDEO_URL" 2>&1 | tee "$HD_DOWNLOAD_LOG"
+            HD_GETVIDEO_ARGS+=("-o" "$OUTPUT_NAME")
         else
-            echo "执行命令: $GETVIDEO_SCRIPT -hd -o \"$BASENAME\" \"$VIDEO_URL\""
-            echo ""
-            "$GETVIDEO_SCRIPT" -hd -o "$BASENAME" "$VIDEO_URL" 2>&1 | tee "$HD_DOWNLOAD_LOG"
+            HD_GETVIDEO_ARGS+=("-o" "$BASENAME")
         fi
+        if [ "$USE_PROXY" = true ]; then
+            HD_GETVIDEO_ARGS+=("--proxy")
+        fi
+        HD_GETVIDEO_ARGS+=("$VIDEO_URL")
+        
+        # 下载高清视频
+        echo "执行命令: $GETVIDEO_SCRIPT ${HD_GETVIDEO_ARGS[*]}"
+        echo ""
+        "$GETVIDEO_SCRIPT" "${HD_GETVIDEO_ARGS[@]}" 2>&1 | tee "$HD_DOWNLOAD_LOG"
         HD_DOWNLOAD_EXIT_CODE=$?
         
         set -e

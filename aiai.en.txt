@@ -1,0 +1,1264 @@
+1
+00:00:00,370 --> 00:00:07,860
+[Music]
+
+2
+00:00:15,440 --> 00:00:19,279
+Welcome everyone.
+
+3
+00:00:17,840 --> 00:00:22,240
+I'm going to talk about practical
+
+4
+00:00:19,279 --> 00:00:25,199
+tactics to build uh reliable AI
+
+5
+00:00:22,240 --> 00:00:27,119
+applications and why nobody does it this
+
+6
+00:00:25,199 --> 00:00:29,599
+way yet.
+
+7
+00:00:27,119 --> 00:00:32,719
+Uh a little bit about myself or why you
+
+8
+00:00:29,599 --> 00:00:36,079
+should trust me. Uh I have allowed 15
+
+9
+00:00:32,719 --> 00:00:38,719
+years as a startup co-founder and CTO.
+
+10
+00:00:36,079 --> 00:00:40,879
+Uh I held executive positions for the
+
+11
+00:00:38,719 --> 00:00:43,360
+last five years at uh several
+
+12
+00:00:40,879 --> 00:00:46,559
+enterprises. uh but most importantly I
+
+13
+00:00:43,360 --> 00:00:49,920
+spent last couple of years developing
+
+14
+00:00:46,559 --> 00:00:55,120
+a lot of gen projects ranging from PC's
+
+15
+00:00:49,920 --> 00:00:59,520
+to uh many production level uh solutions
+
+16
+00:00:55,120 --> 00:01:02,719
+and helped some companies to get it done
+
+17
+00:00:59,520 --> 00:01:06,640
+and uh I've learned or distilled a way
+
+18
+00:01:02,719 --> 00:01:10,159
+to uh make these applications reliable
+
+19
+00:01:06,640 --> 00:01:14,640
+and there are quite a lot of uh tracks
+
+20
+00:01:10,159 --> 00:01:17,759
+this uh uh this conference about evals
+
+21
+00:01:14,640 --> 00:01:20,960
+and reliability but uh to my surprise
+
+22
+00:01:17,759 --> 00:01:23,600
+nobody was talking about the most
+
+23
+00:01:20,960 --> 00:01:26,159
+important things and uh we're going to
+
+24
+00:01:23,600 --> 00:01:28,880
+talk about it right now.
+
+25
+00:01:26,159 --> 00:01:33,840
+So uh standard software development life
+
+26
+00:01:28,880 --> 00:01:35,759
+cycle is uh very standard uh simple uh
+
+27
+00:01:33,840 --> 00:01:37,520
+you design your solution, you develop
+
+28
+00:01:35,759 --> 00:01:41,600
+it, you test it and then eventually you
+
+29
+00:01:37,520 --> 00:01:45,759
+deploy it. And uh when people start
+
+30
+00:01:41,600 --> 00:01:48,320
+doing uh PC with AI
+
+31
+00:01:45,759 --> 00:01:51,119
+it sounds simple like you can very
+
+32
+00:01:48,320 --> 00:01:54,240
+easily do you have some prompt and uh
+
+33
+00:01:51,119 --> 00:01:57,119
+models are very capable but then you
+
+34
+00:01:54,240 --> 00:01:58,880
+start uh facing some uh unexpected
+
+35
+00:01:57,119 --> 00:02:02,000
+challenges
+
+36
+00:01:58,880 --> 00:02:05,040
+uh actually like you can easily do a PC
+
+37
+00:02:02,000 --> 00:02:08,160
+that works 50% of the time uh but we're
+
+38
+00:02:05,040 --> 00:02:11,599
+like making it do the same reliable work
+
+39
+00:02:08,160 --> 00:02:14,720
+the Rest of the 50% is very hard uh
+
+40
+00:02:11,599 --> 00:02:18,319
+because models are nondeterministic
+
+41
+00:02:14,720 --> 00:02:20,319
+and uh it starts requiring uh a data
+
+42
+00:02:18,319 --> 00:02:22,080
+science approach uh continuous
+
+43
+00:02:20,319 --> 00:02:23,680
+experimentation you need to try this
+
+44
+00:02:22,080 --> 00:02:28,400
+prompt you need to try that model you
+
+45
+00:02:23,680 --> 00:02:30,239
+need to try this approach etc etc and uh
+
+46
+00:02:28,400 --> 00:02:32,560
+everything in your solution everything
+
+47
+00:02:30,239 --> 00:02:35,280
+that uh represents your solution which
+
+48
+00:02:32,560 --> 00:02:37,280
+is your code your logic uh the prompts
+
+49
+00:02:35,280 --> 00:02:39,519
+that you use the the models that you use
+
+50
+00:02:37,280 --> 00:02:43,200
+the the data that you base your solution
+
+51
+00:02:39,519 --> 00:02:48,840
+on changing anything of that impacts
+
+52
+00:02:43,200 --> 00:02:48,840
+your uh solution in unexpected ways.
+
+53
+00:02:49,360 --> 00:02:57,440
+Um people very often come to this uh to
+
+54
+00:02:55,040 --> 00:03:00,959
+try solving this with the wrong
+
+55
+00:02:57,440 --> 00:03:04,239
+approach. They start with a data science
+
+56
+00:03:00,959 --> 00:03:05,840
+metrics. They like it sounds reasonable,
+
+57
+00:03:04,239 --> 00:03:08,159
+right? So it requires data science
+
+58
+00:03:05,840 --> 00:03:10,560
+approach of experimentation and uh
+
+59
+00:03:08,159 --> 00:03:14,959
+people start measuring groundness,
+
+60
+00:03:10,560 --> 00:03:18,319
+factuality, bias and other uh metrics
+
+61
+00:03:14,959 --> 00:03:21,599
+that don't really help you to understand
+
+62
+00:03:18,319 --> 00:03:25,680
+uh is your solution uh working the right
+
+63
+00:03:21,599 --> 00:03:28,480
+way? Does it uh does your latest change
+
+64
+00:03:25,680 --> 00:03:31,680
+improved uh your solution in the right
+
+65
+00:03:28,480 --> 00:03:34,239
+way for your users? uh for example I've
+
+66
+00:03:31,680 --> 00:03:35,840
+been talking to an ex-colague that are
+
+67
+00:03:34,239 --> 00:03:38,400
+building a customer support bot at
+
+68
+00:03:35,840 --> 00:03:41,280
+tweaks I asked him how do you know that
+
+69
+00:03:38,400 --> 00:03:43,840
+your solution is working well he started
+
+70
+00:03:41,280 --> 00:03:45,840
+talking about factuality and other data
+
+71
+00:03:43,840 --> 00:03:49,040
+science metrics
+
+72
+00:03:45,840 --> 00:03:52,159
+u that's again I started to dig deeper
+
+73
+00:03:49,040 --> 00:03:54,159
+and then we just uh together figure out
+
+74
+00:03:52,159 --> 00:03:59,680
+that the most important metric for them
+
+75
+00:03:54,159 --> 00:04:02,080
+is uh the rate of moving from AI I
+
+76
+00:03:59,680 --> 00:04:03,599
+support bot like escalation to a human
+
+77
+00:04:02,080 --> 00:04:06,560
+support.
+
+78
+00:04:03,599 --> 00:04:09,920
+If uh your solution uh hasn't able to
+
+79
+00:04:06,560 --> 00:04:11,439
+answer the user with all this factuality
+
+80
+00:04:09,920 --> 00:04:14,400
+like it could be super grounded but
+
+81
+00:04:11,439 --> 00:04:17,120
+still not provide the right answer that
+
+82
+00:04:14,400 --> 00:04:20,560
+the user expects and uh this is what you
+
+83
+00:04:17,120 --> 00:04:26,240
+actually need to test.
+
+84
+00:04:20,560 --> 00:04:28,400
+Um and my experience was to start with
+
+85
+00:04:26,240 --> 00:04:30,880
+real world scenarios. So basically you
+
+86
+00:04:28,400 --> 00:04:34,000
+need to reverse engineer your metrics
+
+87
+00:04:30,880 --> 00:04:37,360
+and your metrics should be very very
+
+88
+00:04:34,000 --> 00:04:40,080
+specific to what your end goal. So they
+
+89
+00:04:37,360 --> 00:04:43,120
+should come from a product experience
+
+90
+00:04:40,080 --> 00:04:44,639
+from business outcomes. Uh if your
+
+91
+00:04:43,120 --> 00:04:46,800
+solution is customer support bot, you
+
+92
+00:04:44,639 --> 00:04:50,400
+need to figure out what your users want
+
+93
+00:04:46,800 --> 00:04:53,600
+and uh how you can mimic it. And instead
+
+94
+00:04:50,400 --> 00:04:56,080
+of measuring something u average or
+
+95
+00:04:53,600 --> 00:04:58,800
+something generic, you need to measure a
+
+96
+00:04:56,080 --> 00:05:01,040
+very specific criterias.
+
+97
+00:04:58,800 --> 00:05:03,280
+Uh cuz universal valves don't really
+
+98
+00:05:01,040 --> 00:05:06,240
+work.
+
+99
+00:05:03,280 --> 00:05:07,759
+How do we do it? Uh so for example,
+
+100
+00:05:06,240 --> 00:05:11,440
+customer support bot, which is by the
+
+101
+00:05:07,759 --> 00:05:15,280
+way one of the hardest uh things to do
+
+102
+00:05:11,440 --> 00:05:19,280
+properly. uh let's say I have a bank and
+
+103
+00:05:15,280 --> 00:05:21,199
+uh bank has FAQ materials
+
+104
+00:05:19,280 --> 00:05:24,000
+which contain including like how do you
+
+105
+00:05:21,199 --> 00:05:27,919
+reset your password?
+
+106
+00:05:24,000 --> 00:05:30,320
+Um so what I usually do when I help my
+
+107
+00:05:27,919 --> 00:05:34,560
+uh like companies that I help them to
+
+108
+00:05:30,320 --> 00:05:36,240
+build uh AI solutions we start with uh
+
+109
+00:05:34,560 --> 00:05:38,560
+reverse engineering like how do we
+
+110
+00:05:36,240 --> 00:05:41,759
+create the valves based on that. So in
+
+111
+00:05:38,560 --> 00:05:44,080
+this case I use LLM and in most cases I
+
+112
+00:05:41,759 --> 00:05:48,000
+use LLM to come up with right
+
+113
+00:05:44,080 --> 00:05:52,720
+evaluations. So here I can take say 01
+
+114
+00:05:48,000 --> 00:05:55,680
+uh 03 now uh and just reverse engineer
+
+115
+00:05:52,720 --> 00:05:57,759
+what should be the user question uh that
+
+116
+00:05:55,680 --> 00:05:59,759
+we know to answer based on these
+
+117
+00:05:57,759 --> 00:06:02,000
+materials and what should be the
+
+118
+00:05:59,759 --> 00:06:05,039
+specific criteria that uh these
+
+119
+00:06:02,000 --> 00:06:07,280
+materials are providing an answer for
+
+120
+00:06:05,039 --> 00:06:08,880
+and some of these criteria are quite
+
+121
+00:06:07,280 --> 00:06:12,720
+important. So for example here it says
+
+122
+00:06:08,880 --> 00:06:14,319
+that uh uh as part of the thing you you
+
+123
+00:06:12,720 --> 00:06:16,800
+need to receive a mobile validation. So
+
+124
+00:06:14,319 --> 00:06:19,919
+you receive a SMS code and uh it says
+
+125
+00:06:16,800 --> 00:06:23,120
+that if you uh don't have a mobile
+
+126
+00:06:19,919 --> 00:06:26,319
+number then you can reach uh support etc
+
+127
+00:06:23,120 --> 00:06:29,360
+etc. Uh if some of that information is
+
+128
+00:06:26,319 --> 00:06:31,120
+missing from the answer the answer would
+
+129
+00:06:29,360 --> 00:06:33,840
+not be correct.
+
+130
+00:06:31,120 --> 00:06:36,160
+You need to be very specific about what
+
+131
+00:06:33,840 --> 00:06:38,479
+exact information you need to see in the
+
+132
+00:06:36,160 --> 00:06:40,880
+answer and that information is very
+
+133
+00:06:38,479 --> 00:06:44,160
+specific to that specific question. So
+
+134
+00:06:40,880 --> 00:06:48,240
+you need to build like lots of evals
+
+135
+00:06:44,160 --> 00:06:52,560
+uh from the materials in this case uh
+
+136
+00:06:48,240 --> 00:06:55,680
+that mimic specific user questions that
+
+137
+00:06:52,560 --> 00:06:57,759
+uh you need to be able to answer for. Uh
+
+138
+00:06:55,680 --> 00:07:02,800
+how do we do it? Usually again I work
+
+139
+00:06:57,759 --> 00:07:05,039
+with uh smart models like O3 uh and I uh
+
+140
+00:07:02,800 --> 00:07:07,039
+provided enough context. I provided
+
+141
+00:07:05,039 --> 00:07:09,599
+which personas are we trying to
+
+142
+00:07:07,039 --> 00:07:12,080
+represent because you can make ask the
+
+143
+00:07:09,599 --> 00:07:14,880
+same question in uh completely different
+
+144
+00:07:12,080 --> 00:07:18,080
+ways depending on who is the persona
+
+145
+00:07:14,880 --> 00:07:19,599
+asking uh yet you would expect exactly
+
+146
+00:07:18,080 --> 00:07:22,080
+the same answer. So you need to account
+
+147
+00:07:19,599 --> 00:07:26,319
+for it.
+
+148
+00:07:22,080 --> 00:07:28,800
+Um so this is uh an example from uh the
+
+149
+00:07:26,319 --> 00:07:32,240
+open source platform that we have that
+
+150
+00:07:28,800 --> 00:07:34,400
+uh just helps to get it done. So if you
+
+151
+00:07:32,240 --> 00:07:36,000
+look it up multineer I'm not trying to
+
+152
+00:07:34,400 --> 00:07:38,319
+sell you anything. I'm not trying to
+
+153
+00:07:36,000 --> 00:07:41,599
+like vendor lock in or whatever. It's
+
+154
+00:07:38,319 --> 00:07:43,199
+completely open source and if needed I
+
+155
+00:07:41,599 --> 00:07:45,680
+can just recreate it in a couple of days
+
+156
+00:07:43,199 --> 00:07:48,319
+now with cursor. The point is in the
+
+157
+00:07:45,680 --> 00:07:51,199
+approach not in the platform. Uh so for
+
+158
+00:07:48,319 --> 00:07:54,720
+example here we see that very same
+
+159
+00:07:51,199 --> 00:07:57,440
+question um how do I reset my password
+
+160
+00:07:54,720 --> 00:08:01,440
+you see the what was the input what was
+
+161
+00:07:57,440 --> 00:08:05,520
+the output and uh that specific criteria
+
+162
+00:08:01,440 --> 00:08:08,080
+that I measure it uh that specific
+
+163
+00:08:05,520 --> 00:08:11,360
+question how do I know if the answer is
+
+164
+00:08:08,080 --> 00:08:14,080
+correct and now I can just reiterate and
+
+165
+00:08:11,360 --> 00:08:17,360
+generate like 50 different variations of
+
+166
+00:08:14,080 --> 00:08:19,680
+the same question and see if I still get
+
+167
+00:08:17,360 --> 00:08:22,240
+the right answer if the answer matches
+
+168
+00:08:19,680 --> 00:08:25,120
+all the checklist that I have for that
+
+169
+00:08:22,240 --> 00:08:28,720
+specific answer.
+
+170
+00:08:25,120 --> 00:08:32,000
+Um how the process usually works
+
+171
+00:08:28,720 --> 00:08:34,479
+um so contrary to like regular approach
+
+172
+00:08:32,000 --> 00:08:36,320
+you build your evals not at the end of
+
+173
+00:08:34,479 --> 00:08:39,360
+the process but in the very beginning of
+
+174
+00:08:36,320 --> 00:08:44,080
+the process. So you just build your
+
+175
+00:08:39,360 --> 00:08:47,120
+first version of the PC. You define the
+
+176
+00:08:44,080 --> 00:08:49,040
+first version of your tests evaluations.
+
+177
+00:08:47,120 --> 00:08:51,279
+You run them and you see what's going
+
+178
+00:08:49,040 --> 00:08:54,000
+on. You you will see that uh in some
+
+179
+00:08:51,279 --> 00:08:57,440
+cases it will fail. Uh in some cases it
+
+180
+00:08:54,000 --> 00:08:59,279
+will succeed. What's important is to to
+
+181
+00:08:57,440 --> 00:09:00,880
+look at the details not just see the
+
+182
+00:08:59,279 --> 00:09:04,080
+average numbers. The average numbers
+
+183
+00:09:00,880 --> 00:09:06,480
+won't tell you anything. Uh won't tell
+
+184
+00:09:04,080 --> 00:09:09,200
+you how to improve it. If you actually
+
+185
+00:09:06,480 --> 00:09:11,200
+look at the details of each evaluation,
+
+186
+00:09:09,200 --> 00:09:14,320
+you'll see exactly why it's failing. It
+
+187
+00:09:11,200 --> 00:09:16,320
+could be failing um because your test is
+
+188
+00:09:14,320 --> 00:09:18,640
+not defined correctly. It could be
+
+189
+00:09:16,320 --> 00:09:21,839
+failing because your uh solution is not
+
+190
+00:09:18,640 --> 00:09:24,800
+working as it should be. And like in
+
+191
+00:09:21,839 --> 00:09:27,360
+order to do it, you may need to uh to do
+
+192
+00:09:24,800 --> 00:09:28,880
+a change in like you may change a model,
+
+193
+00:09:27,360 --> 00:09:31,680
+you may change something on in your
+
+194
+00:09:28,880 --> 00:09:34,720
+logic, you may change a prompt or the
+
+195
+00:09:31,680 --> 00:09:37,360
+data that you use in order to uh answer
+
+196
+00:09:34,720 --> 00:09:40,000
+a question in our example.
+
+197
+00:09:37,360 --> 00:09:42,000
+And uh basically what you do now is
+
+198
+00:09:40,000 --> 00:09:43,600
+experimentation. So you you start
+
+199
+00:09:42,000 --> 00:09:46,320
+running your experiment. You change
+
+200
+00:09:43,600 --> 00:09:49,839
+something. you you need to define these
+
+201
+00:09:46,320 --> 00:09:53,200
+tests in a way that will uh help you to
+
+202
+00:09:49,839 --> 00:09:56,000
+make an educated guess on uh what you
+
+203
+00:09:53,200 --> 00:09:57,760
+need to change in order to to do it. In
+
+204
+00:09:56,000 --> 00:10:01,519
+some cases it will work in some cases it
+
+205
+00:09:57,760 --> 00:10:03,440
+won't. But even if it works uh let's say
+
+206
+00:10:01,519 --> 00:10:06,480
+you change something in your prompt and
+
+207
+00:10:03,440 --> 00:10:08,800
+it fixed this test. In my experience, in
+
+208
+00:10:06,480 --> 00:10:12,000
+many cases, it breaks uh something that
+
+209
+00:10:08,800 --> 00:10:14,720
+used to work before. Uh like you you you
+
+210
+00:10:12,000 --> 00:10:16,399
+have constant regressions and if you
+
+211
+00:10:14,720 --> 00:10:18,000
+don't have these evaluations, there is
+
+212
+00:10:16,399 --> 00:10:19,680
+no way you'll be able to catch it on
+
+213
+00:10:18,000 --> 00:10:22,399
+time.
+
+214
+00:10:19,680 --> 00:10:24,320
+So this is hugely important and what
+
+215
+00:10:22,399 --> 00:10:26,320
+actually happens is that again you build
+
+216
+00:10:24,320 --> 00:10:28,880
+your first version. You build your first
+
+217
+00:10:26,320 --> 00:10:30,560
+version of the vows uh you match them
+
+218
+00:10:28,880 --> 00:10:32,480
+you run these valves you improve
+
+219
+00:10:30,560 --> 00:10:35,360
+something you improve your vows or maybe
+
+220
+00:10:32,480 --> 00:10:38,399
+add more evaluations and then you like
+
+221
+00:10:35,360 --> 00:10:41,120
+continuously improve it until you reach
+
+222
+00:10:38,399 --> 00:10:43,760
+some point where you are satisfied with
+
+223
+00:10:41,120 --> 00:10:47,120
+your valves for this specific solution
+
+224
+00:10:43,760 --> 00:10:49,200
+for that specific point of time. And
+
+225
+00:10:47,120 --> 00:10:50,880
+what actually happened is that you you
+
+226
+00:10:49,200 --> 00:10:53,920
+you got your baseline, you got your
+
+227
+00:10:50,880 --> 00:10:56,800
+benchmark that uh now you can start
+
+228
+00:10:53,920 --> 00:11:00,000
+optimizing and uh you have the
+
+229
+00:10:56,800 --> 00:11:02,079
+confidence that the tests should be
+
+230
+00:11:00,000 --> 00:11:05,600
+working. So now you can try another
+
+231
+00:11:02,079 --> 00:11:09,279
+model. Let's say well what how can I try
+
+232
+00:11:05,600 --> 00:11:13,279
+to see if 40 mini will work the same way
+
+233
+00:11:09,279 --> 00:11:16,079
+with 40 or not? uh can I use a graph rag
+
+234
+00:11:13,279 --> 00:11:18,720
+or can I try a simpler solution?
+
+235
+00:11:16,079 --> 00:11:22,800
+uh should I have uh to use agentic
+
+236
+00:11:18,720 --> 00:11:26,160
+approach that like maybe better but uh
+
+237
+00:11:22,800 --> 00:11:28,560
+requires more time more uh inference
+
+238
+00:11:26,160 --> 00:11:30,720
+cost etc or should I try to simplify the
+
+239
+00:11:28,560 --> 00:11:32,240
+logic or maybe I can simplify the logic
+
+240
+00:11:30,720 --> 00:11:35,200
+for a specific portion of the
+
+241
+00:11:32,240 --> 00:11:38,560
+application etc etc having this
+
+242
+00:11:35,200 --> 00:11:41,440
+benchmark uh allows you to do all these
+
+243
+00:11:38,560 --> 00:11:42,959
+experimentations uh with confidence but
+
+244
+00:11:41,440 --> 00:11:46,000
+again the the most important part is
+
+245
+00:11:42,959 --> 00:11:49,519
+like how do you reach this benchmark
+
+246
+00:11:46,000 --> 00:11:52,240
+And uh while the approach is uh pretty
+
+247
+00:11:49,519 --> 00:11:53,680
+much the same, the evaluations that you
+
+248
+00:11:52,240 --> 00:11:55,279
+need to build and how do you build your
+
+249
+00:11:53,680 --> 00:11:57,760
+evaluations are completely different
+
+250
+00:11:55,279 --> 00:12:01,040
+depending on the solution that you need
+
+251
+00:11:57,760 --> 00:12:03,440
+to build because uh the models are super
+
+252
+00:12:01,040 --> 00:12:06,639
+capable right now. Uh so they allow you
+
+253
+00:12:03,440 --> 00:12:09,200
+to build a huge variety of uh solutions
+
+254
+00:12:06,639 --> 00:12:10,959
+but each and every solution is quite uh
+
+255
+00:12:09,200 --> 00:12:14,160
+different in terms of how do you uh
+
+256
+00:12:10,959 --> 00:12:16,800
+evaluate it. uh for support bot you
+
+257
+00:12:14,160 --> 00:12:19,680
+usually typically use LM as a judge as I
+
+258
+00:12:16,800 --> 00:12:22,240
+uh made an example if you're building
+
+259
+00:12:19,680 --> 00:12:25,120
+text to SQL or text to graph database
+
+260
+00:12:22,240 --> 00:12:27,440
+then uh to my experience the best way is
+
+261
+00:12:25,120 --> 00:12:31,760
+to create a mock database that
+
+262
+00:12:27,440 --> 00:12:34,720
+represents the um whatever uh database
+
+263
+00:12:31,760 --> 00:12:36,480
+or databases that you need your solution
+
+264
+00:12:34,720 --> 00:12:38,880
+to work with they represent the same
+
+265
+00:12:36,480 --> 00:12:41,920
+schema and you have a mock data so you
+
+266
+00:12:38,880 --> 00:12:44,880
+know exactly uh what should expect on
+
+267
+00:12:41,920 --> 00:12:47,040
+specific questions. Um if you need to
+
+268
+00:12:44,880 --> 00:12:50,240
+build some classifier for call center
+
+269
+00:12:47,040 --> 00:12:52,000
+conversations then your uh tests are
+
+270
+00:12:50,240 --> 00:12:54,800
+like simple match whenever this is this
+
+271
+00:12:52,000 --> 00:12:57,120
+is the right rubric or not. Uh and the
+
+272
+00:12:54,800 --> 00:13:00,399
+same appro uh approach applies to guard
+
+273
+00:12:57,120 --> 00:13:02,399
+rails. So uh getting back to the support
+
+274
+00:13:00,399 --> 00:13:05,519
+to the uh example of the customer
+
+275
+00:13:02,399 --> 00:13:08,160
+support bot uh guardrails you need to
+
+276
+00:13:05,519 --> 00:13:10,000
+cover uh questions that should not be
+
+277
+00:13:08,160 --> 00:13:11,839
+answered or questions that should be
+
+278
+00:13:10,000 --> 00:13:14,720
+answered in different ways or questions
+
+279
+00:13:11,839 --> 00:13:16,880
+that uh uh the answers are not in the
+
+280
+00:13:14,720 --> 00:13:18,880
+material. So all of these you can put
+
+281
+00:13:16,880 --> 00:13:20,800
+into your benchmark just different type
+
+282
+00:13:18,880 --> 00:13:23,360
+of benchmark but it's pretty much the
+
+283
+00:13:20,800 --> 00:13:26,480
+same approach.
+
+284
+00:13:23,360 --> 00:13:28,480
+Uh so just to reiterate uh the key
+
+285
+00:13:26,480 --> 00:13:30,639
+takeaways, you need to evaluate your
+
+286
+00:13:28,480 --> 00:13:35,360
+apps the way your users actually use
+
+287
+00:13:30,639 --> 00:13:37,040
+them. Um and uh avoid abstract metrics
+
+288
+00:13:35,360 --> 00:13:39,920
+uh because these abstract connectors
+
+289
+00:13:37,040 --> 00:13:41,760
+don't really measure anything important.
+
+290
+00:13:39,920 --> 00:13:43,279
+Uh and the approach is uh through
+
+291
+00:13:41,760 --> 00:13:45,839
+experimentation. So you run these
+
+292
+00:13:43,279 --> 00:13:49,120
+evaluations frequently. you that allows
+
+293
+00:13:45,839 --> 00:13:52,560
+you to have rapid progress with uh less
+
+294
+00:13:49,120 --> 00:13:55,519
+regressions because testing frequently
+
+295
+00:13:52,560 --> 00:13:58,399
+help you to to catch these surprises. Uh
+
+296
+00:13:55,519 --> 00:14:00,880
+but most importantly what you get if you
+
+297
+00:13:58,399 --> 00:14:04,000
+divi define your evaluations correctly,
+
+298
+00:14:00,880 --> 00:14:06,720
+you get your solution pretty much uh as
+
+299
+00:14:04,000 --> 00:14:08,480
+kind of explainable AI because you know
+
+300
+00:14:06,720 --> 00:14:10,880
+exactly what it does, you know exactly
+
+301
+00:14:08,480 --> 00:14:13,440
+how it does it if you test it the right
+
+302
+00:14:10,880 --> 00:14:16,959
+way.
+
+303
+00:14:13,440 --> 00:14:20,720
+Thank you very much. Uh take a look at
+
+304
+00:14:16,959 --> 00:14:24,000
+multineer uh that's a platform that you
+
+305
+00:14:20,720 --> 00:14:26,079
+can use to uh run these evaluations. You
+
+306
+00:14:24,000 --> 00:14:28,639
+can totally use any other platform. The
+
+307
+00:14:26,079 --> 00:14:31,600
+approach is quite simple. It doesn't
+
+308
+00:14:28,639 --> 00:14:34,160
+require any specific platform. Uh I've
+
+309
+00:14:31,600 --> 00:14:36,959
+built multin just because no other
+
+310
+00:14:34,160 --> 00:14:38,480
+platform helped me to do it this way to
+
+311
+00:14:36,959 --> 00:14:42,079
+to help me with the process of
+
+312
+00:14:38,480 --> 00:14:44,000
+evaluation like end to end. Um, I'm
+
+313
+00:14:42,079 --> 00:14:47,360
+working on a startup that does reliable
+
+314
+00:14:44,000 --> 00:14:49,680
+AI automation right now. Um, and uh,
+
+315
+00:14:47,360 --> 00:14:56,389
+yeah, thank you very much.
+
+316
+00:14:49,680 --> 00:14:56,389
+[Music]
+

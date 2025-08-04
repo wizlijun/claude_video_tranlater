@@ -1,0 +1,1025 @@
+1
+00:00:05,200 --> 00:00:13,520
+Good afternoon everybody. My name is Sedara. Um 
+I am an engineer on the cloud code team. Um and  
+
+2
+00:00:13,520 --> 00:00:19,600
+today we're going to be talking a little bit 
+about uh the cloud code SDK and uh the cloud  
+
+3
+00:00:19,600 --> 00:00:26,000
+GitHub action that was just announced today. 
+Um cool. So a little bit about the agenda.  
+
+4
+00:00:26,000 --> 00:00:30,160
+uh we do a little quick start for the SDK 
+uh just to give some examples of how to get  
+
+5
+00:00:30,160 --> 00:00:36,560
+started and how to use the SDK. Uh we will 
+then dive into uh a live demo of the GitHub  
+
+6
+00:00:36,560 --> 00:00:42,560
+action which should be fun. Uh the GitHub action 
+was built on top of the SDK. So it's meant to be  
+
+7
+00:00:42,560 --> 00:00:47,840
+um a source of inspiration for the kind of things 
+that you can do using the cloud code SDK. Uh we'll  
+
+8
+00:00:47,840 --> 00:00:54,960
+then dive into some uh more advanced features of 
+the SDK. Um, and then we'll end with having all  
+
+9
+00:00:54,960 --> 00:01:00,320
+of you set up uh the the cloud GitHub uh GitHub 
+action on your repo so you guys can start using  
+
+10
+00:01:00,320 --> 00:01:06,880
+it and build on top of it. Um, cool. Actually, 
+before we get started, uh, can I get a show of  
+
+11
+00:01:06,880 --> 00:01:14,160
+hands here? How many people have used cloud code? 
+Okay, it's a lot of people. And, uh, of the people  
+
+12
+00:01:14,160 --> 00:01:22,320
+who have used cloud code, uh, how many have used 
+cla or know what that is? Okay. Okay. far fewer  
+
+13
+00:01:22,320 --> 00:01:27,680
+people. Uh it's good to know. Um if you guys 
+don't have cloud code installed in your laptop,  
+
+14
+00:01:27,680 --> 00:01:31,520
+uh that's how you get it. Uh I'd encourage you 
+to to install it in your laptops and follow  
+
+15
+00:01:31,520 --> 00:01:36,080
+along. Uh there will be parts of this uh this 
+talk that will be beneficial to follow along  
+
+16
+00:01:36,080 --> 00:01:43,040
+and then if you don't want to, you don't have to. 
+It's all good. Uh cool. So what is the cloud code  
+
+17
+00:01:43,040 --> 00:01:49,920
+SDK? It is a way to programmatically access the 
+power of the cloud code agent in headless mode.  
+
+18
+00:01:49,920 --> 00:01:55,200
+Uh this is powerful because uh it's a new kind 
+of primitive and a new kind of building block  
+
+19
+00:01:55,200 --> 00:02:01,520
+that allows you to build applications that just 
+weren't possible before. Um things that you can  
+
+20
+00:02:01,520 --> 00:02:06,320
+do with with the with the SDK are like super 
+simple things to get started. Like for example,  
+
+21
+00:02:06,320 --> 00:02:11,760
+you can use it like a Unix tool. Uh the Unix the 
+Unixish tool philosophy is what really makes cloud  
+
+22
+00:02:11,760 --> 00:02:17,040
+code powerful because you can plug it in anywhere 
+where you can run bash or a terminal. Uh so you  
+
+23
+00:02:17,040 --> 00:02:22,560
+can like use it in your in your Unix pipelines. Uh 
+you can pipe stuff into it, pipe stuff out of it,  
+
+24
+00:02:22,560 --> 00:02:28,240
+have like make like complex chains out of it and 
+stuff like that. You can then build CI automation  
+
+25
+00:02:28,240 --> 00:02:32,960
+on it. So you can have Claude review your code. 
+Some people actually get Claude to write new  
+
+26
+00:02:32,960 --> 00:02:36,640
+llinters for them too. So like Claude can lint 
+your code. If there are specific things that you  
+
+27
+00:02:36,640 --> 00:02:41,120
+can't define programmatically, you can get Claude 
+code to do it. Uh and then we get into fancier  
+
+28
+00:02:41,120 --> 00:02:45,520
+applications as well. So if you want to build 
+your own chatbot that's powered by cloud code,  
+
+29
+00:02:45,520 --> 00:02:50,960
+that's certainly possible. Um if you want 
+cloud code to write you code in like a um a new  
+
+30
+00:02:50,960 --> 00:02:56,800
+environment or a separate remote environment, uh 
+you can build those kinds of applications as well.  
+
+31
+00:02:56,800 --> 00:03:00,720
+Um and finally, the these are a few features. 
+We'll talk more about the features in the coming  
+
+32
+00:03:00,720 --> 00:03:06,320
+slides. Uh and we have Python and Typescript SDKs 
+or like bindings for the cloud code SDK coming up  
+
+33
+00:03:06,320 --> 00:03:11,360
+soon. Uh so that should make it much easier for 
+you guys to consume it and build on top of it.  
+
+34
+00:03:11,360 --> 00:03:18,160
+Uh so let's jump into some basic examples. Uh 
+calling claude the cloud code SDK is as simple  
+
+35
+00:03:18,160 --> 00:03:23,600
+as just doing claude-b and following it up with 
+the string that you want to ask claude. So in  
+
+36
+00:03:23,600 --> 00:03:28,960
+this example uh I'm telling claude to write me 
+a Fibonacci sequence generator. Um and if you  
+
+37
+00:03:28,960 --> 00:03:36,000
+notice I also give it a d-allow tools write which 
+is uh a way for me to proactively give it access  
+
+38
+00:03:36,000 --> 00:03:43,120
+to the right tool so it can write files to my 
+file system. Um, and then this is something I  
+
+39
+00:03:43,120 --> 00:03:50,320
+like doing too. Uh, piping logs to claude. So you 
+can do cat log cat app.log and then pipe that into  
+
+40
+00:03:50,320 --> 00:03:56,960
+cloud-b looking at logs manually. So this is 
+something I do quite often. Um, and as you can  
+
+41
+00:03:56,960 --> 00:04:03,280
+see, it does a pretty decent job of summarizing 
+what the log failures were. Uh, similarly, uh, if  
+
+42
+00:04:03,280 --> 00:04:08,960
+you're anything like me, I just can't get myself 
+to understand the output of if config. I still  
+
+43
+00:04:08,960 --> 00:04:15,040
+don't know what it means, but Claude does and 
+Claude does it for me over here. Um, and finally,  
+
+44
+00:04:15,040 --> 00:04:19,280
+this is uh this is kind of what makes the SDK 
+tick, right? It is this is a we have an output  
+
+45
+00:04:19,280 --> 00:04:26,160
+format. If you do d-output format JSON, uh, cloud 
+code will actually output things or its response  
+
+46
+00:04:26,160 --> 00:04:32,560
+in JSON as opposed to plain text. And, uh, you 
+can parse this JSON and build on top of it. Um, so  
+
+47
+00:04:32,560 --> 00:04:38,000
+we we'll talk more about details for how this is 
+what what else you can do with this JSON, but uh  
+
+48
+00:04:38,000 --> 00:04:45,040
+I wanted to throw that example out there. Uh let's 
+get into a significantly more complex example now  
+
+49
+00:04:45,040 --> 00:04:52,080
+uh which is the uh the cloud GitHub action. Uh so 
+cloud GitHub action was built on top of the SDK  
+
+50
+00:04:52,080 --> 00:04:58,880
+um and it can be used to uh review code. It can 
+be used to create new features. It can be used to  
+
+51
+00:04:58,880 --> 00:05:04,800
+u triage bugs and so on. Um and uh this is also 
+open source. So I'll include a link at the very  
+
+52
+00:05:04,800 --> 00:05:09,440
+end of the talk. Uh so you guys can go have a look 
+at the source for inspiration for how to use it.  
+
+53
+00:05:09,440 --> 00:05:17,280
+Uh but for now let's jump into a live demo on my 
+laptop. So I have cloned a popular uh small like  
+
+54
+00:05:17,280 --> 00:05:22,880
+uh open- source quiz app for this for the purposes 
+of this demo. Um and we are going to fire it up  
+
+55
+00:05:22,880 --> 00:05:30,560
+just to see how that works and then we will tell 
+cloud to build something on top of it for us. So,  
+
+56
+00:05:30,560 --> 00:05:36,320
+I just did an npm start, which opened up my my 
+shiny new quiz app. It's actually pretty nifty. It  
+
+57
+00:05:36,320 --> 00:05:41,440
+allows you to like choose a bunch of categories. 
+Uh how many questions you want, difficulty,  
+
+58
+00:05:41,440 --> 00:05:46,560
+definitely easy for me. I suck at trivia. Um 
+type of questions. And then there's like a  
+
+59
+00:05:46,560 --> 00:05:51,680
+countdown timer. So, we're not going to actually 
+answer these unless someone feels very strongly,  
+
+60
+00:05:51,680 --> 00:05:57,200
+please shout out the answer. But I'm just going 
+to just fly through these uh just to show you  
+
+61
+00:05:57,200 --> 00:06:06,080
+guys how this how this like little quiz app works. 
+There we go. Uh not surprising. We got a great F,  
+
+62
+00:06:06,080 --> 00:06:13,600
+but that's okay. Um we So this was the little like 
+demo quiz app that that's open sourced. And if we  
+
+63
+00:06:13,600 --> 00:06:21,680
+look at the issues for for this uh for this um uh 
+repo, we see a couple very interesting ones. Um,  
+
+64
+00:06:21,680 --> 00:06:29,360
+there's one issue that says, uh, we should add 
+powerups for 50/50 elimination of options and skip  
+
+65
+00:06:29,360 --> 00:06:35,360
+questions for free. Um, because I suck at trivia, 
+I really like that feature and I want to build  
+
+66
+00:06:35,360 --> 00:06:40,480
+it. Uh, and I before before this presentation, I 
+already installed cloud the cloud GitHub action  
+
+67
+00:06:40,480 --> 00:06:45,840
+on my repo. So, it it's already available. Um, but 
+we'll go over like how to set that up uh uh later  
+
+68
+00:06:45,840 --> 00:06:54,880
+too. Um, okay. So, here's the issue. Um it has 
+pretty sparse details on how to implement this.  
+
+69
+00:06:54,880 --> 00:07:00,400
+It's just literally a feature a wish list really 
+like a a wish feature. It's saying uh add a power  
+
+70
+00:07:00,400 --> 00:07:06,400
+up option in the config 50/50 elimination for the 
+skip question. It should avoid user points even  
+
+71
+00:07:06,400 --> 00:07:11,200
+even though the user the question was skipped. Uh 
+and user should be able to configure this from the  
+
+72
+00:07:11,200 --> 00:07:16,000
+config page. So there's a lot of like creative 
+room for claw to do whatever it wants to do  
+
+73
+00:07:16,000 --> 00:07:19,680
+uh in this case and I'm excited to see what it 
+actually ends up building. So what I'm going to  
+
+74
+00:07:19,680 --> 00:07:30,320
+do is say at cloud please implement this feature 
+and comment on it. So it usually does take a four  
+
+75
+00:07:30,320 --> 00:07:35,360
+or five seconds for it to respond. And while it's 
+doing that for good measure we'll just also take  
+
+76
+00:07:35,360 --> 00:07:41,200
+this other GitHub issue. Uh this is talking about 
+uh a per question timer. So we saw there was like  
+
+77
+00:07:41,200 --> 00:07:46,000
+a global timer on the quiz app but there was no 
+per question timer. Uh so that's what this one's  
+
+78
+00:07:46,000 --> 00:07:55,600
+uh talking about. So let's go and say cloud please 
+build this. And now we have two things building.  
+
+79
+00:07:55,600 --> 00:08:02,400
+Um cool. So now when I get back to this tab you 
+see that claude responded with a comment on this  
+
+80
+00:08:02,400 --> 00:08:09,200
+GitHub issue. Uh saying that it's working. Uh 
+it also has a link to the job run which is the  
+
+81
+00:08:09,200 --> 00:08:14,960
+GitHub action run. If I click into it and if 
+I actually like click on the logs, I'll see  
+
+82
+00:08:14,960 --> 00:08:21,040
+that it's doing a bunch of stuff. You can see all 
+this JSON being output. This is from the SDK. Um,  
+
+83
+00:08:21,040 --> 00:08:25,920
+so we won't look at the JSON too much because it's 
+not much fun to parse it manually. But over here  
+
+84
+00:08:25,920 --> 00:08:30,160
+we can see that it also created a to-do list for 
+us. So claw is now going to actually go through  
+
+85
+00:08:30,160 --> 00:08:36,800
+this to-do list and try to implement uh implement 
+the uh powerup feature. Uh and similarly for the  
+
+86
+00:08:36,800 --> 00:08:43,120
+question timer uh it's going to do something 
+something uh similar. Uh one more thing that  
+
+87
+00:08:43,120 --> 00:08:48,720
+we should do here is um there are already a 
+couple pull requests that have been opened  
+
+88
+00:08:48,720 --> 00:08:54,480
+uh for this repo. Um and let's get claw to 
+review it or change some of these pull requests  
+
+89
+00:08:54,480 --> 00:09:03,040
+uh just just for fun. Uh there's this one which 
+is change background color to blue. All right.  
+
+90
+00:09:03,040 --> 00:09:08,560
+I I actually think I like green better. So, 
+I'm just going to be like, "All right, Claude,  
+
+91
+00:09:08,560 --> 00:09:15,920
+please change this to green." Uh, this one is 
+fairly easy, and I'm pretty sure Claude's going  
+
+92
+00:09:15,920 --> 00:09:21,040
+to do this, but I just wanted to show you guys 
+that it can also add commits for a pull request  
+
+93
+00:09:21,040 --> 00:09:26,320
+that's already open. U Okay, so this is going to 
+take a few minutes to run. And while this runs,  
+
+94
+00:09:26,320 --> 00:09:30,960
+uh, let's let's go back to the presentation, 
+and then we'll check up on how this is doing,  
+
+95
+00:09:30,960 --> 00:09:38,240
+um, towards the end. Um, okay cool. So, let's do 
+a little bit of a deep dive on the features of the  
+
+96
+00:09:38,240 --> 00:09:47,200
+SDK. Uh, when you call cloud-ba it has it has uh 
+it has no edit or destructive permission access.  
+
+97
+00:09:47,200 --> 00:09:52,400
+Uh, which is great for safety, but it's not great 
+for actually getting things done. uh which is why  
+
+98
+00:09:52,400 --> 00:09:59,840
+there is a d-allowed tools option which allows you 
+to to preconfigure cloud with uh any permissions  
+
+99
+00:09:59,840 --> 00:10:05,520
+that you think it might need in the future for for 
+for your given task. Uh so in this case the first  
+
+100
+00:10:05,520 --> 00:10:12,560
+example you see that I've given it permissions 
+bash permissions to uh npm run build npm test  
+
+101
+00:10:12,560 --> 00:10:19,760
+and the right tool uh which is a good set of 
+uh permissions because this allows cloud to uh  
+
+102
+00:10:19,760 --> 00:10:25,600
+self-verify what's what it's writing uh and build 
+uh build build your project and test and then  
+
+103
+00:10:25,600 --> 00:10:33,200
+continue writing. Um similarly for MCP if you have 
+MCP servers configured um you can allow list those  
+
+104
+00:10:33,200 --> 00:10:40,720
+MCP tools as well. So it's it's a very similar uh 
+very similar process. Uh then structured output  
+
+105
+00:10:40,720 --> 00:10:47,040
+uh we already saw an example of structured output 
+both from the GitHub actions logs and uh also the  
+
+106
+00:10:47,040 --> 00:10:51,280
+the little screenshot I showed you earlier. But 
+there's two there's two modes here. There's stream  
+
+107
+00:10:51,280 --> 00:10:56,800
+JSON and JSON. Um it it's it does exactly what 
+it sounds like. If you if you select stream JSON,  
+
+108
+00:10:56,800 --> 00:11:01,760
+it'll actually stream messages to you as and 
+when they're available versus JSON will just  
+
+109
+00:11:01,760 --> 00:11:07,760
+give you one giant blob of JSON at the end. U 
+and parsing this JSON and building on top of it  
+
+110
+00:11:07,760 --> 00:11:12,640
+is really how you can make use of the cloud 
+code SDK um and and create features for for  
+
+111
+00:11:12,640 --> 00:11:20,080
+your users. Um and then you can also configure 
+the system prompt. So you can do d-system prompt  
+
+112
+00:11:20,080 --> 00:11:24,240
+talk like a pirate and you can get cloud code 
+to talk like a pirate for the rest of your day.  
+
+113
+00:11:24,240 --> 00:11:31,200
+uh which is actually quite fun. If you haven't 
+done it, I'd encourage you to try it out. Um
+
+114
+00:11:31,200 --> 00:11:38,640
+we also have uh a few user interact interaction 
+features built into the SDK. Um and what that  
+
+115
+00:11:38,640 --> 00:11:46,240
+means is like the first one is uh is resuming 
+session state. So um when you uh when you call  
+
+116
+00:11:46,240 --> 00:11:52,720
+cloud-p in in structured output or JSON mode, it's 
+going to return a session ID. Uh and this session  
+
+117
+00:11:52,720 --> 00:11:57,840
+ID is useful because you can then reference the 
+session ID to go back to the same context state  
+
+118
+00:11:57,840 --> 00:12:02,880
+that that claude had when it finished that 
+process. Uh so by preserving these session  
+
+119
+00:12:02,880 --> 00:12:07,600
+IDs and keeping track of them, you can enable or 
+like build user interactive features where like  
+
+120
+00:12:07,600 --> 00:12:12,880
+you the user says something, you pass that on to 
+claude, uh claude returns a response and now you  
+
+121
+00:12:12,880 --> 00:12:18,000
+want the user to give feedback on that response 
+and that's how this kind of enables you to to  
+
+122
+00:12:18,000 --> 00:12:23,600
+build those types of interactions in your apps. 
+Um, and then the last one, and this one's actually  
+
+123
+00:12:23,600 --> 00:12:30,320
+pretty interesting, and it's it's fairly recent, 
+too. Um, it's it's d-permission prompt tool. Um,  
+
+124
+00:12:30,320 --> 00:12:35,280
+we talked a little bit about how to give cloud 
+permissions using the allowed tools flag. And that  
+
+125
+00:12:35,280 --> 00:12:40,720
+requires you to to preconfigure them in advance. 
+Uh, but what if you didn't want to do them because  
+
+126
+00:12:40,720 --> 00:12:46,560
+you don't know what tools cloud wants to what tool 
+tools cloud would want to use in the future? Um,  
+
+127
+00:12:46,560 --> 00:12:51,200
+in that case, you can use the d-p permission 
+prompt tool and offload the permission management  
+
+128
+00:12:51,200 --> 00:12:57,600
+to an to an MCP server. U so you can ask users 
+in real time for whether they want to accept a  
+
+129
+00:12:57,600 --> 00:13:01,920
+tool or reject a tool and you can have an 
+MCP server kind of handle that for you as  
+
+130
+00:13:01,920 --> 00:13:06,560
+opposed to trying to predict which tools are 
+okay and which tools are not. Um, so this is  
+
+131
+00:13:06,560 --> 00:13:12,400
+uh this is fairly recent and we'd love to get 
+feedback on this if you guys end up trying it out.
+
+132
+00:13:14,160 --> 00:13:22,400
+Uh, okay. Let's let's go back to our demo uh and 
+see what Claude's done. Um, all right. So, this is  
+
+133
+00:13:22,400 --> 00:13:33,600
+the power up issue. Uh, we can see that Claude 
+has actually gone through his to-do list. Um,
+
+134
+00:13:33,600 --> 00:13:37,760
+okay. I'm going to open a PS. There's a 
+there's a link over here to create a PR.  
+
+135
+00:13:37,760 --> 00:13:42,560
+And I'm going to click that uh and see 
+what that gives us. I'll actually create  
+
+136
+00:13:42,560 --> 00:13:46,800
+the pull request too so it's easier 
+for us to review. Um I don't really  
+
+137
+00:13:46,800 --> 00:13:50,400
+know how this codebase works but we'll 
+still eyeball it just to see if you know  
+
+138
+00:13:50,400 --> 00:14:00,240
+it's doing the right thing. U so you see 
+some set power up stuff seems all right.
+
+139
+00:14:00,240 --> 00:14:06,960
+Okay. There's like some configuration in the 
+main component. Um all right. Right. I think  
+
+140
+00:14:06,960 --> 00:14:11,600
+what we should do and what would make this fun 
+is we should just get this branch locally and  
+
+141
+00:14:11,600 --> 00:14:15,520
+see what Claude did because there's no way 
+that we can actually figure out what it did  
+
+142
+00:14:15,520 --> 00:14:25,200
+in the short amount of time that we have. So, I'm 
+going to go back to my terminal, do a good fetch,
+
+143
+00:14:25,200 --> 00:14:35,840
+check out the branch that Claude just 
+created, and restart our process. Okay.  
+
+144
+00:14:36,480 --> 00:14:44,080
+Uh, awesome. Uh, it looks like we have a powerup 
+section now, uh, at the bottom of our config page.  
+
+145
+00:14:44,080 --> 00:14:50,480
+And it's a little check box. I like that touch. 
+Uh, we'll keep both of them on. And, uh, no, let's  
+
+146
+00:14:50,480 --> 00:14:57,760
+select general knowledge. Uh, let's start playing 
+this game. Let's see what it did. Oh, sweet. So,  
+
+147
+00:14:57,760 --> 00:15:03,680
+we You see it has like this little 50/50 button 
+on the bottom left and a skip questions button on  
+
+148
+00:15:03,680 --> 00:15:08,160
+the right. Um, I'm just going to with 50/50 
+because I have no idea what the answer this  
+
+149
+00:15:08,160 --> 00:15:17,200
+is. Does anybody know what that is? D. Okay, 
+there we go. That makes sense. Cadbury. Yeah.
+
+150
+00:15:17,200 --> 00:15:20,160
+Uh, all right. I'm going to 
+skip this one and then let's  
+
+151
+00:15:20,160 --> 00:15:30,320
+just breeze through the other ones 
+for for sake of time. Um, all right.
+
+152
+00:15:30,320 --> 00:15:34,880
+All right. Still got a still got an F, but 
+we got we got one one correct answer. Uh,  
+
+153
+00:15:34,880 --> 00:15:44,320
+which is better than zero correct 
+answers. Um, and yeah, uh, I guess
+
+154
+00:15:44,320 --> 00:15:48,960
+uh, yeah, it tricked us. Uh, that 
+was a good one. Um, but yeah, I mean,  
+
+155
+00:15:48,960 --> 00:15:51,680
+it it seems like it worked. I think there's 
+definitely more we could do here. We could  
+
+156
+00:15:51,680 --> 00:15:56,320
+like show how the power like which questions 
+we we use the power upon over here. And there's  
+
+157
+00:15:56,320 --> 00:16:02,240
+like definitely more we can do. But at the most 
+basic level, I think uh Claude was able to do  
+
+158
+00:16:02,240 --> 00:16:06,800
+u do the task that we assigned it to do. Um 
+which is exciting. Like this is kind of the  
+
+159
+00:16:06,800 --> 00:16:11,280
+power of the GitHub action because you didn't 
+really have to run this on your own infra. You  
+
+160
+00:16:11,280 --> 00:16:15,760
+can just literally comment on a thread saying 
+please build this for me. It uses your your  
+
+161
+00:16:15,760 --> 00:16:22,320
+uh GitHub action runners and just like does the 
+thing. Um we let's also look at the PR that we  
+
+162
+00:16:22,320 --> 00:16:29,360
+told it to change from blue to green. Uh it's 
+all hex code. So let's just see what it did in  
+
+163
+00:16:29,360 --> 00:16:35,680
+the commits. So you see there's two commits and uh 
+Claude has added this last one to switch it from  
+
+164
+00:16:35,680 --> 00:16:42,080
+blue to green. And it did it for all three of the 
+places where uh we uh where the color was defined,  
+
+165
+00:16:42,080 --> 00:16:47,520
+which is which is awesome. Um okay. Uh I'm not 
+going to go over the last one, the question timer,  
+
+166
+00:16:47,520 --> 00:16:53,040
+because we we might run out of time. Um, but 
+this hopefully gives you uh insight into what  
+
+167
+00:16:53,040 --> 00:17:02,400
+the cloud GitHub action can can do for you. Um, 
+let's let's go back to the presentation now.
+
+168
+00:17:02,400 --> 00:17:07,680
+Okay. So, just as a recap, uh, the cloud 
+GitHub action um, as it's implemented today,  
+
+169
+00:17:07,680 --> 00:17:12,800
+uh, is able to to read your code. It's able to 
+create PRs for you from GitHub issues like we  
+
+170
+00:17:12,800 --> 00:17:17,120
+just saw. It's able to create commits for you. 
+So if you already have a PR and you commit or  
+
+171
+00:17:17,120 --> 00:17:22,720
+you comment on it, it can add a commit to an 
+existing branch or an existing PR. Um it can  
+
+172
+00:17:22,720 --> 00:17:26,480
+answer questions. It doesn't have to do something. 
+It can just literally answer questions for you.  
+
+173
+00:17:26,480 --> 00:17:30,000
+If you don't understand something, you can be 
+like, "Hey Claude, how does this work?" And you  
+
+174
+00:17:30,000 --> 00:17:34,880
+can get it to answer questions and it can of 
+course review your code. Uh the best part of  
+
+175
+00:17:34,880 --> 00:17:39,440
+all of this is that you don't have to take care 
+of the infra. It runs on existing GitHub runners  
+
+176
+00:17:39,440 --> 00:17:44,720
+which almost everyone has configured if you're 
+using GitHub actions. Um, so that that's kind  
+
+177
+00:17:44,720 --> 00:17:52,400
+of the really nice thing about this is you 
+don't have to worry about any of the infra.
+
+178
+00:17:52,400 --> 00:17:58,560
+Okay. Um, so how were actions built, right? Um, 
+I think I I may have mentioned that these actions  
+
+179
+00:17:58,560 --> 00:18:04,480
+were built on top of the SDK. Um, we so the SDK 
+does form the foundation of how these actions were  
+
+180
+00:18:04,480 --> 00:18:10,400
+built and then we have two other actions on top. 
+We have the cloud code base action. Uh this is a  
+
+181
+00:18:10,400 --> 00:18:17,760
+thin layer that just uh uh it it just implements 
+the piece which talks to cloud code and returns  
+
+182
+00:18:17,760 --> 00:18:23,360
+the response from cloud code. Um and then we have 
+another action on top of this which is called the  
+
+183
+00:18:23,360 --> 00:18:28,400
+PR action. And this action is responsible for 
+all the fancy things that you saw um on the  
+
+184
+00:18:28,400 --> 00:18:33,040
+PR. So it's responsible for making comments, for 
+the to-do list, for rendering it the right way,  
+
+185
+00:18:33,040 --> 00:18:39,280
+uh for adding the PR links and things like that. 
+So um it it's kind of three layers uh in which  
+
+186
+00:18:39,280 --> 00:18:45,520
+it's built. Both the base action and the PR action 
+are open sourced. Uh so I would encourage you guys  
+
+187
+00:18:45,520 --> 00:18:50,080
+to go have a look uh you know take inspiration 
+from how that works and maybe that inspires more  
+
+188
+00:18:50,080 --> 00:19:03,200
+ideas. Um yeah. Um yeah and then uh finally uh we 
+also um uh you guys can install the cloud GitHub  
+
+189
+00:19:03,200 --> 00:19:11,440
+actions today. Uh the easiest way to do this is 
+to open up cloud code in a terminal uh in the repo  
+
+190
+00:19:11,440 --> 00:19:17,680
+that you want to install it in. Uh and once you 
+open up cloud code, just do slashinstall github  
+
+191
+00:19:17,680 --> 00:19:24,640
+action. Um and that is going to present you with a 
+nice flow which uh guides you through configuring  
+
+192
+00:19:24,640 --> 00:19:30,560
+your GitHub action as well as merging it. So the 
+end the end result of this would be a PR which  
+
+193
+00:19:30,560 --> 00:19:35,840
+would be a YAML file for your GitHub action. Um, 
+and once you merge that in and you configure your  
+
+194
+00:19:35,840 --> 00:19:40,160
+API keys and things like that, uh, you're off 
+to the races and you can you can go ahead and  
+
+195
+00:19:40,160 --> 00:19:47,840
+start tagging Cloud and using Claude, uh, like 
+we just did right now. Um, uh, small caveat,  
+
+196
+00:19:47,840 --> 00:19:53,120
+if you're if you're a Bedrock or Vertex user, uh, 
+the instructions are a little bit different and  
+
+197
+00:19:53,120 --> 00:19:58,320
+a tiny bit more manual. So, uh, please have 
+a look at the docs. the docs uh are pretty  
+
+198
+00:19:58,320 --> 00:20:07,600
+comprehensive in uh in in in helping you set up 
+uh the GitHub action for both bedrock and Vortex.
+
+199
+00:20:07,600 --> 00:20:12,480
+Uh cool. Finally, uh resources. Uh these are 
+resources for things that we've talked about  
+
+200
+00:20:12,480 --> 00:20:19,280
+today. If you want to snap a picture, uh go 
+ahead. Um the the the open source repos for  
+
+201
+00:20:19,280 --> 00:20:25,760
+both the base action and the cloud code action 
+are are here. Um and we we absolutely love your  
+
+202
+00:20:25,760 --> 00:20:31,840
+feedback as well. So if you guys have any feedback 
+on the SDK, on the GitHub action or on cloud code,  
+
+203
+00:20:31,840 --> 00:20:38,640
+uh please go to our um public cloud code 
+GitHub repo and file an issue there and  
+
+204
+00:20:38,640 --> 00:20:43,920
+someone will have a look um and and get 
+back to you. Um cool. That's all I have  
+
+205
+00:20:43,920 --> 00:20:52,400
+for today. Uh thanks for joining me and I 
+hope you guys have a good rest of the day.
+
