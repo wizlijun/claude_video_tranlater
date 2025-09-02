@@ -1,7 +1,7 @@
 #!/opt/homebrew/bin/python3
 """
 简洁的视频字幕提取和优化脚本
-使用方法: python getsrt_simple.py video.mp4
+使用方法: python3 getsrt_simple.py video.mp4
 输出: video.srt (优化后的字幕文件)
 """
 

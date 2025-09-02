@@ -422,8 +422,8 @@ def generate_tts_segment(args):
                 else:
                     # 回退到原始命令，使用通配符匹配虚拟环境
                     tts_commands = [
-                        f'cd index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                        f'cd ../index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                        f'cd index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                        f'cd ../index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
                         f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
                     ]
                 

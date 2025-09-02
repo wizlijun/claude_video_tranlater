@@ -422,7 +422,7 @@ for i, sub in enumerate(subs):
                 # 回退到简单命令 - 虚拟环境已在脚本启动时激活
                 print(f'   路径助手失败，使用简单命令: {helper_result.stderr.strip() if helper_result.stderr else \"未知错误\"}')
                 tts_commands = [
-                    f'MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"$VOICE_FILE\" --output \"{audio_file}\" --device mps'
+                    f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"$VOICE_FILE\" --output \"{audio_file}\" --device mps'
                 ]
             
             cmd = None
