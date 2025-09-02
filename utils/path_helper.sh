@@ -58,16 +58,11 @@ get_index_tts_command() {
         return 1
     fi
     
-    # 生成命令
+    # 生成命令 - 假设虚拟环境已在脚本启动时激活
     if [ "$index_tts_path" = "." ]; then
-        echo "MPS_FALLBACK=0 python3 -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
+        echo "MPS_FALLBACK=0 python -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
     else
-        # 使用相对路径的虚拟环境，保持在程序启动目录
-        if [ "$index_tts_path" = "indextts" ]; then
-            echo "cd $index_tts_path && source ../venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
-        else
-            echo "cd $index_tts_path && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
-        fi
+        echo "cd $index_tts_path && MPS_FALLBACK=0 python -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
     fi
     
     return 0

@@ -3,6 +3,14 @@
 # 严格模式，任何命令失败则脚本退出
 set -e
 
+# 激活虚拟环境
+if [ -f "venv311/bin/activate" ]; then
+    echo "激活虚拟环境: venv311"
+    source venv311/bin/activate
+else
+    echo "警告：未找到venv311虚拟环境，使用系统Python"
+fi
+
 # --- 默认配置 ---
 DEFAULT_VOICE_FILE="bruce.wav"  # IndexTTS使用的默认参考语音文件
 DEFAULT_SPEECH_RATE="1.5"  # TTS语速倍数
@@ -420,11 +428,10 @@ for i, sub in enumerate(subs):
                 tts_command = helper_result.stdout.strip()
                 tts_commands = [tts_command]
             else:
-                # 回退到原始命令
+                # 回退到原始命令 - 虚拟环境已在脚本启动时激活
                 tts_commands = [
-                    f'cd indextts && source ../venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'cd ../indextts && source ../venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
+                    f'cd indextts && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                    f'MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
                 ]
             
             cmd = None
