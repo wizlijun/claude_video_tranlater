@@ -407,12 +407,25 @@ def generate_tts_segment(args):
                 elif os.path.exists(f'../index-tts/{voice_path}'):
                     voice_path = f'../index-tts/{voice_path}'
                 
-                # 尝试不同的IndexTTS路径
-                tts_commands = [
-                    f'cd index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'cd ../index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
-                ]
+                # 使用路径辅助工具生成IndexTTS命令
+                import sys
+                sys.path.append('..')
+                
+                # 调用bash脚本获取IndexTTS命令
+                import subprocess
+                helper_cmd = f'source utils/path_helper.sh && get_index_tts_command \"{text}\" \"{voice_path}\" \"{audio_file}\" mps'
+                helper_result = subprocess.run(['bash', '-c', helper_cmd], capture_output=True, text=True, cwd=os.getcwd())
+                
+                if helper_result.returncode == 0 and helper_result.stdout.strip():
+                    tts_command = helper_result.stdout.strip()
+                    tts_commands = [tts_command]
+                else:
+                    # 回退到原始命令，使用通配符匹配虚拟环境
+                    tts_commands = [
+                        f'cd index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                        f'cd ../index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                        f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
+                    ]
                 
                 cmd = None
                 for tts_cmd in tts_commands:
