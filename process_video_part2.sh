@@ -407,31 +407,22 @@ for i, sub in enumerate(subs):
             if retry_count > 0:
                 print(f'   IndexTTS重试第 {retry_count} 次...')
             
-            # 生成IndexTTS命令，使用相对路径
-            # 首先尝试在index-tts子目录找到语音文件
-            voice_path = '$VOICE_FILE'
-            if os.path.exists(f'index-tts/{voice_path}'):
-                voice_path = f'index-tts/{voice_path}'
-            elif os.path.exists(f'../index-tts/{voice_path}'):
-                voice_path = f'../index-tts/{voice_path}'
-            
             # 使用路径辅助工具生成IndexTTS命令
-            import sys
-            sys.path.append('..')
+            import subprocess
             
             # 调用bash脚本获取IndexTTS命令
-            import subprocess
-            helper_cmd = f'source utils/path_helper.sh && get_index_tts_command \"{text}\" \"{voice_path}\" \"{audio_file}\" mps'
+            helper_cmd = f'source utils/path_helper.sh && get_index_tts_command \"{text}\" \"$VOICE_FILE\" \"{audio_file}\" mps'
             helper_result = subprocess.run(['bash', '-c', helper_cmd], capture_output=True, text=True, cwd=os.getcwd())
             
             if helper_result.returncode == 0 and helper_result.stdout.strip():
                 tts_command = helper_result.stdout.strip()
                 tts_commands = [tts_command]
+                print(f'   使用路径助手命令: {tts_command}')
             else:
-                # 回退到原始命令 - 虚拟环境已在脚本启动时激活
+                # 回退到简单命令 - 虚拟环境已在脚本启动时激活
+                print(f'   路径助手失败，使用简单命令: {helper_result.stderr.strip() if helper_result.stderr else \"未知错误\"}')
                 tts_commands = [
-                    f'cd indextts && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
+                    f'MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"$VOICE_FILE\" --output \"{audio_file}\" --device mps'
                 ]
             
             cmd = None
