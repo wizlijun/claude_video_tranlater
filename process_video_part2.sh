@@ -422,8 +422,8 @@ for i, sub in enumerate(subs):
             else:
                 # 回退到原始命令
                 tts_commands = [
-                    f'cd index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'cd ../index-tts && source venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                    f'cd indextts && source ../venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                    f'cd ../indextts && source ../venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
                     f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
                 ]
             
@@ -467,8 +467,8 @@ for i, sub in enumerate(subs):
     import sys
     import os
     
-    # 尝试添加不同的index-tts路径到Python路径
-    possible_paths = ['index-tts', '../index-tts']
+    # 尝试添加不同的indextts路径到Python路径
+    possible_paths = ['indextts', 'index-tts', '../indextts', '../index-tts']
     for path in possible_paths:
         if os.path.exists(path):
             sys.path.append(os.path.abspath(path))

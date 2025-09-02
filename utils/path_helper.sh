@@ -4,10 +4,10 @@
 
 # 查找IndexTTS安装目录
 find_index_tts_path() {
-    local possible_paths=("index-tts" "../index-tts" ".")
+    local possible_paths=("indextts" "index-tts" "../indextts" "../index-tts" ".")
     
     for path in "${possible_paths[@]}"; do
-        if [ -d "$path" ] && [ -f "$path/setup.py" ] || [ -f "$path/pyproject.toml" ]; then
+        if [ -d "$path" ] && ([ -f "$path/setup.py" ] || [ -f "$path/pyproject.toml" ] || [ -f "$path/cli.py" ]); then
             echo "$path"
             return 0
         fi
@@ -20,7 +20,7 @@ find_index_tts_path() {
 # 查找语音文件路径
 find_voice_file_path() {
     local voice_file="$1"
-    local possible_paths=("." "index-tts" "../index-tts")
+    local possible_paths=("." "indextts" "index-tts" "../indextts" "../index-tts")
     
     for path in "${possible_paths[@]}"; do
         if [ -f "$path/$voice_file" ]; then
@@ -62,7 +62,41 @@ get_index_tts_command() {
     if [ "$index_tts_path" = "." ]; then
         echo "MPS_FALLBACK=0 python3 -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
     else
-        echo "cd $index_tts_path && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
+        # 查找虚拟环境目录 - 从当前目录开始查找
+        local venv_path=""
+        # 先查找当前目录的虚拟环境
+        for venv in venv*; do
+            if [ -d "$venv" ] && [ -f "$venv/bin/activate" ]; then
+                venv_path=$(realpath "$venv" 2>/dev/null || echo "$venv")
+                break
+            fi
+        done
+        
+        # 如果当前目录没找到，尝试父目录
+        if [ -z "$venv_path" ]; then
+            for venv in ../venv*; do
+                if [ -d "$venv" ] && [ -f "$venv/bin/activate" ]; then
+                    venv_path=$(realpath "$venv" 2>/dev/null || echo "$venv")
+                    break
+                fi
+            done
+        fi
+        
+        # 如果还没找到，尝试indextts目录下
+        if [ -z "$venv_path" ]; then
+            for venv in "$index_tts_path"/venv*; do
+                if [ -d "$venv" ] && [ -f "$venv/bin/activate" ]; then
+                    venv_path=$(realpath "$venv" 2>/dev/null || echo "$venv")
+                    break
+                fi
+            done
+        fi
+        
+        if [ -n "$venv_path" ]; then
+            echo "cd $index_tts_path && source $venv_path/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
+        else
+            echo "cd $index_tts_path && MPS_FALLBACK=0 python3 -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
+        fi
     fi
     
     return 0
