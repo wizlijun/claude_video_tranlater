@@ -410,7 +410,7 @@ for i, sub in enumerate(subs):
             # 尝试不同的IndexTTS路径
             tts_commands = [
                 f'cd index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                f'cd ../index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../claude_video_translater/{audio_file}\" --device mps',
+                f'cd ../index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
                 f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
             ]
             
