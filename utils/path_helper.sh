@@ -20,6 +20,14 @@ find_index_tts_path() {
 # 查找语音文件路径
 find_voice_file_path() {
     local voice_file="$1"
+    
+    # If it's an absolute path and exists, use it directly
+    if [[ "$voice_file" == /* ]] && [ -f "$voice_file" ]; then
+        echo "$voice_file"
+        return 0
+    fi
+    
+    # Otherwise, search in relative paths
     local possible_paths=("." "indextts" "index-tts" "../indextts" "../index-tts")
     
     for path in "${possible_paths[@]}"; do
@@ -60,9 +68,9 @@ get_index_tts_command() {
     
     # 生成命令 - 假设虚拟环境已在脚本启动时激活
     if [ "$index_tts_path" = "." ]; then
-        echo "MPS_FALLBACK=0 python3 -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
+        echo "MPS_FALLBACK=0 PYTHONPATH=\$PYTHONPATH:\$(pwd)/indextts python3 indextts/cli.py \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device --model_dir checkpoints --config checkpoints/config.yaml"
     else
-        echo "cd $index_tts_path && MPS_FALLBACK=0 python3 -m indextts.cli \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device"
+        echo "cd $index_tts_path && MPS_FALLBACK=0 PYTHONPATH=\$PYTHONPATH:\$(pwd) python3 cli.py \"$text\" --voice \"$voice_path\" --output \"$output_file\" --device $device --model_dir ../checkpoints --config ../checkpoints/config.yaml"
     fi
     
     return 0
