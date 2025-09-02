@@ -62,7 +62,8 @@ while [[ $# -gt 0 ]]; do
             ;;
         -v|--voice)
             VOICE_FILE="$2"
-            if [ ! -f "$VOICE_FILE" ] && [ ! -f "/Users/bruce/git/index-tts/$VOICE_FILE" ]; then
+            # 检查语音文件路径：当前目录、index-tts子目录、../index-tts目录
+            if [ ! -f "$VOICE_FILE" ] && [ ! -f "index-tts/$VOICE_FILE" ] && [ ! -f "../index-tts/$VOICE_FILE" ]; then
                 echo "错误：语音文件 $VOICE_FILE 不存在"
                 exit 1
             fi
@@ -398,8 +399,29 @@ for i, sub in enumerate(subs):
             if retry_count > 0:
                 print(f'   IndexTTS重试第 {retry_count} 次...')
             
-            # 生成IndexTTS命令
-            cmd = ['bash', '-c', f'cd /Users/bruce/git/claude_video_translater && MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice $VOICE_FILE --output \"{audio_file}\" --device mps']
+            # 生成IndexTTS命令，使用相对路径
+            # 首先尝试在index-tts子目录找到语音文件
+            voice_path = '$VOICE_FILE'
+            if os.path.exists(f'index-tts/{voice_path}'):
+                voice_path = f'index-tts/{voice_path}'
+            elif os.path.exists(f'../index-tts/{voice_path}'):
+                voice_path = f'../index-tts/{voice_path}'
+            
+            # 尝试不同的IndexTTS路径
+            tts_commands = [
+                f'cd index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                f'cd ../index-tts && source venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../claude_video_translater/{audio_file}\" --device mps',
+                f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
+            ]
+            
+            cmd = None
+            for tts_cmd in tts_commands:
+                cmd = ['bash', '-c', tts_cmd]
+                # 先测试命令是否可执行，如果失败则尝试下一个
+                test_result = subprocess.run(['bash', '-c', tts_cmd.split('&&')[0]], capture_output=True, text=True)
+                if 'cd' in tts_cmd and test_result.returncode != 0:
+                    continue  # 目录不存在，尝试下一个命令
+                break  # 找到可用的命令
             # Note: Using TTS_LANGUAGE={$TTS_LANGUAGE} for future language support
             result = subprocess.run(cmd, capture_output=True, text=True)
             
@@ -431,7 +453,14 @@ for i, sub in enumerate(subs):
     # 设置MPS环境变量，强制使用Apple Silicon GPU
     import sys
     import os
-    sys.path.append('/Users/bruce/git/index-tts')
+    
+    # 尝试添加不同的index-tts路径到Python路径
+    possible_paths = ['index-tts', '../index-tts']
+    for path in possible_paths:
+        if os.path.exists(path):
+            sys.path.append(os.path.abspath(path))
+            break
+    
     os.environ['MPS_FALLBACK'] = '0'
     os.environ['PYTORCH_ENABLE_MPS_FALLBACK'] = '0'
     
