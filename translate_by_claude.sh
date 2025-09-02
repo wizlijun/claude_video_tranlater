@@ -190,7 +190,7 @@ if [ "$INPUT_LINES" -gt 100 ]; then
             
             if [ -n "$BATCH_CONTENT" ]; then
                 # 翻译当前批次
-                BATCH_PROMPT="请将以下SRT字幕片段翻译为${LANGUAGE_NAME}，严格保持SRT格式（序号、时间轴、内容、空行）。只输出翻译后的SRT内容，不要添加解释，使用清晰简洁的口语表达："
+                BATCH_PROMPT="请将以下SRT字幕片段翻译为${LANGUAGE_NAME}，严格保持SRT格式（序号、时间轴、内容、空行）。只输出翻译后的SRT内容，不要添加解释，不要出现引号、“。”，使用清晰简洁的口语表达："
                 if [ -n "$CUSTOM_PROMPT" ]; then
                     BATCH_PROMPT="$BATCH_PROMPT $CUSTOM_PROMPT"
                 fi
