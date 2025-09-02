@@ -422,8 +422,8 @@ for i, sub in enumerate(subs):
             else:
                 # 回退到原始命令
                 tts_commands = [
-                    f'cd indextts && source ../venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
-                    f'cd ../indextts && source ../venv*/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                    f'cd indextts && source ../venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
+                    f'cd ../indextts && source ../venv311/bin/activate && MPS_FALLBACK=0 python -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"../{audio_file}\" --device mps',
                     f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"{voice_path}\" --output \"{audio_file}\" --device mps'
                 ]
             
