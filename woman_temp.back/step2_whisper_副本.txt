@@ -1,0 +1,1904 @@
+1
+00:00:00,000 --> 00:00:06,099
+I mean, I think it's pretty unique at OpenAI to be able to work on something that's so generally useful.
+
+2
+00:00:06,099 --> 00:00:09,999
+I mean, it's like everything they tell you not to do at a startup is just like your user is anyone.
+
+3
+00:00:09,999 --> 00:00:13,059
+You just kind of take it for granted that you literally have this like wizard in your pocket.
+
+4
+00:00:13,059 --> 00:00:20,889
+We're trying to make the most capable thing and we're also trying to have as make it useful to as many people as possible and accessible to as many people as possible.
+
+5
+00:00:20,889 --> 00:00:26,518
+If this exponential is true, like there's not really much else I want to spend my life working on.
+
+6
+00:00:26,518 --> 00:00:31,859
+I think we hear this with DbT5 internally when people are testing and they're like, oh, I thought I asked like a really hard question.
+
+7
+00:00:31,859 --> 00:00:36,899
+I feel like a little bit insulted that I thought for like two seconds or like when it doesn't even want to think at all.
+
+8
+00:00:40,539 --> 00:00:43,729
+So slow news day, not much going on for you guys.
+
+9
+00:00:43,729 --> 00:00:45,778
+Thank you for, thank you for coming out.
+
+10
+00:00:45,778 --> 00:00:48,499
+No, obviously, you know, Tina, you were just on the live stream.
+
+11
+00:00:48,499 --> 00:00:51,909
+We're recording day of congratulations. Thank you.
+
+12
+00:00:51,909 --> 00:00:57,549
+For those who are unfamiliar, why don't you introduce what you guys do at OpenAI? Yeah, I'm Christina.
+
+13
+00:00:57,549 --> 00:01:01,170
+I lead the core model team on post -training. I'm Issa.
+
+14
+00:01:01,170 --> 00:01:05,059
+I lead the deep research, like chat GPT agent team on post -training.
+
+15
+00:01:05,059 --> 00:01:08,359
+And Tina, you've been here for, or you've both been here for a while now.
+
+16
+00:01:08,359 --> 00:01:10,959
+Do you know what one you'd be a little bit of your history at the company?
+
+17
+00:01:10,959 --> 00:01:13,830
+Yeah, I've been on OpenAI for about four years now.
+
+18
+00:01:13,830 --> 00:01:21,279
+I originally worked on WebGPT, which was the original, first LLM using tool use, but it was just one question.
+
+19
+00:01:21,279 --> 00:01:25,260
+So the model learned how to use the browser tool, but you only ask one question and answer back.
+
+20
+00:01:25,260 --> 00:01:30,629
+And then we kind of just had this realization like, oh, you normally, when you have questions, you have more questions after that.
+
+21
+00:01:30,629 --> 00:01:36,019
+And so we started building this chat bot, and then that eventually became chat GPT.
+
+22
+00:01:37,179 --> 00:01:41,390
+And it would have been the reactions so far, you know, but it's only been a few hours.
+
+23
+00:01:41,390 --> 00:01:46,409
+But in your live stream, like what are any reflections, what can you tell us the day of?
+
+24
+00:01:46,409 --> 00:01:48,099
+I'm honestly really excited.
+
+25
+00:01:48,099 --> 00:01:52,000
+I think that obviously we have some great eval numbers and numbers are always really exciting.
+
+26
+00:01:52,000 --> 00:01:59,249
+But I think the thing I'm really excited about this model is just it's way more useful like in cross like all the things that people actually use chat for.
+
+27
+00:01:59,249 --> 00:02:09,059
+And it's not just like, and I think the eval numbers look good, but then also like the way when people use it, I think they'll notice it quite a bit big of a difference when the utility of it.
+
+28
+00:02:09,059 --> 00:02:11,219
+And say more about these. What are you noticing?
+
+29
+00:02:11,219 --> 00:02:12,740
+What are you seeing? What are you hoping?
+
+30
+00:02:12,740 --> 00:02:16,159
+Yeah, I think for me the two top, I mean, this is my personal use cases.
+
+31
+00:02:16,159 --> 00:02:18,049
+I use it for coding and writing all the time.
+
+32
+00:02:18,049 --> 00:02:20,139
+And it's just a huge stuff change. Yeah.
+
+33
+00:02:20,139 --> 00:02:24,639
+Sorry, you've been involved in helping lead our investment since 2021.
+
+34
+00:02:24,639 --> 00:02:31,240
+What when you either share more or tee up how you've been thinking about sort of this as it relates to coding or more broadly.
+
+35
+00:02:31,240 --> 00:02:43,199
+Yeah, well, actually just on the topic of coding, it was a huge deal to have Michael Troll come on there and not only showcase the capabilities, but also say this is the best coding model in the market.
+
+36
+00:02:43,199 --> 00:02:50,060
+And so just curious to the extent that you can share, what did you do differently to get these results?
+
+37
+00:02:50,060 --> 00:02:54,189
+Yeah, I think huge shout out to the team, especially Michelle Pokrus like me.
+
+38
+00:02:54,189 --> 00:03:02,389
+I think to get these things right and like eval numbers is one thing, like I said, but to get the actual usability and like how great it is at coding.
+
+39
+00:03:02,389 --> 00:03:04,859
+I think it just takes a lot of detail and care.
+
+40
+00:03:04,859 --> 00:03:10,038
+I think the team put a lot of effort into data sets and thinking about the reward models for this.
+
+41
+00:03:10,038 --> 00:03:14,909
+But I think it's just literally just caring so much about getting coding working well.
+
+42
+00:03:14,909 --> 00:03:19,259
+And maybe actually just to double click on front end web development.
+
+43
+00:03:19,259 --> 00:03:24,978
+I mean, we've seen as sort of investors in the ecosystem that's obviously taken off in the last six to eight months.
+
+44
+00:03:26,318 --> 00:03:33,649
+If you could pinpoint the improvement to that piece specifically, is it around, is it more around aesthetics?
+
+45
+00:03:33,649 --> 00:03:40,728
+Or is there sort of another capability leap forward in terms of what we can do with front end web development?
+
+46
+00:03:40,728 --> 00:03:43,199
+I think there should be a lot more we can do with front end.
+
+47
+00:03:43,199 --> 00:03:49,589
+I think the way we've gotten this big leap, I mean, if you compare to O3's front end coding capability, this is just totally next level.
+
+48
+00:03:49,589 --> 00:03:52,939
+It feels very different. And I think it kind of just goes back to what I was saying.
+
+49
+00:03:52,939 --> 00:03:55,319
+The team just really cared about like nailing front end.
+
+50
+00:03:55,319 --> 00:04:00,419
+And that means like getting the best data, like thinking about the aesthetics of the model and all of these things.
+
+51
+00:04:01,520 --> 00:04:06,499
+I think it's just all those details that are really coming together and making the model like great at front end.
+
+52
+00:04:06,499 --> 00:04:10,059
+Really exciting to see. Love loved the demos in the in the live stream too.
+
+53
+00:04:10,059 --> 00:04:13,938
+I wanted to ask about model behaviors because I know you worked on that too.
+
+54
+00:04:13,938 --> 00:04:16,759
+But how did you guys think about that for GPT -5?
+
+55
+00:04:16,759 --> 00:04:24,539
+And there are a lot of things that, you know, we've talked about in prior models of sync efficiency and characteristics like that.
+
+56
+00:04:24,539 --> 00:04:25,969
+How did you guys think about for this?
+
+57
+00:04:25,969 --> 00:04:27,699
+What did you guys change or tweak?
+
+58
+00:04:27,699 --> 00:04:34,680
+Yeah, the design of this model has been very, very intentional for model behavior, especially with the sync efficiency issues that we had like a few months ago with 4.
+
+59
+00:04:34,680 --> 00:04:38,939
+0. And we've just spent a lot of time thinking about like, yeah, what is the ideal behavior?
+
+60
+00:04:38,939 --> 00:04:48,960
+And I think for post -training, what's really, or one of the reasons I really like post -training is it feels more like an art than maybe even like other areas of research, because you kind of have to make all these trade -offs, right?
+
+61
+00:04:48,960 --> 00:04:54,269
+Like you have to think about like, for my rewards, like all these different rewards, I could be optimizing during the run.
+
+62
+00:04:54,269 --> 00:04:56,349
+Like how does that trade off against it, right?
+
+63
+00:04:56,349 --> 00:05:06,420
+Like I want the assistant to be like super like helpful and engaging, but maybe that's like a bit too engaging and getting too engaging gets to the overly effusive like assistant that we have.
+
+64
+00:05:06,420 --> 00:05:13,320
+So I think it's really like a balancing act of trying to figure out like what are like the characteristics and like what do we want this model to actually feel like?
+
+65
+00:05:13,320 --> 00:05:27,330
+And I think we were really excited with GPT -5 because it's kind of a time to like reset and rethink about, especially since it's so easy to make something I think very engaging in the sense that in an unhealthy way, how can we make this like a very healthy, helpful assistant?
+
+66
+00:05:27,330 --> 00:05:34,180
+Say more about how you've achieved such kind of reduction in hallucinations, but also deception with the relationship between those.
+
+67
+00:05:34,180 --> 00:05:38,499
+I guess like for me, I find hallucinations, deceptions like pretty related.
+
+68
+00:05:38,499 --> 00:05:41,619
+So the model, and we kind of saw this a lot with the reasoning models.
+
+69
+00:05:41,619 --> 00:05:46,360
+Like the reasoning model would understand that it didn't have some ability, but then it still really wanted to respond.
+
+70
+00:05:46,360 --> 00:05:52,069
+I think if you really baked it into the models that they want to be helpful and so they're like whatever I can say to be helpful in that moment.
+
+71
+00:05:52,069 --> 00:05:55,519
+I mean, that's kind of what we consider for like deception versus hallucination.
+
+72
+00:05:55,519 --> 00:05:59,699
+Sometimes the model like literally, it seems that they will just say something quickly.
+
+73
+00:05:59,699 --> 00:06:12,159
+And we kind of see a lot of this reduction with the thinking with when the models are able to stick step by step, they actually can like pause before blurting out an answer is kind of what it feels like with a lot of the previous models for hallucinations.
+
+74
+00:06:12,159 --> 00:06:20,429
+Over the next few weeks as you're evaluating, what are the biggest questions that you're having or that you're sort of anticipating being potentially answered?
+
+75
+00:06:20,429 --> 00:06:24,689
+I'm just really curious to see how all of these things reflect in usage, right?
+
+76
+00:06:24,689 --> 00:06:26,349
+Like I think coding is way, way better.
+
+77
+00:06:26,349 --> 00:06:27,959
+Like what is this actually unlocked for people?
+
+78
+00:06:27,959 --> 00:06:36,200
+And I think we're really excited to be offering these models at the price points that we have because I think this actually like unlocks like a lot more use cases that really weren't there before.
+
+79
+00:06:36,200 --> 00:06:41,649
+Maybe like previous competitor models were are good at coding, but the price point is not as exciting.
+
+80
+00:06:41,649 --> 00:06:50,560
+And so I think with this number of capabilities that we have in this model and the price point, I'm kind of excited to see like all the new startups and like developers like doing things on top of it.
+
+81
+00:06:50,560 --> 00:06:51,899
+Yeah, we're excited too.
+
+82
+00:06:51,899 --> 00:06:58,340
+But by the way, just on the topic of usage, you obviously have a lot of products with a ton of usage already.
+
+83
+00:06:58,340 --> 00:07:11,379
+And since we have one of the deep research gurus here too, how did deep research chat GPT operator sort of your existing products inform how you went about approaching GPT five?
+
+84
+00:07:12,459 --> 00:07:19,600
+One thing that's interesting is with reinforcement learning, training a model to be good at a specific capability is very data efficient.
+
+85
+00:07:19,600 --> 00:07:23,170
+You don't need that many examples to teach it something new.
+
+86
+00:07:23,170 --> 00:07:30,230
+And so the way that we think about it on my team is we're trying to push capabilities and things that are like useful to people.
+
+87
+00:07:30,230 --> 00:07:36,040
+So like deep research, it was the first model to do like very comprehensive browsing.
+
+88
+00:07:36,040 --> 00:07:40,149
+But then when O3 came out, it was also good at comprehensive browsing.
+
+89
+00:07:40,149 --> 00:07:50,069
+And that's because we're able to take the datasets that we've created for the frontier agent models and then contribute it back to the frontier reasoning models.
+
+90
+00:07:50,069 --> 00:07:56,600
+We always want to make sure that the capabilities that we're pushing with agents makes it into the flagship models as well.
+
+91
+00:07:56,600 --> 00:07:58,740
+Yeah, that's great. Very self -reinforcing.
+
+92
+00:07:58,740 --> 00:08:08,739
+You mentioned all the startups that you're excited to see come flush out what you think that could look like or even just high -level some opportunities you're more excited about because of this.
+
+93
+00:08:08,739 --> 00:08:10,749
+I mean, people always say vibe coding.
+
+94
+00:08:10,749 --> 00:08:15,529
+I think basically like non -technical people like have such a powerful tool at their hands.
+
+95
+00:08:15,529 --> 00:08:20,329
+I think really you just need some good idea and like you're not going to be limited by the fact that like you don't know how to code something.
+
+96
+00:08:20,329 --> 00:08:25,480
+Like you saw two of our demos which were front -end coding or in the beginning and that's just literally took minutes.
+
+97
+00:08:25,480 --> 00:08:29,609
+I think that would have honestly taken me like a week to actually build like fully interactive.
+
+98
+00:08:29,609 --> 00:08:31,678
+And so I think we're just going to have a lot more.
+
+99
+00:08:31,678 --> 00:08:41,229
+I would expect like maybe a lot more like indie type of like businesses built around this because of the fact that like you just need to have the idea right a simple prompt and then you get the full flush out.
+
+100
+00:08:41,229 --> 00:08:44,108
+It's the world of the ideas guy. Yeah, I think so.
+
+101
+00:08:44,108 --> 00:08:50,549
+Yeah, finally. How about in the broader sort of AGI discourse?
+
+102
+00:08:50,549 --> 00:08:54,759
+Like what is this mean or accelerator or not?
+
+103
+00:08:54,759 --> 00:09:01,939
+Or like how do we think about sort of the broader AI discourse in terms of what does GBT -5 mean here or change the conversation in any sort of way?
+
+104
+00:09:01,939 --> 00:09:08,960
+I think with GBT -5 because it's like a new, it's obviously state of the art and like all the things we talked about.
+
+105
+00:09:08,960 --> 00:09:17,239
+But I think if you're showing that like, you know, we can continue pushing the frontier here and I feel like there's always people like, oh, we're hurting a wall, like things aren't actually improving.
+
+106
+00:09:17,239 --> 00:09:27,479
+And I think the interesting thing is I feel like we've almost saturated a lot of these evals and the real like metric of like how good our models are getting is I think can be like usage, right?
+
+107
+00:09:27,479 --> 00:09:35,120
+Like what are the new use cases that are being unlocked and like how many more people are using this in their daily lives to help them like across multiple tasks.
+
+108
+00:09:35,120 --> 00:09:41,509
+So I feel like that's actually like the ultimate usage in terms like that I'm excited about for terms of like, are we getting to AGI?
+
+109
+00:09:41,509 --> 00:09:50,489
+I had a question about that just because I think Greg made this comment about how he was comparing the last model to this model and the benchmark went from 98 to 99.
+
+110
+00:09:50,489 --> 00:09:53,049
+It's like clearly we've saturated the benchmarks.
+
+111
+00:09:53,049 --> 00:09:56,479
+At least on that front which is instruction following.
+
+112
+00:09:56,479 --> 00:09:59,029
+What benchmarks do you pay attention to?
+
+113
+00:09:59,029 --> 00:10:00,720
+Like how do you guys think about evals, right?
+
+114
+00:10:00,720 --> 00:10:06,299
+Because given you're already saturating what's out there to a large extent or doing very well along those dimensions.
+
+115
+00:10:06,299 --> 00:10:13,669
+What actually gets you to push the frontier is that before them, I mean, so usage would be kind of post the model release.
+
+116
+00:10:13,669 --> 00:10:17,980
+But before you get there, what are you guys looking to internally to help guide you?
+
+117
+00:10:17,980 --> 00:10:20,320
+Is it a lot of internal evals that you created?
+
+118
+00:10:21,740 --> 00:10:24,119
+You know, is it early access to startups seeing what they think?
+
+119
+00:10:24,119 --> 00:10:27,118
+Maybe it's a combo of all the above, but how do you weigh all those things?
+
+120
+00:10:27,118 --> 00:10:33,598
+Yeah, I mean, I think on our team, we really work backwards from the capabilities we want the models to have.
+
+121
+00:10:33,598 --> 00:10:41,609
+So maybe we want it to be good at creating slide decks or something or you're good at editing spreadsheets.
+
+122
+00:10:41,609 --> 00:10:51,479
+And then if evals for those things don't exist, we try to make evals that are representative measures of that capability in a way that's actually going to be useful for users.
+
+123
+00:10:51,479 --> 00:11:02,000
+And then a lot of those are internal, we'll collect them maybe from human experts or, you know, try and statistically create examples or we'll actually look at usage data.
+
+124
+00:11:03,158 --> 00:11:05,500
+And then for us, we'll just try and hill climb on those.
+
+125
+00:11:06,980 --> 00:11:17,039
+Yeah, I think we make this joke a lot internally that like if you want to nerd type someone into working on something, you just need to make a good eval and then people are so happy to try to hill climb that.
+
+126
+00:11:17,039 --> 00:11:17,278
+Yeah.
+
+127
+00:11:18,318 --> 00:11:25,249
+I like what you said about starting with the capabilities first, how do you prioritize which you actually are shooting for?
+
+128
+00:11:25,249 --> 00:11:32,319
+Let's say there's a dimension of maybe deeper into everyday use versus getting much deeper into the expert use cases.
+
+129
+00:11:32,319 --> 00:11:34,220
+How do you think about that trade off?
+
+130
+00:11:34,220 --> 00:11:38,549
+What does that trade off mean practically speaking and what do you guys prioritize when?
+
+131
+00:11:38,549 --> 00:11:44,620
+I mean, I think it's pretty unique at OpenAI to be able to work on something that's so generally useful.
+
+132
+00:11:44,620 --> 00:11:48,720
+I mean, it's like everything they tell you not to do at a startup is just like your user is anyone.
+
+133
+00:11:48,720 --> 00:11:55,100
+Like for deep research, we wanted it to be good across like every single domain someone might want to do research in.
+
+134
+00:11:55,100 --> 00:12:02,509
+And I think you only have the privilege of doing that if you work at a company that has like huge distribution and like all different kinds of users.
+
+135
+00:12:02,509 --> 00:12:03,729
+Yeah.
+
+136
+00:12:03,729 --> 00:12:16,479
+I mean, I think if you choose a capability that's quite general like online research, you just have to make sure that you represent like a distribution of tasks across loads of different domains if you want to get good at all of them.
+
+137
+00:12:16,479 --> 00:12:25,840
+But then yeah, sometimes it is, it's hard to decide to focus on one specific thing because there are just so many different verticals that you could go could choose from.
+
+138
+00:12:25,840 --> 00:12:28,899
+But I think in some cases, maybe like coding will be really important.
+
+139
+00:12:28,899 --> 00:12:32,019
+So then, you know, a specific team will focus on coding.
+
+140
+00:12:32,019 --> 00:12:44,479
+But I think in general, because the capabilities are so general, usually like the next model improvement just kind of improves performance on a pretty broad range.
+
+141
+00:12:44,479 --> 00:12:52,340
+Yeah, I think we've kind of seen this like with the progression of even the models that we've had in chat GBT, like as a model gets smarter, it's better at instruction following.
+
+142
+00:12:52,340 --> 00:12:53,619
+It's better at tool use.
+
+143
+00:12:53,619 --> 00:12:57,379
+And like some more things get unlocked as we just continue to make smarter models.
+
+144
+00:12:57,379 --> 00:13:08,820
+So I think like a good chunk of our team also like does focus on just getting general intelligence up because I think the wins that we get from there are like you said, saying like, pretty great whenever we get a new base model.
+
+145
+00:13:08,820 --> 00:13:11,420
+And it's just saying like, oh, wow, suddenly this clicks, it works.
+
+146
+00:13:11,420 --> 00:13:21,879
+And I think we kind of saw that moment with like operator because we have been working on computer usage, but I think it was hard to finally get the model to actually without like the multi portal capabilities to really support it.
+
+147
+00:13:21,879 --> 00:13:24,408
+Like you couldn't have something like operator when it launched.
+
+148
+00:13:24,408 --> 00:13:30,950
+Yeah, it's the same thing with everyone was talking about agents, but we didn't really have a way of actually training useful agents.
+
+149
+00:13:30,950 --> 00:13:36,809
+I mean, I think everyone was talking about all these agent demos, but nothing that actually really works.
+
+150
+00:13:36,809 --> 00:13:44,620
+But I think when we saw the reinforcement learning algorithm working really well on math and physics problems and coding problems, it became pretty clear.
+
+151
+00:13:44,620 --> 00:13:52,919
+Like just from reading through the chain of thought, like, okay, this thing's actually like thinking and reasoning and backtracking and to build something that's able to like navigate the real world.
+
+152
+00:13:52,919 --> 00:13:54,369
+It also needs to have that ability.
+
+153
+00:13:54,369 --> 00:13:59,590
+So we realize, okay, like this is a thing that's going to actually let us get to useful agents.
+
+154
+00:13:59,590 --> 00:14:08,440
+And so I think it's interesting at OpenAI because you have people pushing like, you know, foundational algorithms, getting really good at math, getting a gold medal in the IMO.
+
+155
+00:14:08,440 --> 00:14:16,929
+And then on post -training, we'll often take like those methods and try and figure out how to make things that are most useful and like usable to like all of our users.
+
+156
+00:14:16,929 --> 00:14:23,139
+How much of the improvements are coming from the architecture versus the data versus the scale?
+
+157
+00:14:23,139 --> 00:14:25,140
+How do you sort of think about that?
+
+158
+00:14:25,140 --> 00:14:27,210
+My opinion, I'm very data -pilled.
+
+159
+00:14:27,210 --> 00:14:28,769
+Like I think data is very important.
+
+160
+00:14:28,769 --> 00:14:37,879
+I think deep research was so good because ESA puts so much thought and like careful attention to like the data curation that they did and thinking about all the different use cases.
+
+161
+00:14:37,879 --> 00:14:38,940
+She wanted to have represented.
+
+162
+00:14:40,259 --> 00:14:42,269
+So I'm on team data.
+
+163
+00:14:42,269 --> 00:14:54,329
+Yeah, I mean, I think all are very important, but especially like, especially now that we have such an efficient way of learning, high -quality data is even more important.
+
+164
+00:14:54,329 --> 00:14:59,950
+Maybe on the data topic, we've been talking a lot about RL environments.
+
+165
+00:14:59,950 --> 00:15:04,399
+It's a popular space for startups who all want to work with you guys.
+
+166
+00:15:04,399 --> 00:15:09,328
+And I was curious just to get your thoughts on this since you've been data or you're data -pilled.
+
+167
+00:15:09,328 --> 00:15:13,299
+But what are the bottlenecks that you see for the next stage?
+
+168
+00:15:13,299 --> 00:15:16,418
+Is that, I mean, maybe tying it to RL environments.
+
+169
+00:15:16,418 --> 00:15:34,000
+Is there sort of a lack of good realistic RL environments that that's sort of the next frontier, which maybe creates an opportunity for these startups that once you, you know, sort of are able to really work within an environment that takes a long time to build.
+
+170
+00:15:34,000 --> 00:15:43,989
+These are not, you know, sort of built in a day or two that you can actually automate labor to the full extent of, like, compute, you know, the way that you would need computer use to do.
+
+171
+00:15:43,989 --> 00:15:52,369
+Yeah, I think in my opinion, I do think there is a lot of value in getting really good tasks and getting really good tasks requires really good RL environments.
+
+172
+00:15:52,369 --> 00:15:59,500
+I think the more complicated, the more realistic, the more simulated we can make them, I think the better we'll get.
+
+173
+00:15:59,500 --> 00:16:05,980
+And I think we're kind of saying that, like, tasks matter more at this point, given the fact that we have such a strong algorithm.
+
+174
+00:16:05,980 --> 00:16:13,119
+So I think the data, creating data and figuring out, like, the best tasks to train on is, like, one of the big questions we have.
+
+175
+00:16:13,119 --> 00:16:20,918
+Yeah, like, there's some generalization from training on, like, one website to another, but if you want to get really, really good at something, the best thing to do is just, like, train on that exact thing.
+
+176
+00:16:20,918 --> 00:16:21,439
+Right.
+
+177
+00:16:21,439 --> 00:16:29,699
+So, yeah, I think we're definitely just constrained by how, like, things that we can represent in a way that we can train on.
+
+178
+00:16:29,699 --> 00:16:33,429
+Like, the chargeability agent, for example, has such a general tool.
+
+179
+00:16:33,429 --> 00:16:35,989
+It has a browser and a terminal.
+
+180
+00:16:35,989 --> 00:16:41,150
+And between those two things, you can basically do most of the tasks that a human does on a computer.
+
+181
+00:16:41,150 --> 00:16:44,899
+So in theory, you can ask it to do anything that you can do on your computer.
+
+182
+00:16:44,899 --> 00:16:51,140
+It's obviously not good enough to do that yet, but with the tools it has in theory, you can push it really, really far.
+
+183
+00:16:51,140 --> 00:16:58,190
+So now we just have to, like, make it really good at all those things by, you know, training on way more things.
+
+184
+00:16:58,190 --> 00:17:01,279
+Yeah. Let's talk about creative writing.
+
+185
+00:17:01,279 --> 00:17:03,789
+Maybe you can talk about the improvements there, how you think about it.
+
+186
+00:17:03,789 --> 00:17:06,298
+That's one of my favorite improvements in GBT -5.
+
+187
+00:17:07,799 --> 00:17:14,360
+The writing, I honestly find it very tender and touching, especially for a lot of the creative writing that we want to do.
+
+188
+00:17:14,360 --> 00:17:17,588
+We were thinking through, like, a bunch of different samples for the live stream.
+
+189
+00:17:17,588 --> 00:17:23,159
+And, like, every time I was like, oh, that's, like, actually, like, that, like, hits, like, it's, like, it's, like, good.
+
+190
+00:17:23,159 --> 00:17:24,449
+And it's, like, spooky.
+
+191
+00:17:24,449 --> 00:17:28,460
+And I'm just like, oh, this feels like someone, like, someone should have written this.
+
+192
+00:17:28,460 --> 00:17:33,778
+But I think it's really cool because you can actually really use it for, like, helping you with things.
+
+193
+00:17:33,778 --> 00:17:39,340
+Like, like, my example I did in the live stream was, like, writing, helping me write the eulogy, something that, like, that's, like, kind of hard to write.
+
+194
+00:17:39,340 --> 00:17:42,568
+Especially since writing isn't really something a lot of people are good at.
+
+195
+00:17:42,568 --> 00:17:45,338
+Like, I'm personally a very, very bad writer. That's not true.
+
+196
+00:17:46,940 --> 00:17:47,920
+I think it's. .
+
+197
+00:17:47,920 --> 00:17:49,050
+. That makes a better story.
+
+198
+00:17:49,050 --> 00:17:50,700
+I think it's. .
+
+199
+00:17:50,700 --> 00:17:52,929
+. Compared to maybe the other things I'm better at.
+
+200
+00:17:52,929 --> 00:18:02,680
+But it's so great to have this tool to help me, like, craft whenever, like, I use it literally for as simple things as, like, Slack messages to figure out, like, how to phrase this well.
+
+201
+00:18:02,680 --> 00:18:04,728
+It'll help me give me some iterations.
+
+202
+00:18:04,728 --> 00:18:06,989
+How to, how to say something to the team.
+
+203
+00:18:06,989 --> 00:18:08,660
+I want to see those prompts. Yeah.
+
+204
+00:18:08,660 --> 00:18:10,789
+For now, I'll just looking for M dashes.
+
+205
+00:18:10,789 --> 00:18:12,640
+That was a good save. We're like.
+
+206
+00:18:12,640 --> 00:18:12,640
+. .
+
+207
+00:18:12,640 --> 00:18:15,229
+Where do you stand? Where do you stand on the M dash discourse?
+
+208
+00:18:15,229 --> 00:18:16,989
+I like M dashes. I do them normally.
+
+209
+00:18:16,989 --> 00:18:19,309
+Now people think I'm misusing them. I know, I know.
+
+210
+00:18:19,309 --> 00:18:20,519
+I know, me too.
+
+211
+00:18:20,519 --> 00:18:35,849
+Going back to the discourse for a second, Sam said in his interview with Jack, he said, if you had said 10 years ago that we would get models at the level of sort of PhD students, I would think, wow, the world looks so different.
+
+212
+00:18:35,849 --> 00:18:37,640
+And yet we've basically taken it for granted.
+
+213
+00:18:39,220 --> 00:18:41,129
+Do you think basically the improvements are similar?
+
+214
+00:18:41,129 --> 00:18:45,188
+Like, as soon as we get them, we're just going to be like, oh, you know, now this is the standard.
+
+215
+00:18:45,188 --> 00:18:47,900
+Or do you think at some point there's going to be like, oh my God, this is like.
+
+216
+00:18:47,900 --> 00:18:48,329
+. .
+
+217
+00:18:48,329 --> 00:18:55,829
+How do you think about sort of people's ability to sort of acclimate or adjust her? Yeah.
+
+218
+00:18:55,829 --> 00:18:58,809
+I mean, it seems like people adjust really quickly. Don't you think?
+
+219
+00:18:58,809 --> 00:19:02,119
+Yeah, whatever happens. I feel like Chatchabee TV got released and everyone was like, wow, that's so cool.
+
+220
+00:19:02,119 --> 00:19:05,458
+But then you just kind of take it for granted that you literally have this like wizard in your pocket.
+
+221
+00:19:05,458 --> 00:19:08,479
+You can like ask it whatever, whatever random thought you have.
+
+222
+00:19:08,479 --> 00:19:12,609
+And it just pops out like a good essay and you're like, oh, okay, cool. That's what's happening.
+
+223
+00:19:12,609 --> 00:19:17,320
+I guess people adapt to things rather quickly in my opinion with technology and it is really easy.
+
+224
+00:19:17,320 --> 00:19:27,179
+And I think because the form factor is so easy, even with like new tools, like deep research and Chatchabee TV agent, it's like presented in such like a easy way that people already know how to interface with.
+
+225
+00:19:27,179 --> 00:19:36,239
+Like I think as long as that's true, even with the models getting like much smarter than us, like I think it'll be, it's still going to be like quite approachable to people.
+
+226
+00:19:36,239 --> 00:19:43,869
+Do you think the jump from GPT four to five was bigger or three to four or maybe three and a half to four?
+
+227
+00:19:43,869 --> 00:19:59,288
+I mean, at least one thing for me and my usage of it is sometimes I'm wondering if I have hard enough questions to ask it to actually like highlight the difference because when it gets to a point where it's just answering what you need so well, it's like almost harder to tell the difference in some areas.
+
+228
+00:19:59,288 --> 00:20:07,039
+But with writing, yeah, I've been, I've been using it for a few weeks and it's just kind of blown me away in a way that models previously haven't.
+
+229
+00:20:07,039 --> 00:20:12,838
+Maybe I'm biased, recency bias, but I think does jump to four to five is most impressive for me because I guess with 3.
+
+230
+00:20:12,838 --> 00:20:17,469
+5 when we first released it, the most common use case for me then also was still just for coding.
+
+231
+00:20:17,469 --> 00:20:33,610
+But now like even though four was better at coding, I feel like the jump between four and five in terms of like breadth of ability to do things is just way different and way more, and you can just handle a lot more complex things than like before, like with the context like being much longer as well.
+
+232
+00:20:33,610 --> 00:20:37,239
+I think the jump to four to five to me is like much bigger.
+
+233
+00:20:37,239 --> 00:20:41,259
+Is there anything the model categorically can't do?
+
+234
+00:20:41,259 --> 00:20:44,598
+I guess for five, we don't really take like action to the real world yet.
+
+235
+00:20:44,598 --> 00:20:46,680
+We're going to team up with Asian for that.
+
+236
+00:20:46,680 --> 00:20:55,798
+Yeah, as I said, you could ask the agent to do anything, but it's not capable enough to do everything you want it to do yet.
+
+237
+00:20:57,298 --> 00:21:04,719
+We take a conservative approach, especially with like asking the user for confirmation before doing any kind of action that's irreversible.
+
+238
+00:21:04,719 --> 00:21:08,940
+So like sending an email or ordering something, booking something.
+
+239
+00:21:08,940 --> 00:21:17,129
+So I think I can imagine quite, you know, a number of tasks where you'd want to take like bulk actions, which you might not be able to do right now because it would ask you every single time.
+
+240
+00:21:17,129 --> 00:21:27,359
+But I think as people get more comfortable using these things and as they get better and you trust them more, you might, you know, allow it to do things for you without checking in with you as much.
+
+241
+00:21:27,359 --> 00:21:35,038
+Maybe just to build on that question for in terms of what it can't do today, but what you would sort of direct future research toward.
+
+242
+00:21:36,700 --> 00:21:43,210
+If you look at coding, something like end to end DevOps, for example, that feels like the logical next set of capabilities.
+
+243
+00:21:43,210 --> 00:21:46,940
+Do you guys think we'll get there and I don't know what you'll name it, but 5.
+
+244
+00:21:46,940 --> 00:21:51,460
+5 or GPT -6. How far are we from something like that?
+
+245
+00:21:51,460 --> 00:21:57,130
+Yeah, I don't know about the exact thing of DevOps, but I do feel like with the models getting much smarter.
+
+246
+00:21:57,130 --> 00:22:02,449
+One other thing that came to my mind when you asked me the question is like longer running tasks and like things like that.
+
+247
+00:22:02,449 --> 00:22:12,070
+I think like, I think we GPT -5 is great because like, yeah, within like a couple of minutes, maybe you get a full -fledged app, but then what would it look like if you actually gave it like an hour, like a day, a week?
+
+248
+00:22:12,070 --> 00:22:13,320
+What can it actually get done?
+
+249
+00:22:13,320 --> 00:22:15,840
+And I think that's, there's going to be a lot of interesting stuff.
+
+250
+00:22:15,840 --> 00:22:17,960
+We're interested to see what will happen there.
+
+251
+00:22:17,960 --> 00:22:23,919
+Yeah, I think a lot of it is not just about the model capability, but it's actually like how you set it up in a way to do things.
+
+252
+00:22:23,919 --> 00:22:30,780
+Like I'm sure that you could build something that's like monitoring, you know, your cumio or like datadog, whatever.
+
+253
+00:22:30,780 --> 00:22:34,220
+Like with these current models, it's just like setting up the harness like to make that possible.
+
+254
+00:22:34,220 --> 00:22:45,970
+And same for like agentic tasks, I think a lot of things that will be quite useful will be when the agent like proactively does something for you, which I don't think is impossible today.
+
+255
+00:22:45,970 --> 00:22:55,799
+It's just not like set up that way, but eventually like as it proactively does things for you, then we might get feedback on whether that was useful and we can make it like even better at like triggering.
+
+256
+00:22:55,799 --> 00:23:00,180
+Agents is probably, or agent is probably the most overused word of 2025.
+
+257
+00:23:00,180 --> 00:23:03,378
+That being said, your agents launch was extremely exciting.
+
+258
+00:23:03,378 --> 00:23:10,858
+What does that word mean to you in the context of capabilities that you'd like to build in the near term or have already built?
+
+259
+00:23:10,858 --> 00:23:16,549
+And what is sort of most important that the agent is able to do on behalf of your users?
+
+260
+00:23:16,549 --> 00:23:33,028
+I guess my very general definition would just be something that does work, useful work for me on my behalf with, I would say asynchronously, so like you'd kind of leave it and then come back and get, either get a result or like a question about what it's doing.
+
+261
+00:23:33,028 --> 00:23:46,379
+And then in terms of, I guess roadmap for agents, I mean longer term, you want it to be able to do anything that, you know, a chief of staff or assistant or something like that would do for you.
+
+262
+00:23:46,379 --> 00:23:56,220
+But I think in the more immediate term, we, there are a lot of new capabilities that we launched in chat to be the agent that we just want to improve.
+
+263
+00:23:56,220 --> 00:23:59,699
+So one of the main capabilities is deep research.
+
+264
+00:23:59,699 --> 00:24:02,719
+So just being really good at synthesizing information from the internet.
+
+265
+00:24:02,719 --> 00:24:11,078
+But also, I think we can improve capabilities on synthesizing information from like all of the services that you use and like private data that you have.
+
+266
+00:24:11,078 --> 00:24:26,499
+And then also being better at creating and editing artifacts like docs or slides and spreadsheets because I think so much of like the work that's useful that people do in their jobs is basically just research and making something.
+
+267
+00:24:26,499 --> 00:24:36,340
+But then also I'm personally like love all the consumer use cases, like making it better at like shopping or planning a trip and those kinds of things are like also really fun.
+
+268
+00:24:36,340 --> 00:24:51,679
+And so that also involves like taking an action, which is interesting because it's, it's very, it's kind of the last step often of a, of a task and it's the, maybe a task that would take less time for a human.
+
+269
+00:24:51,679 --> 00:24:58,798
+And it's like actually very hard, like a very hard research question to like get it to do something or like book something or use it, use a calendar picker.
+
+270
+00:24:58,798 --> 00:25:03,670
+But yeah, once you have the end to end flow working really well, it can basically do, do anything.
+
+271
+00:25:03,670 --> 00:25:05,110
+Yeah. That's incredible.
+
+272
+00:25:05,110 --> 00:25:13,708
+On the shopping piece, I now do not make a single large ticket purchase without having chat GPD put all the options in a table for me along the dimensions I care about.
+
+273
+00:25:13,708 --> 00:25:14,358
+It's incredible.
+
+274
+00:25:14,358 --> 00:25:26,210
+But I want to push on the async piece because I, I don't know if you would agree with this, but it felt like a revelation to me at least at the beginning of the year that people were willing to wait.
+
+275
+00:25:26,210 --> 00:25:28,989
+So you kind of think about, oh, we want it faster.
+
+276
+00:25:28,989 --> 00:25:32,568
+Like the value prop of this tool is that it gives me the answer fast. Right.
+
+277
+00:25:32,568 --> 00:25:33,740
+That was sort of very 2024.
+
+278
+00:25:35,118 --> 00:25:41,279
+Clearly this paradigm has shifted people are willing to wait for high quality, high value answers and work.
+
+279
+00:25:41,279 --> 00:25:54,808
+How do you think about the trade off between how long something take, how long you take to get something back to the user versus what you're actually the value that you're providing and like, what do you think is the ideal frontier for something like that?
+
+280
+00:25:54,808 --> 00:25:55,299
+Yeah.
+
+281
+00:25:55,299 --> 00:26:00,999
+It's interesting because I worked on, I built the retrieval on chat GPD and was on the browsing team before this.
+
+282
+00:26:00,999 --> 00:26:06,778
+Tina was also on the, the browsing team and we were always making these trade offs and optimizations to, for latency.
+
+283
+00:26:06,778 --> 00:26:14,659
+And so we're thinking, how can you best like fill the context with information you've retrieved so that the answer is pretty good in a few seconds.
+
+284
+00:26:14,659 --> 00:26:19,960
+And so I think with deep research, I was just very excited to like remove latency as a constraint.
+
+285
+00:26:19,960 --> 00:26:26,568
+And since we were going for these, we're going for these tasks that are really hard for humans to do and would take humans many hours to do.
+
+286
+00:26:26,568 --> 00:26:37,539
+I think we felt like, you know, if you asked an analyst to do this and it would take them 10 hours or two days, seems, seems reasonable that someone would be willing to wait like five minutes in your product.
+
+287
+00:26:37,539 --> 00:26:40,578
+So I think that was the, we just kind of made that bet.
+
+288
+00:26:40,578 --> 00:26:46,869
+And luckily it seems like it's the case, but I do also think that, you know, initially people are like, oh, this is amazing.
+
+289
+00:26:46,869 --> 00:26:47,778
+It's doing all this work.
+
+290
+00:26:48,940 --> 00:26:50,529
+That's would have taken me so long.
+
+291
+00:26:50,529 --> 00:26:52,328
+And now people are like, okay, but I want it.
+
+292
+00:26:52,328 --> 00:26:55,429
+Now I want it in 30 seconds. Right.
+
+293
+00:26:55,429 --> 00:26:57,338
+To the point of the bar changing.
+
+294
+00:26:58,420 --> 00:27:08,629
+Because yeah, I was going to say, is there any sort of rule of thumb, I'm sure it's constantly shifting where as long as you're 10 times faster than it would take the human to do, they're willing to wait for it.
+
+295
+00:27:08,629 --> 00:27:11,259
+Or is that just constantly shifting sand?
+
+296
+00:27:11,259 --> 00:27:14,380
+I think with these launches, people's expectations keep getting changing.
+
+297
+00:27:15,759 --> 00:27:18,809
+Yeah, I do think we have like a specific, a specific number.
+
+298
+00:27:18,809 --> 00:27:29,249
+One thing that's interesting is I think sometimes people just bias to thinking that the longer answer is more like thorough or it's done more work for it, which I don't necessarily think is the case.
+
+299
+00:27:29,249 --> 00:27:32,259
+Like deep research, for example, always gives you a really long reports.
+
+300
+00:27:32,259 --> 00:27:34,909
+But sometimes for me, I don't want to read this whole long report.
+
+301
+00:27:34,909 --> 00:27:36,859
+I actually don't, don't like that.
+
+302
+00:27:36,859 --> 00:27:40,039
+And so agent, like it will only give you a long report if you ask for it.
+
+303
+00:27:40,039 --> 00:27:46,180
+But I think sometimes people, since now they're used to always getting a really long report, they're like, wait, I've been waiting like, where's my long report?
+
+304
+00:27:46,180 --> 00:27:54,980
+But sometimes it's like really hard to find a specific piece of information and would have also taken a human a long time because it's in like page 10 of the results, whereas where it finds this information.
+
+305
+00:27:54,980 --> 00:28:10,999
+So I think it's interesting also how you can condition people's expectations with, with a product so that when you change or like with deep research, it always thinks for a really long time, which again, I don't necessarily think is a feature, but I think now people are like really used to the amount of time that they wait.
+
+306
+00:28:10,999 --> 00:28:15,460
+And so, so. I think we hear this with GBT -5 internally when people are testing it.
+
+307
+00:28:15,460 --> 00:28:17,679
+They're like, oh, I thought I asked like a really hard question.
+
+308
+00:28:17,679 --> 00:28:20,450
+I feel like a little bit insulted that he asked that in a second.
+
+309
+00:28:20,450 --> 00:28:23,910
+Or like when it doesn't even want to think at all. Yeah.
+
+310
+00:28:23,910 --> 00:28:25,619
+It's like the Mark Twain line.
+
+311
+00:28:25,619 --> 00:28:27,289
+I didn't have time to write you a short letter.
+
+312
+00:28:27,289 --> 00:28:29,559
+Sorry, I wrote you a long one. Yeah, yeah.
+
+313
+00:28:29,559 --> 00:28:34,780
+Why don't you talk about the, the bottom, like why don't we have reliable agency?
+
+314
+00:28:34,780 --> 00:28:38,739
+So let's get, what are the, the main bottlenecks as you see them? Yeah.
+
+315
+00:28:38,739 --> 00:28:43,369
+I think a big part of it is the things that we train on often really good arts.
+
+316
+00:28:43,369 --> 00:28:49,930
+And then sometimes with the things outside of that, it can be a bit, sometimes it's good at those things.
+
+317
+00:28:49,930 --> 00:28:51,318
+Sometimes it's not good at those things.
+
+318
+00:28:51,318 --> 00:28:56,578
+So I think, yeah, creating more data across like a broader range of things that we want it to be good at.
+
+319
+00:28:57,680 --> 00:29:10,149
+I think also what's interesting with, with agents is we have this, like when, when something is doing something on your behalf and it has access to your, you know, your private data and the things that you use.
+
+320
+00:29:10,149 --> 00:29:14,358
+It's kind of more scary the different things it could do to achieve its final goal.
+
+321
+00:29:15,838 --> 00:29:25,099
+You know, in theory, if you asked it to, to buy you something that, and like make sure that I like it, it could go and buy five things just to make sure that you liked one of them.
+
+322
+00:29:25,099 --> 00:29:26,759
+Which you might not necessarily want.
+
+323
+00:29:26,759 --> 00:29:32,379
+So I think that there's definitely like having oversight during training is also like an interesting area.
+
+324
+00:29:32,379 --> 00:29:39,680
+I think there's just like new things that we have to like develop to, you know, push these agents even further.
+
+325
+00:29:40,818 --> 00:29:42,879
+So yeah, I think that that's part of it.
+
+326
+00:29:42,879 --> 00:29:52,859
+And then also like as every time we get to have a smarter like base model or something like this, it improves every model that's built on top of that.
+
+327
+00:29:52,859 --> 00:30:03,979
+So I think that will also help, especially with like multimodal capabilities, as Tina said, with like computer use, because it's like just literally looking at screenshots of, of the, of a webpage.
+
+328
+00:30:03,979 --> 00:30:18,609
+And it's like, it's a little interesting because the way that humans like focus on specific things, it's like, it's a lot to expect a model to just like take a whole image and be able to like know everything about the image when like when we're looking at something will like focus on a specific thing.
+
+329
+00:30:18,609 --> 00:30:22,349
+Yeah, I think that there's lots of room for improvement in lots of, in lots of areas.
+
+330
+00:30:22,349 --> 00:30:24,219
+Sorry, that was kind of a general answer.
+
+331
+00:30:24,219 --> 00:30:40,309
+No, no, well, actually, I was going to maybe have that last example gets into something that we were curious about, which is, and this ties back to training data as well, but what, what sort of, I guess, what specific categories of browsing tasks are challenging for agents today?
+
+332
+00:30:40,309 --> 00:30:45,700
+And like, I don't know if you have thoughts on how you'd overcome this for sort of the next iteration of the model.
+
+333
+00:30:45,700 --> 00:30:51,989
+I mean, I think one thing is like, so free training, it's based on like what data is available, right?
+
+334
+00:30:51,989 --> 00:31:01,410
+And so I think when we've done these free training, there's not much data out there to begin with, but people using computers, like computer usage is not really a thing that like, there's lots of like data out there.
+
+335
+00:31:01,410 --> 00:31:05,308
+And this is something we actually have to like seek out now that this is a capability that we want.
+
+336
+00:31:05,308 --> 00:31:07,349
+So I think that's actually probably a big one.
+
+337
+00:31:07,349 --> 00:31:09,879
+Just for general improvements of like computer usage.
+
+338
+00:31:09,879 --> 00:31:27,348
+Do you think you'll lean more heavily on human data vendors to help collect that or given it doesn't exist to your point, like recorded in the way that maybe it's most helpful for training, like how do we, but it is probably the most useful application of the models to, you know, at least knowledge work.
+
+339
+00:31:27,348 --> 00:31:29,619
+Like how do you overcome that?
+
+340
+00:31:29,619 --> 00:31:39,880
+I mean, I think one cool thing is for, for example, for initial deep research, there's not really any data sets that exist for browsing in the same way that you have a math data set that already exists.
+
+341
+00:31:39,880 --> 00:31:47,179
+So we, we have to create all this data, but once you have good browsing models or good computer use models, you can like bootstrap them to help you make synthetic data.
+
+342
+00:31:47,179 --> 00:31:49,219
+So I think that's like pretty promising area.
+
+343
+00:31:49,219 --> 00:31:55,409
+Christina, can you explain what mid training is and how it's sort of, what does it achieve that for your post doesn't?
+
+344
+00:31:55,409 --> 00:32:04,079
+So I think with your pre training runs, these are like your, these are your, the big runs, these are the massive ones, like that's what we're building all these giant clusters for.
+
+345
+00:32:04,079 --> 00:32:17,809
+So you can kind of think of mid training is literally, it's for like middle, like we do it before, after pre training, but before post training, you kind of think of a way to like extend the models like intelligence without having to do a whole new pre training run.
+
+346
+00:32:17,809 --> 00:32:21,649
+So this is mostly just focus on data and off of the pre training models.
+
+347
+00:32:21,649 --> 00:32:26,379
+So this is a way for us to do things like updating the knowledge cutoff of these models, right?
+
+348
+00:32:26,379 --> 00:32:31,359
+So when you pre train it, you're kind of like, okay, shoot, now we're kind of stuck in this date and we can never update it again.
+
+349
+00:32:31,359 --> 00:32:34,038
+And doesn't quite make sense to put all that data into post training.
+
+350
+00:32:34,038 --> 00:32:40,989
+And so mid training is just a smaller pre training run to help expand like the models intelligence and like up to dateness.
+
+351
+00:32:40,989 --> 00:32:44,029
+Christian, did you work on web GPT? Yes, I did.
+
+352
+00:32:44,029 --> 00:32:45,380
+Okay. So you're basically like an AI historian.
+
+353
+00:32:46,939 --> 00:32:50,519
+She also watched some Confucius. I'm an elder.
+
+354
+00:32:51,660 --> 00:32:58,459
+So can you like reflect back a little bit to, you know, four years ago, five years ago and sort of reflect on like, what are the biggest thing?
+
+355
+00:32:58,459 --> 00:33:04,239
+Like if you were to predict the, the five years out, like what are the inflection points or biggest things that would have surprised you?
+
+356
+00:33:04,239 --> 00:33:09,769
+Honestly, with web GPT, the main thing we were just excited about was like trying to ground these language models.
+
+357
+00:33:09,769 --> 00:33:14,438
+Like it's, we had so many issues with like hallucinations and the model just saying random things.
+
+358
+00:33:14,438 --> 00:33:16,519
+And like the fact of we didn't really do mid training sense.
+
+359
+00:33:16,519 --> 00:33:20,649
+So like the fact of like, how do we make sure the model is actually up to date, like most factually up to date.
+
+360
+00:33:20,649 --> 00:33:23,809
+So then that's kind of how we thought about like, oh, let's give it a browsing tool.
+
+361
+00:33:23,809 --> 00:33:25,109
+I think that makes sense.
+
+362
+00:33:25,109 --> 00:33:29,858
+And then yeah, like I said, that kind of went on from like, oh, I actually want to keep asking questions.
+
+363
+00:33:29,858 --> 00:33:31,479
+So what a chatbot would look like.
+
+364
+00:33:31,479 --> 00:33:35,359
+But at this point, I think there had been a few chatbots by a few other companies.
+
+365
+00:33:35,359 --> 00:33:39,489
+And I feel like a chatbot is also like a very common AI thing to think of.
+
+366
+00:33:39,489 --> 00:33:41,879
+But they're quite unpopular at the time.
+
+367
+00:33:41,879 --> 00:33:48,688
+So we weren't really even sure that like this is actually something useful for people to work on or like people to use or will people be excited about this?
+
+368
+00:33:48,688 --> 00:33:52,619
+Is this really like a research innovation that we like are remaking the Turing test here?
+
+369
+00:33:52,619 --> 00:33:58,298
+Like, but I think it kind of clicked into me that like maybe there was actually something interesting happening here.
+
+370
+00:33:58,298 --> 00:34:04,349
+We gave early access to about 50 people, most of those people being like people I lived with at the time.
+
+371
+00:34:04,349 --> 00:34:07,940
+And there are two of my roommates just used it all the time.
+
+372
+00:34:07,940 --> 00:34:09,340
+They just like would never stop using it.
+
+373
+00:34:09,340 --> 00:34:14,939
+And they would just have these long conversations and they would ask it like quite technical things because they're also AI researchers.
+
+374
+00:34:14,939 --> 00:34:18,429
+And so I was just like, oh, this is like kind of interesting. Like I don't know.
+
+375
+00:34:18,429 --> 00:34:23,949
+And at the time we're kind of thinking like, okay, we kind of this chatbot should we do make this like a really specific like meeting bot type of thing?
+
+376
+00:34:23,949 --> 00:34:26,209
+Do we like make it a coding helper?
+
+377
+00:34:26,209 --> 00:34:34,628
+But it was interesting to see my two roommates just use it just like for anything and everything and just like literally be chatting with it like the whole work day while they're using it.
+
+378
+00:34:34,628 --> 00:34:36,449
+And I was like, oh, this is kind of interesting.
+
+379
+00:34:36,449 --> 00:34:42,509
+But then it was also interesting to see like the majority of the people that I gave access to on that 50 person list like didn't really use it that much.
+
+380
+00:34:42,509 --> 00:34:47,769
+But I was like, oh, it's like there's clearly like something here, but it's like not quite maybe for everyone yet.
+
+381
+00:34:47,769 --> 00:34:49,110
+But there's something here.
+
+382
+00:34:49,110 --> 00:34:54,029
+When did you realize like I'm working at one of the most important companies of this generation?
+
+383
+00:34:54,029 --> 00:34:57,939
+Like when was the moment where you were like, hey, this is something that I obviously believed important.
+
+384
+00:34:57,939 --> 00:35:00,880
+That's why I joined, but that you realized like the scale and significance.
+
+385
+00:35:00,880 --> 00:35:03,999
+Honestly, I kind of had this moment before I joined OpenAI.
+
+386
+00:35:03,999 --> 00:35:14,869
+Like, I think with the scaling law's paper with GBT3, I was just like kind of hit me that like if this exponential is true, like there's not really much else I want to spend my life working on.
+
+387
+00:35:14,869 --> 00:35:17,049
+And like I want to be part of this like story.
+
+388
+00:35:17,049 --> 00:35:20,820
+Like I think there's going to be so many interesting things unlocked with this.
+
+389
+00:35:20,820 --> 00:35:31,539
+And I think this is, this is probably the next like step level in terms of like technology that it kind of made me realize like, oh, I should probably go start reading about deep learning and figure out how I can get into one of these labs.
+
+390
+00:35:31,539 --> 00:35:32,858
+Is it what was your moment?
+
+391
+00:35:32,858 --> 00:35:42,409
+I think for me, it was also before I started working at OpenAI using, I think I first learned about OpenAI in a AI class or something, or some kind of computer science class.
+
+392
+00:35:42,409 --> 00:35:44,999
+And they were saying like, oh, they trained on the whole internet.
+
+393
+00:35:44,999 --> 00:35:46,199
+It's like, oh, that's so crazy.
+
+394
+00:35:46,199 --> 00:35:47,099
+Like what is this company?
+
+395
+00:35:47,099 --> 00:35:55,610
+And then started using GPT3, like in the, I think I was the, it was a power user of the OpenAI playground.
+
+396
+00:35:55,610 --> 00:36:01,469
+And at a certain point like had early access to these like different OpenAI features, like embeddings and things like that.
+
+397
+00:36:01,469 --> 00:36:07,699
+And just became this like big OpenAI fan, which is like a little embarrassing, but you know, it's fine because it got me here.
+
+398
+00:36:07,699 --> 00:36:10,469
+And then eventually they're like, okay, like you're stalking us.
+
+399
+00:36:10,469 --> 00:36:12,359
+Do you want to interview her?
+
+400
+00:36:12,359 --> 00:36:19,539
+But yeah, I think it was like pretty clear to me, but just how much I was using GPT3, which wasn't even, compared to what we have now, like just pales in comparison.
+
+401
+00:36:19,539 --> 00:36:25,190
+But I was like, from then I was hooked and just trying to figure out a way to work here.
+
+402
+00:36:25,190 --> 00:36:28,880
+Maybe a question or more on the company building front.
+
+403
+00:36:28,880 --> 00:36:34,940
+We all sort of read and reread Calvin French Owen's piece, just his reflections on working at OpenAI.
+
+404
+00:36:36,559 --> 00:36:48,838
+Curious, and you don't have to comment on that piece unless you want to, but would love your reflections on the change that you've seen over the last four years or even less than that, given I think that was only covering one year of change.
+
+405
+00:36:48,838 --> 00:36:51,749
+But what are the biggest things that you've seen change at OpenAI?
+
+406
+00:36:51,749 --> 00:36:56,479
+I mean, when I first joined OpenAI, the applied team was 10 engineers or something.
+
+407
+00:36:56,479 --> 00:36:58,759
+It's just like we didn't really have this product arm.
+
+408
+00:36:58,759 --> 00:37:00,239
+We had just launched the API.
+
+409
+00:37:00,239 --> 00:37:02,079
+It was just a completely different world.
+
+410
+00:37:02,079 --> 00:37:12,680
+And I think AI is in most people's mind now after chat GPT, but I think pre -chat GPT, like people didn't really know what AI was or really like thought about it as much.
+
+411
+00:37:12,680 --> 00:37:18,360
+It's kind of cool working in a place that my parents know what I do now, and that's really cool.
+
+412
+00:37:18,360 --> 00:37:23,029
+And I think the company obviously is just a lot bigger, but I think with that, we can just take a lot more bets.
+
+413
+00:37:23,029 --> 00:37:28,229
+I think when I first joined OpenAI, there were obviously way less people.
+
+414
+00:37:28,229 --> 00:37:29,340
+It was much, much smaller.
+
+415
+00:37:29,340 --> 00:37:34,390
+We're on like 200 -ish people, and I think we're close to a few thousand for sure. Yeah.
+
+416
+00:37:34,390 --> 00:37:37,440
+When I joined, it was also a few hundred before chat GPT.
+
+417
+00:37:37,440 --> 00:37:44,009
+So it's obviously very different in how all of your friends have heard of what you work on.
+
+418
+00:37:44,009 --> 00:37:46,509
+But I think culturally, obviously the company is much bigger.
+
+419
+00:37:46,509 --> 00:37:50,130
+I still think we've maintained this.
+
+420
+00:37:50,130 --> 00:37:52,269
+It still feels very much like a startup.
+
+421
+00:37:52,269 --> 00:37:54,659
+I think some people who come from a startup are surprised.
+
+422
+00:37:54,659 --> 00:37:58,429
+They're like, oh, I'm working even harder than when I was working on the startup that I founded.
+
+423
+00:37:58,429 --> 00:38:00,360
+I think ideas can still come from anywhere.
+
+424
+00:38:00,360 --> 00:38:03,340
+And if you just take initiative and want to make something happen, you can.
+
+425
+00:38:03,340 --> 00:38:06,239
+And this doesn't really matter like how senior you are or anything like that.
+
+426
+00:38:06,239 --> 00:38:09,800
+I think we've been able to maintain that culture, which I think is pretty special. Yeah.
+
+427
+00:38:09,800 --> 00:38:12,849
+We definitely reward agency. And I think that's always been true.
+
+428
+00:38:12,849 --> 00:38:16,159
+And I think especially on the research side, the teams are quite small.
+
+429
+00:38:16,159 --> 00:38:19,259
+Like when ESA was working on deep research, it was like two people still.
+
+430
+00:38:19,259 --> 00:38:22,168
+So I think we still do that on the research side.
+
+431
+00:38:22,168 --> 00:38:25,260
+Like most research teams are quite small and nimble for that reason.
+
+432
+00:38:27,139 --> 00:38:35,059
+And earlier you said we do something at OpenAI, which startups never do, which is try to appeal to every single person with the product.
+
+433
+00:38:35,059 --> 00:38:44,699
+Are there other things that come to mind that OpenAI just does differently than your peers or other startups or things that we may not appreciate being on there?
+
+434
+00:38:44,699 --> 00:38:48,299
+I mean, I think it's different for different teams.
+
+435
+00:38:48,299 --> 00:39:02,800
+But my team collaborates so closely with the applied like the engineering team and the product team and design team in a way that I think sometimes like research can be quite separate from like the rest of the company.
+
+436
+00:39:02,800 --> 00:39:05,159
+But for us, it's like so integrated, we all sit together.
+
+437
+00:39:06,320 --> 00:39:11,899
+You know, sometimes like the researchers will help with like implementing something.
+
+438
+00:39:11,899 --> 00:39:15,048
+I'm not sure that engineers are always happy about it, but we'll try.
+
+439
+00:39:15,048 --> 00:39:17,520
+Like they'll like get out of the front end code.
+
+440
+00:39:17,520 --> 00:39:22,789
+And vice versa, like they'll help us with things that we're doing for like model training rounds and things like that.
+
+441
+00:39:22,789 --> 00:39:26,849
+So I think some of the like product teams are quite integrated.
+
+442
+00:39:26,849 --> 00:39:28,759
+I think it's for post training.
+
+443
+00:39:28,759 --> 00:39:34,420
+It's a pretty common pass in which I think just lets you move really quickly.
+
+444
+00:39:35,599 --> 00:39:48,739
+I guess one thing that I think is unique about OpenAI is that you're both very much a consumer company by revenue, et cetera, products, but also an enterprise company.
+
+445
+00:39:48,739 --> 00:39:52,380
+How does that internally like what would you guys consider yourself?
+
+446
+00:39:52,380 --> 00:39:55,029
+Or is that even just the wrong paradigm to think about?
+
+447
+00:39:55,029 --> 00:40:06,279
+Yeah, I mean, I guess if you tie it to the mission, it's like we're trying to make the most capable thing and we're also trying to make it useful to as many people as possible and accessible to as many people as possible.
+
+448
+00:40:06,279 --> 00:40:08,989
+So like in that framing, I think it makes a lot of sense.
+
+449
+00:40:08,989 --> 00:40:13,618
+The concept of taste has become also very widely used.
+
+450
+00:40:13,618 --> 00:40:16,100
+What does good taste mean within OpenAI?
+
+451
+00:40:16,100 --> 00:40:17,599
+How do you know when you see it?
+
+452
+00:40:17,599 --> 00:40:18,460
+Know it when you see it.
+
+453
+00:40:18,460 --> 00:40:26,529
+And is that something that even in a world where everything, the cost to produce everything just keeps going down and down?
+
+454
+00:40:26,529 --> 00:40:32,878
+Is that the one thing that's not commoditizable or is that also shifting given maybe that can go into the training data?
+
+455
+00:40:32,878 --> 00:40:38,579
+No, I think taste is quite important, especially now that like it is like, like I said, like our models are getting smarter.
+
+456
+00:40:38,579 --> 00:40:39,949
+It's easier to use them as tools.
+
+457
+00:40:39,949 --> 00:40:46,420
+So I think having the right direction matters a lot now and like having the right intuitions and like with the right questions you want to ask.
+
+458
+00:40:46,420 --> 00:40:50,109
+So I would say maybe it matters more now than before.
+
+459
+00:40:50,109 --> 00:40:58,429
+I think also I've been surprised by how often the thing that is the most simple, like easy to explain is the thing that works the best.
+
+460
+00:40:58,429 --> 00:41:06,559
+And so sometimes it's like sounds seems very obvious, but you know, it's quite hard to get the details of something right.
+
+461
+00:41:06,559 --> 00:41:14,418
+But I think usually good researcher taste is just like pretty simplifying the problem to like the dumbest thing or the most simple thing you can do.
+
+462
+00:41:14,418 --> 00:41:20,579
+Yeah, I feel like with every like research release we do and when people figure out what happened there, they're like, oh, that's so simple.
+
+463
+00:41:20,579 --> 00:41:23,639
+Like, oh, I should like that obviously, obviously that would have worked.
+
+464
+00:41:23,639 --> 00:41:30,269
+But I think it's like knowing to try that like obvious or like at the time, not obvious thing that is obvious in hindsight.
+
+465
+00:41:30,269 --> 00:41:30,649
+Yeah.
+
+466
+00:41:30,649 --> 00:41:39,039
+And then all of the details around the hyperprime and all these things like the infrared is obviously like very hard, but the actual concept itself is usually usually pretty straightforward.
+
+467
+00:41:40,059 --> 00:41:41,619
+Very cool. Taste is Occam's razor.
+
+468
+00:41:43,400 --> 00:41:55,759
+So sort of in closing here, obviously, historic day, you want to contextualize sort of what this means in context of the mission and where you've been to get to now to where you're going.
+
+469
+00:41:55,759 --> 00:42:01,809
+Yeah, I think with GPT -5, the thing that's the word that's like been in my mind throughout all of this is like usable.
+
+470
+00:42:01,809 --> 00:42:04,760
+And I think the thing that we're excited about is getting this out to everyone.
+
+471
+00:42:04,760 --> 00:42:08,739
+We're excited to get like our best reasoning models out to free users now.
+
+472
+00:42:08,739 --> 00:42:13,209
+And I think just getting our smartest model yet to like everyone.
+
+473
+00:42:13,209 --> 00:42:16,369
+And I'm just excited to see like what people are going to actually use it for.
+
+474
+00:42:16,369 --> 00:42:17,819
+That's a great place to wrap.
+
+475
+00:42:17,819 --> 00:42:20,429
+Tina, Ysa, thanks so much for coming to the podcast. Thank you.
+
+476
+00:42:20,429 --> 00:42:37,298
+Thank you for having us. Yeah.
+

@@ -407,23 +407,14 @@ for i, sub in enumerate(subs):
             if retry_count > 0:
                 print(f'   IndexTTS重试第 {retry_count} 次...')
             
-            # 使用路径辅助工具生成IndexTTS命令
+            # 直接使用正确的IndexTTS命令
             import subprocess
             
-            # 调用bash脚本获取IndexTTS命令
-            helper_cmd = f'source utils/path_helper.sh && get_index_tts_command \"{text}\" \"$VOICE_FILE\" \"{audio_file}\" mps'
-            helper_result = subprocess.run(['bash', '-c', helper_cmd], capture_output=True, text=True, cwd=os.getcwd())
-            
-            if helper_result.returncode == 0 and helper_result.stdout.strip():
-                tts_command = helper_result.stdout.strip()
-                tts_commands = [tts_command]
-                print(f'   使用路径助手命令: {tts_command}')
-            else:
-                # 回退到简单命令 - 虚拟环境已在脚本启动时激活
-                print(f'   路径助手失败，使用简单命令: {helper_result.stderr.strip() if helper_result.stderr else \"未知错误\"}')
-                tts_commands = [
-                    f'MPS_FALLBACK=0 python3 -m indextts.cli \"{text}\" --voice \"$VOICE_FILE\" --output \"{audio_file}\" --device mps'
-                ]
+            # 使用绝对路径调用IndexTTS
+            tts_commands = [
+                f'cd /Users/bruce/git/claude_video_translater/indextts && PYTHONPATH=/Users/bruce/git/claude_video_translater:$PYTHONPATH MPS_FALLBACK=0 python3 cli.py \"{text}\" --voice \"/Users/bruce/git/claude_video_translater/$VOICE_FILE\" --output \"{audio_file}\" --device mps --model_dir /Users/bruce/git/claude_video_translater/checkpoints --config /Users/bruce/git/claude_video_translater/checkpoints/config.yaml'
+            ]
+            print(f'   使用IndexTTS命令: {tts_commands[0]}')
             
             cmd = None
             for tts_cmd in tts_commands:
